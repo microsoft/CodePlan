@@ -1,0 +1,53 @@
+{
+    "Title": "Equality and diversity policy",
+    "LinkTitle": "Equality and diversity policy",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "4020",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Equality and diversity policy",
+            "LinkTitle": "Equality and diversity policy",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PYA-30",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's equality and diversity policy",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='pya-equality-policy'>This must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>promote the policy</li><li>get engagement towards the policy</li><li>train its employees in implementing the policy</li><li>consider the policy when recruiting, delivering apprenticeship training and working with employers and apprentices</li><li>review this policy annually</li></ul><p class='govuk-body'>Your equality and diversity policy must include your last review date.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select your organisation's equality and diversity policy"
+                            },
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "4.4",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        }
+    ]
+}

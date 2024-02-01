@@ -1,0 +1,88 @@
+{
+    "Title": "Process for evaluating the quality of training delivered",
+    "LinkTitle": "Process for evaluating the quality of training delivered",
+    "DisplayType": "Pages",
+    "Pages": [{
+            "PageId": "8100",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Process for evaluating the quality of training delivered",
+            "LinkTitle": "Process for evaluating the quality of training delivered",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "EAT-20",
+                    "QuestionTag": null,
+                    "Label": "What is your organisation's process for evaluating the quality of training delivered?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='eat-evaluating-training'>Your answer must include how your organisation:</p><ul class='govuk-list govuk-list--bullet'><li>responds and acts on feedback from employers and learners</li><li>continuously improves training</li><li>identifies and addresses poor training outcomes</li><li>uses key performance indicators to measure the quality of training</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": null,
+                                "ErrorMessage": "Tell us what your organisation's process is for evaluating the quality of training delivered"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value":  275,
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "NextPage",
+                    "ReturnId": "8110",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "8110",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Process for evaluating the quality of training delivered",
+            "LinkTitle": "Process for evaluating the quality of training delivered",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "EAT-21",
+                    "QuestionTag": null,
+                    "Label": "How has your organisation made improvements using its process for evaluating the quality of training delivered?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='eat-improving-training'>Give us an example including:</p><ul class='govuk-list govuk-list--bullet'><li>how an issue was identified</li><li>what improvements were made</li><li>who was involved in implementing the improvements</li><li>the overall outcome</li><li>how success was measured</li><li>the impact on apprentices</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": null,
+                                "ErrorMessage": "Tell us how your organisation has made improvements using its process for evaluating the quality of training delivered"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value": 275,
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "ReturnToSection",
+                    "ReturnId": "8.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }
+    ]
+}

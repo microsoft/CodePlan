@@ -1,0 +1,44 @@
+@model dynamic
+@{
+    var isError = Model.ErrorMessages != null && Model.ErrorMessages.Count > 0 ? "govuk-input--error" : "";
+}
+
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+
+<div class="govuk-date-input" id="dob">
+    <div class="govuk-date-input__item">
+        <div class="govuk-form-group" id="@Model.QuestionId">
+            <label class="govuk-label govuk-date-input__label" for="@(Model.QuestionId + "_Month")">Month</label>
+            <input 
+                value="@(string.IsNullOrWhiteSpace(Model.Value?.ToString()) ? "" : Model.Value?.ToString().Split(',')[0])"
+                class="govuk-input govuk-date-input__input govuk-input--width-2 @isError"
+                id="@(Model.QuestionId + "_Month")"
+                name="@Model.QuestionId"
+                type="number"
+                pattern="[0-9]*"
+            />
+        </div>
+    </div>
+    <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="@(Model.QuestionId + "_Year")">Year</label>
+            <input 
+                value="@(string.IsNullOrWhiteSpace(Model.Value?.ToString()) ? "" : Model.Value?.ToString().Split(',')[1])"
+                class="govuk-input govuk-date-input__input govuk-input--width-4 @isError"
+                id="@(Model.QuestionId + "_Year")"
+                name="@Model.QuestionId"
+                type="number"
+                pattern="[0-9]*"
+            />
+        </div>
+    </div>
+</div>

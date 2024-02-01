@@ -1,0 +1,47 @@
+{
+    "Title": "Contract for services template",
+    "LinkTitle": "Contract for services template",
+    "DisplayType": "Pages",
+    "Pages": [{
+            "PageId": "5300",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Contract for services template",
+            "LinkTitle": "Contract for services template",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "RTE-40",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's contract for services template with employers",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-contract-services'>A contract for services is a signed and dated written agreement between your organisation and an employer. It's only used where an apprenticeship is funded from the employer's apprenticeship service account.</p><p class='govuk-body'>The template must include a section for your organisation to add the services it will provide.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select your organisation's contract for services template with employers"
+                            }, {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.5",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }
+    ]
+}

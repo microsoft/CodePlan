@@ -1,0 +1,9 @@
+
+
+t2\pred\repair\repo\audiocraft\models\loaders.py
+BlockTypes.METHOD, load_mbd_ckpt
+def load_mbd_ckpt(file_or_url_or_id: tp.Union[Path, str],
+                  filename: tp.Optional[str] = None,
+                  cache_dir: tp.Optional[str] = None):
+    return _get_state_dict(file_or_url_or_id, filename=filename, cache_dir=cache_dir)
+--------------------------------------------------

@@ -1,0 +1,969 @@
+{
+    "Title": "Checks on your organisation",
+    "LinkTitle": "Checks on your organisation",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "3100",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Details": {
+                "Title": "Further information",
+                "Body": "<p class='govuk-body'>Section 4.4.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>A provider will be considered to be a high risk provider and the ESFA will take action where it, any of the directors, shadow directors, trustees or any person who is a member of the administrative, management or supervisory body of the provider or who has powers of representation, decision, influence, management or control of the provider organisation including through a blind trust, a connected party, a partner organisation or a parent organisation:<br/>I. Is bankrupt or is the subject of insolvency or winding-up proceedings, where its assets are being administered by a liquidator or by the court or where it is in an arrangement with creditors.</p>"
+            },
+            "Questions": [
+                {
+                    "QuestionId": "CC-20",
+                    "QuestionTag": "CCOrganisationComposition",
+                    "Label": "Does your organisation have any composition with creditors?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-composition'>Composition with creditors is an agreement between a debtor and its creditors where all the creditors agree to accept less than the original amount of debt due to them in full satisfaction of their claim.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-20-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of the agreement</li><li>how your organisation will settle the debt</li><li>the date of when the debt will be fully paid off</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell if your organisation has any composition with creditors"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3110",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3110",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-21",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation failed to pay back funds in the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-repayfunding'>Tell us if your organisation has failed to repay &pound;50,000 or more:</p><ul class='govuk-list govuk-list--bullet'><li>to ESFA or any other public body</li><li>under a subcontract to deliver education and training services funded by ESFA</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-21-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>why your organisation failed to repay funding</li><li>which public body was involved</li><li>if any actions have been taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has failed to pay back funds in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3120",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3120",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Details": {
+                "Title": "Further information",
+                "Body": "<p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>The provider:<br/>II. Has previously had, in relation to any ESFA (and/or EFA or SFA) monies, a contract for services, a grant funding agreement or an apprenticeship agreement with the ESFA terminated as a consequence of falling within one or more of the criteria specified in this policy and has not been able to present sufficient evidence such that the ESFA can be satisfied that there would be no risk to public funds, were funding provided.</p>"
+            },
+            "Questions": [
+                {
+                    "QuestionId": "CC-22",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation had a contract terminated early by a public body in the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-contractterminated'></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-22-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of why the contract was terminated</li><li>which public body was involved</li><li>if any actions have been taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has had a contract terminated early by a public body in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3130",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3130",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-23",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation withdrawn from a contract with a public body in the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-contractwithdrawal'></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-23-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of why your organisation withdrew from a contract</li><li>which public body was involved</li><li>if any actions have been taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has withdrawn from a contract with a public body in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3135",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3135",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation been removed from the Register of Training Organisations (RoTO) in the last 3 years? ",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-235",
+                    "QuestionTag": "CC-Organisation-RoTO",
+                    "Label": "Has your organisation been removed from the Register of Training Organisations (RoTO) in the last 3 years? ",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-235-1",
+                                        "QuestionTag": "CC-Organisation-RoTO-Information",
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint'>You'll need to include a brief summary of why your organisation was removed.</p>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information "
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has been removed from the Register of Training Organisations (RoTO) in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3140",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "3140",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-24",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation had funding removed from any education bodies in the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-fundingremoval'>This only includes funds removed by:</p><ul class='govuk-list govuk-list--bullet'><li>the Higher Education Funding Council for England (HEFCE)</li><li>the Office for Students (OfS)</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-24-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of why funding was removed</li><li>if any actions have been taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has had funding removed from any education bodies in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3150",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3150",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-25",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation been removed from any professional or trade registers in the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-traderegisterremoval'></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-25-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of why your organisation was removed</li><li>if any actions have been taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has been removed from any professional or trade registers in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3160",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3160",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+              {
+                "QuestionId": "CC-26",
+                "QuestionTag": null,
+                "Label": "Has your organisation been involuntarily withdrawn from Initial Teacher Training accreditation in the last 3 years?",
+                "ShortLabel": "",
+                "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-ittwithdrawal'></p>",
+                "Hint": "",
+                "Input": {
+                  "Type": "ComplexRadio",
+                  "Options": [
+                    {
+                      "FurtherQuestions": [
+                        {
+                          "QuestionId": "CC-26-1",
+                          "QuestionTag": null,
+                          "Label": "Give us more information",
+                          "ShortLabel": "",
+                          "QuestionBodyText": "",
+                          "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include a brief summary of why your organisation was withdrawn involuntarily.</p>",
+                          "Input": {
+                            "Type": "Textarea",
+                            "Options": [],
+                            "Validations": [
+                              {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter more information"
+                              },
+                              {
+                                "Name": "MaxWordCount",
+                                "Value": "500",
+                                "ErrorMessage": "Your answer must be 500 words or less"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "Value": "Yes",
+                      "Label": "Yes",
+                      "HintText": ""
+                    },
+                    {
+                      "FurtherQuestions": [],
+                      "Value": "No",
+                      "Label": "No",
+                      "HintText": ""
+                    }
+                  ],
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "Value": "",
+                      "ErrorMessage": "Tell us if your organisation has had involuntary withdrawal from Initial Teacher Training accreditation in the last 3 years"
+                    }
+                  ]
+                }
+              }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3170",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3170",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-27",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation been removed from any charity register?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-charityregisterremoval'>This includes being removed from:</p><ul class='govuk-list govuk-list--bullet'><li>the Charity Commission for England and Wales</li><li>the Charity Commission for Northern Ireland</li><li>the Office of the Scottish Charity Regulator</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-27-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include a brief summary of why your organisation was removed.</p>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has been removed from any charity register"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3180",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3180",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-28",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation been investigated due to safeguarding issues in the last 3 months?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-safeguarding'></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-28-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>what the issues were</li><li>who was involved</li><li>if any actions were taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has been investigated due to safeguarding issues in the last 3 months"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3190",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3190",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "CC-29",
+                    "QuestionTag": null,
+                    "Label": "Is your organisation currently, or has within the last 5 years been, subject to an investigation by the ESFA or other public body or regulator?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-whistleblowing'></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-29-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>what the issues were</li><li>who was involved</li><li>if any actions were taken to resolve this</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation is currently, or has within the last 5 years been, subject to an investigation by the ESFA or other public body or regulator"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "3199",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "3199",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Checks on your organisation",
+            "LinkTitle": "Checks on your organisation",
+            "InfoText": "",
+            "Details": {
+                "Title": "Further information",
+                "Body": "<p class='govuk-body'>Section 4.4.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>A provider will be considered to be a high risk provider and the ESFA will take action where it, any of the directors, shadow directors, trustees or any person who is a member of the administrative, management or supervisory body of the provider or who has powers of representation, decision, influence, management or control of the provider organisation including through a blind trust, a connected party, a partner organisation or a parent organisation:<br/>I. Is bankrupt or is the subject of insolvency or winding-up proceedings, where its assets are being administered by a liquidator or by the court or where it is in an arrangement with creditors.<br/>II. Have been served with a Public Interest Winding Up petition under section 124A of the Insolvency Act 1986.</p>"
+            },
+            "Questions": [
+                {
+                    "QuestionId": "CC-30",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation been subject to insolvency or winding up proceedings in the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='cc-organisation-insolvency'>This applies to any of its current or historical partner organisations or organisations at which your directors have held directorships.</p><p class='govuk-body'>A partner organisation is an organisation who either:</p><ul class='govuk-list govuk-list--bullet'><li>shares the same UK ultimate parent company as your organisation - so they are part of the same group</li><li>has a legal contract with your organisation to deliver training</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "CC-30-1",
+                                        "QuestionTag": null,
+                                        "Label": "Give us more information",
+                                        "ShortLabel": "",
+                                        "QuestionBodyText": "",
+                                        "Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>names of the other organisations</li><li>a brief summary of why this happened - including relevant dates</li><li>outstanding judgements or legal proceedings</li></ul>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter more information"
+                                                },
+                                                {
+                                                    "Name": "MaxWordCount",
+                                                    "Value": "500",
+                                                    "ErrorMessage": "Your answer must be 500 words or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation or any of its partner organisations has been subject to insolvency or winding up proceedings in the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "3.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }
+    ]
+}

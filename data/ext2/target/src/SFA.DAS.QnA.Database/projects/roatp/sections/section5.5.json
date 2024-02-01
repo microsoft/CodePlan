@@ -1,0 +1,51 @@
+{
+    "Title": "Commitment statement template",
+    "LinkTitle": "Commitment statement template",
+    "DisplayType": "Pages",
+    "Pages": [
+      {
+        "PageId": "5400",
+        "SequenceId": null,
+        "SectionId": null,
+        "Title": "Commitment statement template",
+        "LinkTitle": "Commitment statement template",
+        "InfoText": "",
+        "Questions": [
+          {
+            "QuestionId": "RTE-50",
+            "QuestionTag": null,
+            "Label": "Upload your organisation's commitment statement template",
+            "ShortLabel": "",
+            "QuestionBodyText": "<p class='govuk-body'>Your organisation can <a href='https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/792229/ESFA_Commitment_Statement_v1_reissued_.xlsx' class='govuk-link' target='_blank'>use ESFA's commitment statement</a>, use one from a third party or create its own.</p><p class='govuk-body'>It must include:</p><ul class='govuk-list govuk-list--bullet'><li>the planned content and schedule for training</li><li>what is expected and offered by the employer, the training organisation and the apprentice</li><li>a section for the employer, apprentice and training organisation to sign</li><li>how this will be communicated to users throughout their journey</li></ul><p class='govuk-body'>Find out more about commitment statements in <a href='https://www.gov.uk/guidance/apprenticeship-funding-rules-for-training-providers/what-is-an-apprenticeship#rule-p65' class='govuk-link' target='_blank'>the apprenticeship funding rules (opens in a new window)</a>.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+            "Hint": "Upload a file",
+            "Input": {
+              "Type": "FileUpload",
+              "Validations": [
+                {
+                  "Name": "Required",
+                  "ErrorMessage": "Select your organisation's commitment statement template"
+                },
+                {
+                  "Name": "FileType",
+                  "Value": "pdf",
+                  "ErrorMessage": "The selected file must be a PDF"
+                }
+              ]
+            }
+          }
+        ],
+        "PageOfAnswers": [],
+        "Next": [
+          {
+            "Action": "ReturnToSection",
+            "ReturnId": "5.6",
+            "Conditions": []
+          }
+        ],
+        "AllowMultipleAnswers": false,
+        "Active": true,
+        "NotRequiredConditions": [],
+        "BodyText": ""
+      }
+    ]
+}

@@ -1,0 +1,44 @@
+
+
+t2\pred\codeplan_no_context\repo\demos\musicgen_app.py
+BlockTypes.METHOD, load_diffusion
+def load_diffusion(filename=None, cache_dir=None):
+    global MBD
+    if MBD is None:
+        print("loading MBD")
+        MBD = MultiBandDiffusion.get_mbd_musicgen(filename=filename, cache_dir=cache_dir)
+--------------------------------------------------
+t2\pred\codeplan_no_context\repo\demos\musicgen_app.py
+BlockTypes.METHOD, predict_full
+def predict_full(model, decoder, text, melody, duration, topk, topp, temperature, cfg_coef, progress=gr.Progress(), filename=None, cache_dir=None):
+    global INTERRUPTING
+    global USE_DIFFUSION
+    INTERRUPTING = False
+    if temperature < 0:
+        raise gr.Error("Temperature must be >= 0.")
+    if topk < 0:
+        raise gr.Error("Topk must be non-negative.")
+    if topp < 0:
+        raise gr.Error("Topp must be non-negative.")
+
+    topk = int(topk)
+    if decoder == "MultiBand_Diffusion":
+        USE_DIFFUSION = True
+        load_diffusion(filename=filename, cache_dir=cache_dir)
+    else:
+        USE_DIFFUSION = False
+    load_model(model)
+
+    def _progress(generated, to_generate):
+        progress((min(generated, to_generate), to_generate))
+        if INTERRUPTING:
+            raise gr.Error("Interrupted.")
+    MODEL.set_custom_progress_callback(_progress)
+
+    videos, wavs = _do_predictions(
+        [text], [melody], duration, progress=True,
+        top_k=topk, top_p=topp, temperature=temperature, cfg_coef=cfg_coef)
+    if USE_DIFFUSION:
+        return videos[0], wavs[0], videos[1], wavs[1]
+    return videos[0], wavs[0], None, None
+--------------------------------------------------

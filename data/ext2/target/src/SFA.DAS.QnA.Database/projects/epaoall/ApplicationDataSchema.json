@@ -1,0 +1,421 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://example.com/example.json",
+    "title": "ApplicationData",
+    "type": "object",
+    "additionalProperties": true,
+    "required": [
+        "OrganisationReferenceId",
+        "OrganisationName"
+    ],
+    "properties": {
+        "OrganisationReferenceId": {
+            "type": "string",
+            "minLength": 1
+        },
+        "OrganisationName": {
+            "type": "string",
+            "minLength": 1
+        },
+        "OrganisationType": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "ReferenceNumber": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "StandardName": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "StandardCode": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "TradingName": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "UseTradingName": {
+            "minLength": 1,
+            "type": "boolean"
+        },
+        "ContactGivenName": {
+            "minLength": 1
+        },
+        "EarliestDateOfWithdrawal": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+             ]
+        },
+        "PipelinesCount": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "CompanySummary": {
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/CompaniesHouseSummary"
+                }
+            ]
+        },
+        "CharitySummary": {
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/CharityCommissionSummary"
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "CompaniesHouseSummary": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "CompanyName": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "CompanyNumber": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "Status": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "CompanyType": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "CompanyTypeDescription": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "IncorporationDate": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "format": "date-time"
+                },
+                "Directors": {
+                    "oneOf": [
+                        {
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/DirectorInformation"
+                    }
+                },
+                "PersonsWithSignificantControl": {
+                    "oneOf": [
+                        {
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/PersonWithSignificantControlInformation"
+                    }
+                },
+                "ManualEntryRequired": {
+                    "minLength": 1,
+                    "type": "boolean"
+                }
+            }
+        },
+        "DirectorInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Id": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "Name": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "DateOfBirth": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "AppointedDate": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "format": "date-time"
+                },
+                "ResignedDate": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "format": "date-time"
+                },
+                "Active": {
+                    "minLength": 1,
+                    "type": "boolean"
+                }
+            }
+        },
+        "PersonWithSignificantControlInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Id": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "Name": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "DateOfBirth": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "NotifiedDate": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "format": "date-time"
+                },
+                "CeasedDate": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "format": "date-time"
+                },
+                "Active": {
+                    "minLength": 1,
+                    "type": "boolean"
+                }
+            }
+        },
+        "CharityCommissionSummary": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "CharityName": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "CharityNumber": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "IncorporatedOn": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "format": "date-time"
+                },
+                "Trustees": {
+                    "oneOf": [
+                        {
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/TrusteeInformation"
+                    }
+                },
+                "TrusteeManualEntryRequired": {
+                    "minLength": 1,
+                    "type": "boolean"
+                }
+            }
+        },
+        "TrusteeInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Id": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "Name": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

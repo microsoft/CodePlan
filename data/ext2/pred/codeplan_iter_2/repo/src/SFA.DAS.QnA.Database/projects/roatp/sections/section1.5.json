@@ -1,0 +1,1536 @@
+{
+    "Title": "Experience and accreditation",
+    "LinkTitle": "Experience and accreditation",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "235",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Is your organisation funded by the Office for Students?",
+            "LinkTitle": "Is your organisation funded by the Office for Students?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-235",
+                    "QuestionTag": "OFSFunded",
+                    "Label": "Is your organisation funded by the Office for Students?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation is funded by the Office for Students"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "350",
+                    "Conditions": [
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "3"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "240",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "2", "3"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "240",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Does your organisation offer initial teacher training?",
+            "LinkTitle": "Does your organisation offer initial teacher training?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-240",
+                    "QuestionTag": "ITTAccredited",
+                    "Label": "Does your organisation offer initial teacher training?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>This means your organisation has been accredited by the Department for Education (DfE) to offer initial teacher training</p><p class='govuk-body'>Find out more about <a href='https://www.gov.uk/government/collections/initial-teacher-training' class='govuk-link' target='blank'>initial teacher training (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation is Initial Teacher Training (ITT) accredited"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "250",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-240",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "260",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-240",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "HasFeedback": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "235",
+            "BodyText": ""
+        },
+        {
+            "PageId": "250",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Is the postgraduate teaching apprenticeship the only apprenticeship your organisation intends to deliver?",
+            "LinkTitle": "Is the postgraduate teaching apprenticeship the only apprenticeship your organisation intends to deliver?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-250",
+                    "QuestionTag": "ITTPGTA",
+                    "Label": "Is the postgraduate teaching apprenticeship the only apprenticeship your organisation intends to deliver?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>The postgraduate teaching apprenticeship is an employment-based initial teacher training route leading to qualified teacher status.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation will only deliver post graduate teaching apprenticeships"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-250",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "260",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-250",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "240",
+            "BodyText": ""
+        },
+        {
+            "PageId": "260",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation had a full Ofsted inspection in further education and skills?",
+            "LinkTitle": "Has your organisation had a full Ofsted inspection in further education and skills?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-260",
+                    "QuestionTag": "OfstedFESkills",
+                    "Label": "Has your organisation had a full Ofsted inspection in further education and skills?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>If you're not sure, <a href='https://reports.ofsted.gov.uk/' class='govuk-link' target='_blank'>check if your organisation's had an Ofsted inspection (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has had an Ofsted inspection in further education and skills"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "270",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-260",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "290",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-260",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "240,250",
+            "BodyText": ""
+        },
+        {
+            "PageId": "270",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Did your organisation get a grade for apprenticeships in this full Ofsted inspection?",
+            "LinkTitle": "Did your organisation get a grade for apprenticeships in this full Ofsted inspection?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-270",
+                    "QuestionTag": "OfstedApprenticeshipGrade",
+                    "Label": "Did your organisation get a grade for apprenticeships in this full Ofsted inspection?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>If you're not sure, <a href='https://reports.ofsted.gov.uk/' class='govuk-link' target='blank'>check your organisation's Ofsted inspection report  (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation was awarded a grade for apprenticeships in this Ofsted inspection"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "301",
+                    "Conditions": [
+                        {
+                            "QuestionTag": "OrganisationOfSFundedMS",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "301",
+                    "Conditions": [
+                        {
+                            "QuestionTag": "OrganisationOfSFundedEmp",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "300",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-270",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "280",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-270",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "260",
+            "BodyText": ""
+        },
+        {
+            "PageId": "280",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What grade did your organisation get for overall effectiveness in this full Ofsted inspection?",
+            "LinkTitle": "What grade did your organisation get for overall effectiveness in this full Ofsted inspection?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-280",
+                    "QuestionTag": "OfstedOEGrade",
+                    "Label": "What grade did your organisation get for overall effectiveness in this full Ofsted inspection?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Outstanding",
+                                "Value": "Outstanding"
+                            },
+                            {
+                                "Label": "Good",
+                                "Value": "Good"
+                            },
+                            {
+                                "Label": "Requires improvement",
+                                "Value": "Requires improvement"
+                            },
+                            {
+                                "Label": "Inadequate",
+                                "Value": "Inadequate"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what grade your organisation got"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-280",
+                            "MustEqual": "Requires improvement"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "311",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-280",
+                            "MustEqual": "Inadequate"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "310",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-280",
+                            "MustEqual": "Good"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "310",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-280",
+                            "MustEqual": "Outstanding"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "270,300",
+            "BodyText": ""
+        },
+        {
+            "PageId": "290",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation had a monitoring visit for apprenticeships in further education and skills?",
+            "LinkTitle": "Has your organisation had a monitoring visit for apprenticeships in further education and skills?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-290",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation had a monitoring visit for apprenticeships in further education and skills?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has had a monitoring visit for apprenticeships in further education and skills"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-290",
+                            "MustEqual": "No"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "292",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-290",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "260",
+            "BodyText": ""
+        },
+        {
+            "PageId": "292",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation had 2 consecutive monitoring visits with the grade 'insufficient progress'?",
+            "LinkTitle": "Has your organisation had 2 consecutive monitoring visits with the grade 'insufficient progress'?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-292",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation had 2 consecutive monitoring visits with the grade 'insufficient progress'?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has had 2 consecutive monitoring visits with the grade 'insufficient progress'"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-292",
+                            "MustEqual": "No"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "294",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-292",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "290",
+            "BodyText": ""
+        },
+        {
+            "PageId": "294",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Was the most recent monitoring visit within the last 18 months?",
+            "LinkTitle": "Was the most recent monitoring visit within the last 18 months?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-294",
+                    "QuestionTag": null,
+                    "Label": "Was the most recent monitoring visit within the last 18 months?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if the most recent monitoring visit was within the last 18 months"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-294",
+                            "MustEqual": "No"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "10010",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-294",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "292",
+            "BodyText": ""
+        },
+        {
+            "PageId": "300",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What grade did your organisation get for apprenticeships in this full Ofsted inspection?",
+            "LinkTitle": "What grade did your organisation get for apprenticeships in this full Ofsted inspection?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-300",
+                    "QuestionTag": "OfstedApprenticeshipsGrade",
+                    "Label": "What grade did your organisation get for apprenticeships in this full Ofsted inspection?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Outstanding",
+                                "Value": "Outstanding"
+                            },
+                            {
+                                "Label": "Good",
+                                "Value": "Good"
+                            },
+                            {
+                                "Label": "Requires improvement",
+                                "Value": "Requires improvement"
+                            },
+                            {
+                                "Label": "Inadequate",
+                                "Value": "Inadequate"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what grade your organisation got"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "280",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-300",
+                            "MustEqual": "Requires improvement"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "311",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-300",
+                            "MustEqual": "Inadequate"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "310",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-300",
+                            "MustEqual": "Good"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "310",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-300",
+                            "MustEqual": "Outstanding"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "260,270",
+            "BodyText": ""
+        },
+        {
+            "PageId": "301",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What grade did your organisation get for apprenticeships in this full Ofsted inspection?",
+            "LinkTitle": "What grade did your organisation get for apprenticeships in this full Ofsted inspection?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-301",
+                    "QuestionTag": "OfstedApprenticeshipsGradeOFS",
+                    "Label": "What grade did your organisation get for apprenticeships in this full Ofsted inspection?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Outstanding",
+                                "Value": "Outstanding"
+                            },
+                            {
+                                "Label": "Good",
+                                "Value": "Good"
+                            },
+                            {
+                                "Label": "Requires improvement",
+                                "Value": "Requires improvement"
+                            },
+                            {
+                                "Label": "Inadequate",
+                                "Value": "Inadequate"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what grade your organisation got"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-301",
+                            "MustEqual": "Requires improvement"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "311",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-301",
+                            "MustEqual": "Inadequate"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "310",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-301",
+                            "MustEqual": "Good"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "310",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-301",
+                            "MustEqual": "Outstanding"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "270",
+            "BodyText": ""
+        },
+        {
+            "PageId": "310",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Did your organisation get this grade within the last 3 years?",
+            "LinkTitle": "Did your organisation get this grade within the last 3 years?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-310",
+                    "QuestionTag": "OfstedGradeLast3Years",
+                    "Label": "Did your organisation get this grade within the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>This is your last full inspection grade, not a grade received for a monitoring visit.</p><p class='govuk-body'>If you're not sure, <a href='https://reports.ofsted.gov.uk/' class='govuk-link' target='blank'>check your organisation's Ofsted inspection report  (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation was awarded this grade within the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "320",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-310",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "330",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-310",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "280,300,301",
+            "BodyText": ""
+        },
+        {
+            "PageId": "311",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Did your organisation get this grade within the last 3 years?",
+            "LinkTitle": "Did your organisation get this grade within the last 3 years?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-311",
+                    "QuestionTag": "OfstedGradeLast3Years",
+                    "Label": "Did your organisation get this grade within the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>This is your last full inspection grade, not a grade received for a monitoring visit.</p><p class='govuk-body'>If you're not sure, <a href='https://reports.ofsted.gov.uk/' class='govuk-link' target='blank'>check your organisation's Ofsted inspection report  (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation was awarded this grade within the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "10004",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-311",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-311",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "280,300,301",
+            "BodyText": ""
+        },
+        {
+            "PageId": "320",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation maintained funding from an education agency since its full Ofsted inspection?",
+            "LinkTitle": "Has your organisation maintained funding from an education agency since its full Ofsted inspection?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-320",
+                    "QuestionTag": "MaintainedFunding",
+                    "Label": "Has your organisation maintained funding from an education agency since its full Ofsted inspection?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>This means your organisation already has an existing relationship with and has maintained funding from:</p><ul class='govuk-list govuk-list--bullet'> <li>ESFA</li> <li>Skills Funding Agency (SFA)</li> <li>Education Funding Agency (EFA)</li> </ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has maintained funding from an education agency since its full Ofsted inspection"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "310,340",
+            "BodyText": ""
+        },
+        {
+            "PageId": "330",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation had a short Ofsted inspection within the last 3 years?",
+            "LinkTitle": "Has your organisation had a short Ofsted inspection within the last 3 years?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-330",
+                    "QuestionTag": "HadShortInspection",
+                    "Label": "Has your organisation had a short Ofsted inspection within the last 3 years?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>If you're not sure, <a href='https://reports.ofsted.gov.uk/' class='govuk-link' target='_blank'>check if your organisation's had a short Ofsted inspection (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has had a short Ofsted inspection within the last 3 years"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "340",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-330",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-330",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "310",
+            "BodyText": ""
+        },
+        {
+            "PageId": "340",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation maintained the grade it got in its full Ofsted inspection in its short Ofsted inspection?",
+            "LinkTitle": "Has your organisation maintained the grade it got in its full Ofsted inspection in its short Ofsted inspection?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-340",
+                    "QuestionTag": "MaintainedShortInspectionGrade",
+                    "Label": "Has your organisation maintained the grade it got in its full Ofsted inspection in its short Ofsted inspection?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has maintained the grade it was awarded in its full Ofsted inspection"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "320",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-340",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-340",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "OfstedFESkills",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "330",
+            "BodyText": ""
+        },
+        {
+            "PageId": "350",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation delivered apprenticeship training as a subcontractor in the last 12 months?",
+            "LinkTitle": "Has your organisation delivered apprenticeship training as a subcontractor in the last 12 months?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-350",
+                    "QuestionTag": null,
+                    "Label": "Has your organisation delivered apprenticeship training as a subcontractor in the last 12 months?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>To confirm your answer, we'll review your main or employer provider's subcontractor declaration.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes"
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has delivered apprenticeship training as a subcontractor in the last 12 months"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "360",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-350",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-350",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "235",
+            "BodyText": ""
+        },
+        {
+            "Field": "ApplyProviderRoute",
+            "PageId": "360",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload a copy of a legally binding contract between your organisation and a main or employer provider",
+            "LinkTitle": "Upload a copy of a legally binding contract between your organisation and a main or employer provider",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-360",
+                    "QuestionTag": null,
+                    "Label": "Upload a copy of a legally binding contract between your organisation and a main or employer provider",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>The contract must be:</p><ul class='govuk-list govuk-list--bullet'><li>signed and dated by your organisation and a main or employer provider</li><li>from the last 12 months</li></ul><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select a copy of a legally binding contract between your organisation and a main or employer provider"
+                            },
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "350"
+        },
+        {
+            "PageId": "10004",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Your organisation is not eligible to apply to join RoATP",
+            "LinkTitle": "Your organisation is not eligible to apply to join RoATP",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "ITTPGTA",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "311",
+            "BodyText": "<p class='govuk-body'>This is because your organisation got an 'inadequate' grade within the last 3 years.</p><p class='govuk-body'><a href='https://www.gov.uk' class='govuk-link'>Back to GOV.UK</a></p>"
+        },
+        {
+            "PageId": "10010",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Your organisation is not eligible to apply to join RoATP",
+            "LinkTitle": "Your organisation is not eligible to apply to join RoATP",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "294",
+            "BodyText": "<p class='govuk-body'>This is because your organisation got an 'insufficient progress' grade in its most recent monitoring visit within the last 18 months.</p><p class='govuk-body'><a href='https://www.gov.uk' class='govuk-link'>Back to GOV.UK</a></p>"
+        }
+    ]
+}

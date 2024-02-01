@@ -1,0 +1,169 @@
+{
+    "Title": "Overall accountability for apprenticeships",
+    "LinkTitle": "Overall accountability for apprenticeships",
+    "DisplayType": "",
+    "Pages": [
+        {
+            "PageId": "7100",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Tell us who has overall accountability for apprenticeships in your organisation",
+            "LinkTitle": "Tell us who has overall accountability for apprenticeships in your organisation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-10-1",
+                    "QuestionTag": null,
+                    "Label": "Full name",
+                    "QuestionBodyText": "",
+                    "ShortLabel": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a full name"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "255",
+                                "ErrorMessage": "Enter a full name using 255 characters or less"
+                            }
+                        ],
+                        "Options": []
+                    }
+                },
+                {
+                    "QuestionId": "DAT-10-2",
+                    "QuestionTag": null,
+                    "Label": "Email",
+                    "QuestionBodyText": "",
+                    "ShortLabel": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Email",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a valid email"
+                            },
+                            {
+                                "Name": "Email",
+                                "Value": "",
+                                "ErrorMessage": "Enter an email in the correct format, like name@example.com"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "70",
+                                "ErrorMessage": "Enter an email using 70 characters or less"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "DAT-10-3",
+                    "QuestionTag": null,
+                    "Label": "Contact number",
+                    "QuestionBodyText": "",
+                    "ShortLabel": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Number",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a valid contact number using only numbers"
+                            },
+                            {
+                                "Name": "Number",
+                                "Value": "",
+                                "ErrorMessage": "Enter a valid contact number using only numbers"
+                            },
+                            {
+                                "Name": "MinLength",
+                                "Value": "10",
+                                "ErrorMessage": "Enter a contact number using 10 digits or more"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "20",
+                                "ErrorMessage": "Enter a contact number using 20 digits or less"
+                            }
+                        ],
+                        "InputClasses": "govuk-input--width-20"
+                    }
+                },
+				{
+                    "QuestionId": "DAT-10-4",
+                    "QuestionTag": null,
+                    "Label": "Is this person part of any other organisations?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes",
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "DAT-10-4-1",
+                                        "Label": "Enter the names of all these organisations",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You also need to include which of these organisations may receive funding directly from ESFA or as a subcontractor.</p>",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": "",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter the names of all these organisations"
+                                                },
+                                                {
+                                                    "Name": "MaxLength",
+                                                    "Value": "750",
+                                                    "ErrorMessage": "Enter the names of all these organisations using 750 characters or less"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No",
+                                "FurtherQuestions": []
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if this person is part of any other organisations"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "7.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body' id='dat-overall-accountability'>This must be someone who's accountable for the overall management and governance of apprenticeships.</p><p class='govuk-body'>We will contact them for all apprenticeship related concerns, issues or queries after your organisation joins the RoATP.</p>",
+            "ActivatedByPageId": null
+        }
+    ]
+}

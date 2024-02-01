@@ -1,0 +1,274 @@
+{
+  "Title": "Safeguarding and Prevent duty policy",
+  "LinkTitle": "Safeguarding and Prevent duty policy",
+  "DisplayType": "Pages",
+  "Pages": [
+    {
+      "PageId": "4030",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "Safeguarding and Prevent duty policy",
+      "LinkTitle": "Safeguarding and Prevent duty policy",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "PYA-40",
+          "QuestionTag": null,
+          "Label": "Upload your organisation's safeguarding policy",
+          "ShortLabel": "",
+          "QuestionBodyText": "<p class='govuk-body' id='pya-equality-policy'>This must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>promote the policy</li><li>get commitment towards the policy</li><li>train its employees in implementing the policy</li><li>protect its apprentices</li><li>prevent abuse towards its apprentices</li><li>have  way of raising, recording and investigating concerns</li><li>have a way of apprentices getting support or guidance</li><li>monitor its IT usage</li><li>review this policy annually</li></ul><p class='govuk-body'>Your safeguarding policy must include your last review date. </p><p class='govuk-body'>Find out more about safeguarding in <a href='http://www.legislation.gov.uk/ukpga/2014/23/contents' class='govuk-link' target='_blank'>the Care Act 2014 (opens in a new windows or tab)</a>.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+          "Hint": "Upload a file",
+          "Input": {
+            "Type": "FileUpload",
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": "",
+                "ErrorMessage": "Select your organisation's safeguarding policy"
+              },
+              {
+                "Name": "FileType",
+                "Value": "pdf",
+                "ErrorMessage": "The selected file must be a PDF"
+              }
+            ]
+          }
+        }
+      ],
+	  "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "4035",
+          "Conditions": []
+        }
+      ],
+      "AllowMultipleAnswers": false,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": ""
+    },
+    {
+      "PageId": "4035",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "Tell us who has overall responsibility for safeguarding in your organisation",
+      "LinkTitle": "Tell us who has overall responsibility for safeguarding in your organisation",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "PYA-45",
+          "QuestionTag": null,
+          "Label": "Full name",
+          "ShortLabel": "",
+          "QuestionBodyText": "",
+          "Hint": "",
+          "Input": {
+            "Type": "Text",
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": null,
+                "ErrorMessage": "Enter a full name"
+              },
+              {
+                "Name": "MaxLength",
+                "Value": 255,
+                "ErrorMessage": "Enter a full name using 255 characters or less"
+              }
+            ]
+          }
+        },
+        {
+          "QuestionId": "PYA-46",
+          "QuestionTag": null,
+          "Label": "Email",
+          "ShortLabel": "",
+          "QuestionBodyText": "",
+          "Hint": "",
+          "Input": {
+            "Type": "Text",
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": null,
+                "ErrorMessage": "Enter a valid email"
+              },
+              {
+                "Name": "MaxLength",
+                "Value": 70,
+                "ErrorMessage": "Enter an email using 70 characters or less"
+              },
+              {
+                "Name": "Email",
+                "Value": null,
+                "ErrorMessage": "Enter an email in the correct format, like name@example.com"
+              }
+            ]
+          }
+        },
+        {
+          "QuestionId": "PYA-47",
+          "QuestionTag": null,
+          "Label": "Contact number",
+          "ShortLabel": "",
+          "QuestionBodyText": "",
+          "Hint": "",
+          "Input": {
+            "Type": "Text",
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": null,
+                "ErrorMessage": "Enter a valid contact number using only numbers"
+              },
+              {
+                "Name": "Number",
+                "Value": null,
+                "ErrorMessage": "Enter a valid contact number using only numbers"
+              },
+              {
+                "Name": "MinLength",
+                "Value": 10,
+                "ErrorMessage": "Enter a contact number using 10 digits or more"
+              },
+              {
+                "Name": "MaxLength",
+                "Value": 20,
+                "ErrorMessage": "Enter a contact number using 20 digits or less"
+              }
+            ]
+          }
+        }
+      ],
+      "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "4037",
+          "Conditions": []
+        }
+      ],
+      "AllowMultipleAnswers": false,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": "<p class='govuk-body'>This must be someone who has the overall responsibility, relevant knowledge and skills to manage safeguarding concerns.</p><p class='govuk-body'>We'll only contact them if there is a safeguarding concern.</p>"
+    },
+    {
+      "PageId": "4037",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "Does your organisation's safeguarding policy include its responsibilities towards the Prevent duty?",
+      "LinkTitle": "Does your organisation's safeguarding policy include its responsibilities towards the Prevent duty?",
+      "InfoText": "",
+      "Details": {
+        "Title": "What is the Prevent duty statement?",
+        "Body": "<p class='govuk-body'>The Prevent duty statement is 'to have due regard to the need to prevent people from being drawn into terrorism'.</p>"
+      },
+      "Questions": [
+        {
+          "QuestionId": "PYA-48",
+          "QuestionTag": null,
+          "Label": "Does your organisation's safeguarding policy include its responsibilities towards the Prevent duty?",
+          "ShortLabel": "",
+          "QuestionBodyText": "<p class='govuk-body' id='pya-equality-policy'>This means your organisation's safeguarding policy includes how it will:</p><ul class='govuk-list govuk-list--bullet'><li>have a legal responsibility to fulfil the Prevent duty statement</li><li>protect apprentices and employees from radicalising influences</li><li>ensure apprentices and employees are resilient to extreme narratives</li><li>identify changes in behaviour of apprentices and employees</li><li>deal with any issues raised by apprentices or employees</li></ul><p class='govuk-body'>Find out about <a href='https://www.gov.uk/government/publications/prevent-duty-guidance' class='govuk-link' target='_blank'>the Prevent duty (opens in a new windows or tab)</a></p>",
+          "Hint": "",
+          "Input": {
+            "Type": "Radio",
+            "Options": [
+              {
+                "Label": "Yes",
+                "Value": "Yes",
+                "FurtherQuestions": []
+              },
+              {
+                "Label": "No",
+                "Value": "No",
+                "FurtherQuestions": []
+              }
+            ],
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": null,
+                "ErrorMessage": "Tell us if your organisation's safeguarding policy include its responsibilities towards the Prevent duty"
+              }
+            ]
+          }
+        }
+      ],
+	  "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "4038",
+          "Conditions": [
+            {
+              "QuestionId": "PYA-48",
+              "MustEqual": "No"
+            }
+          ]
+        },
+        {
+          "Action": "ReturnToSection",
+          "ReturnId": "4.5",
+          "Conditions": []
+        }
+      ],
+      "AllowMultipleAnswers": false,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": ""
+    },
+    {
+      "PageId": "4038",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "Upload your organisation's Prevent duty policy",
+      "LinkTitle": "Upload your organisation's Prevent duty policy",
+      "InfoText": "",
+      "Details": {
+        "Title": "What is the Prevent duty statement?",
+        "Body": "<p class='govuk-body'>The Prevent duty statement is 'to have due regard to the need to prevent people from being drawn into terrorism'.</p>"
+      },
+      "Questions": [
+        {
+          "QuestionId": "PYA-49",
+          "QuestionTag": null,
+          "Label": "Upload your organisation's Prevent duty policy",
+          "ShortLabel": "",
+          "QuestionBodyText": "<p class='govuk-body' id='pya-prevent-duty-policy'>This can be your Prevent risk assessment and action plan.</p><p class='govuk-body' id='pya-prevent-duty-policy-2'>This must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>promote the policy</li><li>get commitment to the policy</li><li>train employees in implementing the policy</li><li>have a legal responsibility to fulfil the Prevent duty statement</li><li>protect apprentices and employees from radicalising influences</li><li>ensure apprentices and employees are resilient to extreme narratives</li><li>identify changes in behaviour of apprentices and employees</li><li>deal with any issues raised by apprentices or employees</li><li>review this policy annually</li></ul><p class='govuk-body'>Your Prevent duty policy must include your last review date.</p><p class='govuk-body'>Find out more about <a href='https://www.gov.uk/government/publications/prevent-duty-guidance' class='govuk-link' target='_blank'>the Prevent duty (opens in a new windows or tab)</a>.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+          "Hint": "Upload a file",
+          "Input": {
+            "Type": "FileUpload",
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": null,
+                "ErrorMessage": "Select your organisation's Prevent duty policy"
+              },
+              {
+                "Name": "FileType",
+                "Value": "pdf",
+                "ErrorMessage": "The selected file must be a PDF"
+              }
+            ]
+          }
+        }
+      ],
+	  "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "ReturnToSection",
+          "ReturnId": "4.5",
+          "Conditions": []
+        }
+      ],
+      "AllowMultipleAnswers": false,
+      "Active": false,
+      "NotRequiredConditions": [],
+      "ActivatedByPageId": "4037",
+      "BodyText": ""
+    }
+  ]
+}

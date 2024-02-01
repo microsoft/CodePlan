@@ -1,0 +1,257 @@
+{
+    "Title": "Quality and high standards in apprenticeship training",
+    "LinkTitle": "Quality and high standards in apprenticeship training",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "7300",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your management hierarchy's expectations for quality and high standards in apprenticeship training",
+            "LinkTitle": "Upload your management hierarchy's expectations for quality and high standards in apprenticeship training",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-40",
+                    "QuestionTag": null,
+                    "Label": "Upload your management hierarchy's expectations for quality and high standards in apprenticeship training",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your management hierarchy's expectations may also be known as your organisation's mission statement, vision statement or set of principles.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select your management hierarchy's expectations for quality and high standards in apprenticeship training"
+                            },
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "7305",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "7305",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Tell us how these expectations for quality and high standards in apprenticeship training are monitored and evaluated",
+            "LinkTitle": "Tell us how these expectations for quality and high standards in apprenticeship training are monitored and evaluated",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-7305",
+                    "QuestionTag": null,
+                    "Label": "Tell us how these expectations for quality and high standards in apprenticeship training are monitored and evaluated",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your answer must include how they're:</p><ul class='govuk-list govuk-list--bullet'><li>reviewed and monitored</li><li>reflected in developing and delivering apprenticeship training programmes</li><li>measured through key performance indicators for the outcomes of apprenticeship training programmes</li><li>used to benchmark apprenticeship training delivery against industry leaders</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how these expectations for quality and high standards in apprenticeship training are monitored and evaluated"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "7310",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "7300"
+        },
+        {
+            "PageId": "7310",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Tell us who's responsible for maintaining these expectations for quality and high standards in apprenticeship training",
+            "LinkTitle": "Tell us who's responsible for maintaining these expectations for quality and high standards in apprenticeship training",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-41-1",
+                    "QuestionTag": null,
+                    "Label": "Full name",
+                    "QuestionBodyText": "",
+                    "ShortLabel": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a full name"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "255",
+                                "ErrorMessage": "Enter a full name using 255 characters or less"
+                            }
+                        ],
+                        "Options": []
+                    }
+                },
+                {
+                    "QuestionId": "DAT-41-2",
+                    "QuestionTag": null,
+                    "Label": "Email",
+                    "QuestionBodyText": "",
+                    "ShortLabel": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Email",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a valid email"
+                            },
+                            {
+                                "Name": "Email",
+                                "Value": "",
+                                "ErrorMessage": "Enter an email in the correct format, like name@example.com"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "70",
+                                "ErrorMessage": "Enter an email using 70 characters or less"
+                            }
+                        ],
+                        "Options": []
+                    }
+                },
+                {
+                    "QuestionId": "DAT-41-3",
+                    "QuestionTag": null,
+                    "Label": "Contact number",
+                    "QuestionBodyText": "",
+                    "ShortLabel": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Number",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a valid contact number using only numbers"
+                            },
+                            {
+                                "Name": "Number",
+                                "Value": "",
+                                "ErrorMessage": "Enter a valid contact number using only numbers"
+                            },
+                            {
+                                "Name": "MinLength",
+                                "Value": "10",
+                                "ErrorMessage": "Enter a contact number using 10 digits or more"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "20",
+                                "ErrorMessage": "Enter a contact number using 20 digits or less"
+                            }
+                        ],
+                        "Options": [],
+                        "InputClasses": "govuk-input--width-20"
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "7320",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "7305"
+        },
+        {
+            "PageId": "7320",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "How are these expectations for quality and high standards in apprenticeship training communicated to employees",
+            "LinkTitle": "How are these expectations for quality and high standards in apprenticeship training communicated to employees",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-42",
+                    "QuestionTag": null,
+                    "Label": "How are these expectations for quality and high standards in apprenticeship training communicated to employees?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='dat-highstandards-communicated'>Your answer must include how these expectations are:</p><ul class='govuk-list govuk-list--bullet'><li>transparent and available to all employees</li><li>communicated throughout your organisation - for example through training or official policies</li><li>maintained and what feedback mechanisms your organisation has for employees</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how these expectations for quality and high standards in apprenticeship training are communicated to employees"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "7.5",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "7310"
+        }
+    ]
+}

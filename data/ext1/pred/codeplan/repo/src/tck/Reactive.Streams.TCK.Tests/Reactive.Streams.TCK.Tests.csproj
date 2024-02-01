@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Reactive.Streams.TCK.Tests</AssemblyName>
+    <TargetFrameworks>net461;netcoreapp3.1</TargetFrameworks>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Reactive.Streams.TCK\Reactive.Streams.TCK.csproj" />
+    <ProjectReference Include="..\..\api\Reactive.Streams\Reactive.Streams.csproj" />
+    <ProjectReference Include="..\..\examples\Reactive.Streams.Example.Unicast\Reactive.Streams.Example.Unicast.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.utility" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+</Project>

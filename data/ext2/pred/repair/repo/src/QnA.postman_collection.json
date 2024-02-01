@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "d3efbd36-bfac-40d0-b087-3d5d66747974",
+		"name": "QnA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5554/Applications/Start",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1065b81d-a25a-4587-a020-91d0cad99e12",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(201)});",
+							"var jsonResponse = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"applicationId\", jsonResponse.applicationId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UserReference\":\"dave\",\n\t\"WorkflowType\":\"EPAO\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5554/Applications/Start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"Applications",
+						"Start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5554/applications/{{applicationId}}/sequences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b3539bf9-5d2b-4d74-a4ec-fabb628cafcf",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(200)});",
+							"var jsonResponse = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"sequenceId\", jsonResponse[0].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5554/applications/{{applicationId}}/sequences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"applications",
+						"{{applicationId}}",
+						"sequences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5554/applications/{{applicationId}}/sequences/current",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8748021a-e555-4473-90e4-b8a7e1e8b4b7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(200)});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5554/applications/{{applicationId}}/sequences/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"applications",
+						"{{applicationId}}",
+						"sequences",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5554/applications/{{applicationId}}/sequences/{{sequenceId}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4ff98a52-3ecf-4a31-8f44-7ef2d1f5247d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(200)});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5554/applications/{{applicationId}}/sequences/{{sequenceId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"applications",
+						"{{applicationId}}",
+						"sequences",
+						"{{sequenceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5554/applications/{{applicationId}}/sequences/{{sequenceId}}/sections",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f94e71c-45ff-4d0d-a2f3-a20981e2c060",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(200)});",
+							"var jsonResponse = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"sectionId\", jsonResponse[0].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5554/applications/{{applicationId}}/sequences/{{sequenceId}}/sections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"applications",
+						"{{applicationId}}",
+						"sequences",
+						"{{sequenceId}}",
+						"sections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5554/applications/{{applicationId}}/sections/{{sectionId}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b2ac5bb6-ead5-488b-a6f9-3e8b333fef2e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(200)});",
+							"var jsonResponse = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"pageId\", jsonResponse.qnAData.pages[0].pageId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5554/applications/{{applicationId}}/sections/{{sectionId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"applications",
+						"{{applicationId}}",
+						"sections",
+						"{{sectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5554/applications/{{applicationId}}/sections/{{sectionId}}/page/{{pageId}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ad5bc350-165a-421f-8519-dc2cd13ba3d3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){pm.response.to.have.status(200)});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5554/applications/{{applicationId}}/sections/{{sectionId}}/pages/{{pageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5554",
+					"path": [
+						"applications",
+						"{{applicationId}}",
+						"sections",
+						"{{sectionId}}",
+						"pages",
+						"{{pageId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5c16ebb2-fc1e-49d7-b20c-b420af57ca24",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0574f063-f01c-43cd-9486-25497502e099",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "81b7f71f-a1e0-47f2-8bc0-dca916b4cda5",
+			"key": "applicationId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "6e985b46-f552-40c0-abb7-5ead5d3f089b",
+			"key": "sequenceId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "34390908-908b-4865-a19b-58749167c363",
+			"key": "sectionId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "ab1ef118-da89-4d1b-90a6-b97dded5a94a",
+			"key": "pageId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

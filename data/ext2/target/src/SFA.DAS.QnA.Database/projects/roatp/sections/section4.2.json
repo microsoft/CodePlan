@@ -1,0 +1,58 @@
+{
+    "Title": "Continuity plan for apprenticeship training",
+    "LinkTitle": "Continuity plan for apprenticeship training",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "4010",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Continuity plan for apprenticeship training",
+            "LinkTitle": "Continuity plan for apprenticeship training",
+            "InfoText": "",
+            "Details": {
+                "Title": "What is a significant event?",
+                "Body": "<p class='govuk-body'>It's when something happens that impacts the delivery of apprenticeship training. This includes things like a training location being unavailable or loss of systems and data.</p>"
+            },
+            "Questions": [
+                {
+                    "QuestionId": "PYA-20",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's continuity plan for apprenticeship training",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='pya-continuity-plan'>A continuity plan for apprenticeship training shows how your organisation will continue to deliver in case of a significant event.</p><p class='govuk-body' id='pya-continuity-plan-2'>This must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>have different methods of communication</li><li>manage transportation needs</li><li>provide different operating locations (if needed)</li><li>back-up relevant business systems</li><li>back-up and restore data </li><li>have a list of emergency contact numbers, ESFA must be listed</li><li>support apprentices if you can no longer deliver training</li><li>ensure ongoing access to apprentices' learning resources and portfolios</li><li>review this plan annually</li></ul><p class='govuk-body' id='pya-continuity-plan-3'>Your continuity plan must include your last review date.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select your organisation's continuity plan for apprenticeship training"
+                            },
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "4.3",
+                    "Conditions": []
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        }
+    ]
+}

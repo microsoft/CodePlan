@@ -1,0 +1,52 @@
+{
+    "summary": {
+        "avg_diff_bleu": 0.9007018002137791,
+        "total_ld": 1044.0,
+        "matched_blocks": 8,
+        "missed_blocks": 2,
+        "spurious_blocks": 0
+    },
+    "full": {
+        "text": [
+            {
+                "input_type": "file_diff",
+                "metric_type": "bleu",
+                "results": {
+                    "whisper\\utils.py": 0.9007018002137791
+                }
+            },
+            {
+                "input_type": "file",
+                "metric_type": "levenshtein",
+                "results": {
+                    "setup.py": 0.0,
+                    "tests\\conftest.py": 0.0,
+                    "tests\\test_audio.py": 0.0,
+                    "tests\\test_normalizer.py": 0.0,
+                    "tests\\test_timing.py": 0.0,
+                    "tests\\test_tokenizer.py": 0.0,
+                    "tests\\test_transcribe.py": 0.0,
+                    "whisper\\__init__.py": 0.0,
+                    "whisper\\__main__.py": 0.0,
+                    "whisper\\audio.py": 0.0,
+                    "whisper\\decoding.py": 0.0,
+                    "whisper\\model.py": 0.0,
+                    "whisper\\normalizers\\__init__.py": 0.0,
+                    "whisper\\normalizers\\basic.py": 0.0,
+                    "whisper\\normalizers\\english.py": 0.0,
+                    "whisper\\timing.py": 0.0,
+                    "whisper\\tokenizer.py": 0.0,
+                    "whisper\\transcribe.py": 986.0,
+                    "whisper\\triton_ops.py": 0.0,
+                    "whisper\\utils.py": 58.0,
+                    "whisper\\version.py": 0.0
+                }
+            }
+        ],
+        "blocks": {
+            "matched_blocks": 8,
+            "missed_blocks": 2,
+            "spurious_blocks": 0
+        }
+    }
+}

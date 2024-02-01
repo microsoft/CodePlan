@@ -1,0 +1,304 @@
+{
+    "Title": "Organisation information",
+    "LinkTitle": "Organisation information",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "20",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Does your organisation have an ultimate parent company in the UK?",
+            "LinkTitle": "Does your organisation have an ultimate parent company in the UK?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-20",
+                    "QuestionTag": "HasParentCompany",
+                    "Label": "Does your organisation have an ultimate parent company in the UK?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your organisation will only have an ultimate parent company if it's part of a group.</p><p class='govuk-body'>An ultimate parent company sits at the top of your organisation's group and has the most responsibility.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes",
+                                "FurtherQuestions": []
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No",
+                                "FurtherQuestions": []
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has an ultimate UK parent company"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "21",
+                    "Conditions": [
+                        {
+                            "QuestionId": "YO-20",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "30",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "UKRLPVerificationCompanyNumber",
+                    "IsOneOf": [
+                        ""
+                    ]
+                }
+            ],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        },
+        {
+            "PageId": "21",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Enter your organisation's UK ultimate parent company details",
+            "LinkTitle": "Enter your organisation's UK ultimate parent company details",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-22",
+                    "QuestionTag": null,
+                    "Label": "Organisation name",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "InputClasses": "app-uppercase govuk-!-width-two-thirds",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter an organisation name"
+                            },
+                            {
+                                "Name": "MinLength",
+                                "Value": "2",
+                                "ErrorMessage": "Enter an organisation name using 2 characters or more"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "200",
+                                "ErrorMessage": "Enter an organisation name using 200 characters or less"
+                            }
+                        ]
+                    }
+                },
+				{
+                    "QuestionId": "YO-21",
+                    "QuestionTag": null,
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>If your UK ultimate parent company is a registered company or charity, please tell us their company or charity number. </p><p class='govuk-body'>If you're not sure of the number, you can search:<ul class='govuk-list govuk-list--bullet'><li><a href='https://beta.companieshouse.gov.uk/' class='govuk-link' target='_blank'>the Companies House register (opens in a new window or tab)</li><li><a href='https://register-of-charities.charitycommission.gov.uk/charity-search' class='govuk-link' target='_blank'>the Charity Commission's register (opens in a new window or tab)</a></li></ul></p><label class='govuk-label' for='YO-21'>Company or charity number</label>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "InputClasses": "app-uppercase govuk-input--width-10",
+                        "Validations": []
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "30",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "HasParentCompany",
+                    "IsOneOf": [
+                        "No",
+                        ""
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "20",
+            "BodyText": ""
+        },
+        {
+            "PageId": "30",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What is your organisation's Information Commissioner's Office (ICO) registration number?",
+            "LinkTitle": "What is your organisation's Information Commissioner's Office (ICO) registration number?",
+            "InfoText": "",
+            "Details": {
+                "Title": "I do not have an ICO registration number",
+                "Body": "<p class='govuk-body'>To get an ICO registration number, you'll need to <a href='https://ico.org.uk/registration/new' class='govuk-link' target='_blank'>register with the ICO (opens in a new window or tab)</a>.</p><p class='govuk-body'>After you've registered and received an ICO registration number, sign back in to continue with this application.</p>"
+            },
+            "Questions": [
+                {
+                    "QuestionId": "YO-30",
+                    "QuestionTag": null,
+                    "Label": "What is your organisation's Information Commissioner's Office (ICO) registration number?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>This is an 8-digit registration number from the ICO data protection public register. Any organisation that processes personal data must have one.</p><p class='govuk-body'>If you're not sure, <a href='https://ico.org.uk/ESDWebPages/Search' class='govuk-link' target='_blank'>search for your organisation on the ICO data protection register (opens in a new window or tab)</a></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "InputClasses": "app-uppercase govuk-input--width-10",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter an ICO registration number"
+                            },
+                            {
+                                "Name": "MinLength",
+                                "Value": "8",
+                                "ErrorMessage": "Enter an ICO registration number using 8 characters"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "8",
+                                "ErrorMessage": "Enter an ICO registration number using 8 characters"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "40",
+                    "Conditions": [
+                        {
+                            "QuestionTag": "UKRLPNoWebsite",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "1.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        },
+        {
+            "PageId": "40",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Does your organisation have a website?",
+            "LinkTitle": "Does your organisation have a website?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "YO-40",
+                    "QuestionTag": "HasWebsite",
+                    "Label": "Does your organisation have a website?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes",
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "YO-41",
+                                        "Hint": "",
+                                        "Label": "Enter main website address",
+                                        "Input": {
+                                            "Type": "Text",
+                                            "InputClasses": "govuk-!-width-two-thirds",
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a website"
+                                                },
+                                                {
+                                                    "Name": "MaxLength",
+                                                    "Value": "200",
+                                                    "ErrorMessage": "Enter a website using 200 characters or less"
+                                                }, 
+                                                {
+                                                    "Name": "Url",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a website using the correct format. For example, www.company.co.uk"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No",
+                                "FurtherQuestions": []
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation has a website"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                   "Action": "ReturnToSection",
+                    "ReturnId": "1.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "UKRLPNoWebsite",
+                    "IsOneOf": [
+                        ""
+                    ]
+                }
+            ],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        }
+    ]
+}

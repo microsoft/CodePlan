@@ -1,0 +1,1971 @@
+{
+	"Title": "Checks on who's in control of your organisation",
+	"LinkTitle": "Checks on who's in control of your organisation",
+	"DisplayType": "Pages",
+	"Pages": [
+		{
+			"PageId": "3300",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-40",
+					"QuestionTag": null,
+					"Label": "Does anyone who's in control of your organisation have any unspent criminal convictions?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-convictions'>An unspent criminal conviction has an outstanding sentence and is shown on a criminal record check.</p><p class='govuk-body'>Find out more about unspent criminal convictions in the <a href='http://www.legislation.gov.uk/ukpga/1974/53' class='govuk-link' target='_blank'>Rehabilitation of Offenders Act 1974</a>.</p><p class='govuk-body'>Criminal convictions include:</p><ul class='govuk-list govuk-list--bullet'><li>serious crimes</li><li>criminal conduct</li><li>conspiracy</li><li>money laundering</li><li>asylum and immigrants offences</li><li>sexual offences</li><li>drug trafficking</li><li>terrorism</li><li>fraud</li><li>theft</li><li>corruption</li><li>bribery</li><li>insolvency</li><li>accounting offences</li><li>discrimination and prejudice</li><li>public contracts offences</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-40-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of the conviction</li><li>full names of who the conviction is for</li><li>conviction dates including any time spent</li><li>outstanding judgements or legal proceedings</li><li>any actions your organisation has taken in relation to the conviction</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation has any unspent criminal convictions"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3310",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "What acts are covered under criminal convictions?",
+				"Body": "<h2 class='govuk-heading-m'>Serious crimes</h2><p class='govuk-body'>This is covered under section 44 to 46 of the Serious Crime Act 2007 and section 71 of the Coroners and Justice Act 2009.</p><h2 class='govuk-heading-m'>Criminal conduct</h2><p class='govuk-body'>This is covered under section 93A, 93B or 93C of the Criminal Justice Act 1988 and article 45, 46 or 47 of the Proceeds of Crime (Northern Ireland) Order 1996.</p><p class='govuk-body'>Offences in connection with taxation are covered under section 71 of the Criminal Justice Act 1993.</p><p class='govuk-body'>A director disqualification order under the Company Directors Disqualification Act 1986.</p><p class='govuk-body'>A criminal offence under the Health and Safety at Work Act 1974.</p><h2 class='govuk-heading-m'>Conspiracy</h2><p class='govuk-body'>This is covered under section 1 or 1A of the Criminal Law Act 1977 and article 9 or 9A of the Criminal Attempts and Conspiracy (Northern Ireland) Order 1983.</p><h2 class='govuk-heading-m'>Money laundering</h2><p class='govuk-body'>This is covered under section 340(11) and 415 of the Proceeds of Crime Act 2002</p><h2 class='govuk-heading-m'>Asylum and immigrants offences</h2><p class='govuk-body'>This is covered under section 4 of the Asylum and Immigration Act 2004.</p><p class='govuk-body'>An offence under sections 15, 21 and 22 of the Immigration and Asylum Act 2006.</p><p class='govuk-body'>An offence under sections 34, 35, 36, 37 and 38 of the Immigration Act 2016.</p><h2 class='govuk-heading-m'>Sexual offences</h2><p class='govuk-body'>This is covered under section 59A of the Sexual Offences Act 2003.</p><p class='govuk-body'>Any offence of viewing, taking, making, possessing or publishing indecent images of a child that leads to imprisonment. </p><h2 class='govuk-heading-m'>Drug trafficking</h2><p class='govuk-body'>This is covered under drug trafficking in section 49 to 51 of the Drug Trafficking Act 1994.</p><h2 class='govuk-heading-m'>Terrorism</h2><p class='govuk-body'>This is covered under section 41 and schedule 2 of the Counter Terrorism Act 2008.</p><h2 class='govuk-heading-m'>Fraud</h2><p class='govuk-body'>This is covered under the common law offence of conspiracy to defraud and section 2, 3, 4, 6 and 7 of the Fraud Act 2006.</p><p class='govuk-body'>Fraudulent trading is covered under section 458 of the Companies Act 1985, article 451 of the Companies (Northern Ireland) Order 1986 or section 993 of the Companies Act 2006.</p><p class='govuk-body'>Fraudulent evasion is covered under section 170 of the Customs and Excise Management Act 1979 or section 72 of the Value Added Tax Act 1994.</p><p class='govuk-body'>Fraudulent activity as defined by Article 1 of the Convention on the protection of the financial interests of the European communities.</p><p class='govuk-body'>The common law offence of cheating the revenue.</p><h2 class='govuk-heading-m'>Theft</h2><p class='govuk-body'>This is covered under the Theft Act 1968, the Theft Act (Northern Ireland) 1969, the Theft Act 1978 or the Theft (Northern Ireland) Order 1978.</p><h2 class='govuk-heading-m'>Corruption</h2><p class='govuk-body'>This is covered under section 1(2) of the Public Bodies Corrupt Practices Act 1889 and section 1 of the Prevention of Corruption Act 1906.</p><h2 class='govuk-heading-m'>Bribery</h2><p class='govuk-body'>This is covered under the common law offence of bribery and section 1, 2, or 6 of the Bribery Act 2010 or section 113 of the Representation of the People Act 1983.</p><h2 class='govuk-heading-m'>Insolvency</h2><p class='govuk-body'>This is covered under sections 6A, 206 to 211,251 and 353 to 360 of the Insolvency Act 1986.</p><h2 class='govuk-heading-m'>Accounting offences</h2><p class='govuk-body'>This is covered under sections 386, 387, 388, and 389 of the Companies Act 2006.</p><h2 class='govuk-heading-m'>Discrimination and prejudice</h2><p class='govuk-body'>This includes offences of hate and intolerance relating to race, religion or sexual orientation that leads to imprisonment.</p><h2 class='govuk-heading-m'>Public Contracts offences</h2><p class='govuk-body'>This is covered by point 1n and 2 of Article 57(1) of The Public Contracts Regulations 2015</p><p class='govuk-body'>Mandatory and discretionary exclusions covered in points 3, 4 and 5 of Article 57(1) of The Public Contracts Regulations 2015</p>"
+			}
+		},
+		{
+			"PageId": "3301",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-41",
+					"QuestionTag": null,
+					"Label": "Do you have any unspent criminal convictions?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-convictions-soletrader'>An unspent criminal conviction has an outstanding sentence and is shown on a criminal record check.</p><p class='govuk-body'>Find out more about unspent criminal convictions in the <a href='http://www.legislation.gov.uk/ukpga/1974/53' class='govuk-link' target='_blank'>Rehabilitation of Offenders Act 1974</a>.</p><p class='govuk-body'>Criminal convictions include:</p><ul class='govuk-list govuk-list--bullet'><li>serious crimes</li><li>criminal conduct</li><li>conspiracy</li><li>money laundering</li><li>asylum and immigrants offences</li><li>sexual offences</li><li>drug trafficking</li><li>terrorism</li><li>fraud</li><li>theft</li><li>corruption</li><li>bribery</li><li>insolvency</li><li>accounting offences</li><li>discrimination and prejudice</li><li>public contracts offences</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-41-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>a brief summary of the conviction</li><li>conviction dates including any time spent</li><li>outstanding judgements or legal proceedings</li><li>any actions your organisation has taken in relation to the conviction</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have any unspent criminal convictions"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3311",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "What acts are covered under criminal convictions?",
+				"Body": "<h2 class='govuk-heading-m'>Serious crimes</h2><p class='govuk-body'>This is covered under section 44 to 46 of the Serious Crime Act 2007 and section 71 of the Coroners and Justice Act 2009.</p><h2 class='govuk-heading-m'>Criminal conduct</h2><p class='govuk-body'>This is covered under section 93A, 93B or 93C of the Criminal Justice Act 1988 and article 45, 46 or 47 of the Proceeds of Crime (Northern Ireland) Order 1996.</p><p class='govuk-body'>Offences in connection with taxation are covered under section 71 of the Criminal Justice Act 1993.</p><p class='govuk-body'>A director disqualification order under the Company Directors Disqualification Act 1986.</p><p class='govuk-body'>A criminal offence under the Health and Safety at Work Act 1974.</p><h2 class='govuk-heading-m'>Conspiracy</h2><p class='govuk-body'>This is covered under section 1 or 1A of the Criminal Law Act 1977 and article 9 or 9A of the Criminal Attempts and Conspiracy (Northern Ireland) Order 1983.</p><h2 class='govuk-heading-m'>Money laundering</h2><p class='govuk-body'>This is covered under section 340(11) and 415 of the Proceeds of Crime Act 2002</p><h2 class='govuk-heading-m'>Asylum and immigrants offences</h2><p class='govuk-body'>This is covered under section 4 of the Asylum and Immigration Act 2004.</p><p class='govuk-body'>An offence under sections 15, 21 and 22 of the Immigration and Asylum Act 2006.</p><p class='govuk-body'>An offence under sections 34, 35, 36, 37 and 38 of the Immigration Act 2016.</p><h2 class='govuk-heading-m'>Sexual offences</h2><p class='govuk-body'>This is covered under section 59A of the Sexual Offences Act 2003.</p><p class='govuk-body'>Any offence of viewing, taking, making, possessing or publishing indecent images of a child that leads to imprisonment. </p><h2 class='govuk-heading-m'>Drug trafficking</h2><p class='govuk-body'>This is covered under drug trafficking in section 49 to 51 of the Drug Trafficking Act 1994.</p><h2 class='govuk-heading-m'>Terrorism</h2><p class='govuk-body'>This is covered under section 41 and schedule 2 of the Counter Terrorism Act 2008.</p><h2 class='govuk-heading-m'>Fraud</h2><p class='govuk-body'>This is covered under the common law offence of conspiracy to defraud and section 2, 3, 4, 6 and 7 of the Fraud Act 2006.</p><p class='govuk-body'>Fraudulent trading is covered under section 458 of the Companies Act 1985, article 451 of the Companies (Northern Ireland) Order 1986 or section 993 of the Companies Act 2006.</p><p class='govuk-body'>Fraudulent evasion is covered under section 170 of the Customs and Excise Management Act 1979 or section 72 of the Value Added Tax Act 1994.</p><p class='govuk-body'>Fraudulent activity as defined by Article 1 of the Convention on the protection of the financial interests of the European communities.</p><p class='govuk-body'>The common law offence of cheating the revenue.</p><h2 class='govuk-heading-m'>Theft</h2><p class='govuk-body'>This is covered under the Theft Act 1968, the Theft Act (Northern Ireland) 1969, the Theft Act 1978 or the Theft (Northern Ireland) Order 1978.</p><h2 class='govuk-heading-m'>Corruption</h2><p class='govuk-body'>This is covered under section 1(2) of the Public Bodies Corrupt Practices Act 1889 and section 1 of the Prevention of Corruption Act 1906.</p><h2 class='govuk-heading-m'>Bribery</h2><p class='govuk-body'>This is covered under the common law offence of bribery and section 1, 2, or 6 of the Bribery Act 2010 or section 113 of the Representation of the People Act 1983.</p><h2 class='govuk-heading-m'>Insolvency</h2><p class='govuk-body'>This is covered under sections 6A, 206 to 211,251 and 353 to 360 of the Insolvency Act 1986.</p><h2 class='govuk-heading-m'>Accounting offences</h2><p class='govuk-body'>This is covered under sections 386, 387, 388, and 389 of the Companies Act 2006.</p><h2 class='govuk-heading-m'>Discrimination and prejudice</h2><p class='govuk-body'>This includes offences of hate and intolerance relating to race, religion or sexual orientation that leads to imprisonment.</p><h2 class='govuk-heading-m'>Public Contracts offences</h2><p class='govuk-body'>This is covered by point 1n and 2 of Article 57(1) of The Public Contracts Regulations 2015</p><p class='govuk-body'>Mandatory and discretionary exclusions covered in points 3, 4 and 5 of Article 57(1) of The Public Contracts Regulations 2015</p>"
+			}
+		},
+		{
+			"PageId": "3310",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-50",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation failed to pay back funds in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-repayfunding'>Tell us if anyone who's in control has failed to:</p><ul class='govuk-list govuk-list--bullet'><li>repay &pound;50,000 or more to ESFA or any other public body</li><li>follow the conditions of funding under ESFA funding agreements or sub-contracts</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-50-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>which public body was involved</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation has failed to pay back funds in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3320",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3311",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-51",
+					"QuestionTag": null,
+					"Label": "Have you failed to pay back funds in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-repayfunding-soletrader'>Tell us if anyone who's in control has failed to:</p><ul class='govuk-list govuk-list--bullet'><li>repay &pound;50,000 or more to ESFA or any other public body</li><li>follow the conditions of funding under ESFA funding agreements or sub-contracts</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-51-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>which public body was involved</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have failed to pay back funds in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3321",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3320",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-60",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation been investigated for fraud or irregularities in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-investigatedfraud'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-60-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>what the investigation was</li><li>the outcome of the investigation</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation has been investigated for fraud or irregularities in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3330",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3310",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3321",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-61",
+					"QuestionTag": null,
+					"Label": "Have you been investigated for fraud or irregularities in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-investigatedfraud-soletrader'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-61-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>what the investigation was</li><li>the outcome of the investigation</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have been investigated for fraud or irregularities in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3331",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3311",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3330",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-70",
+					"QuestionTag": null,
+					"Label": "Does anyone who's in control of your organisation have any ongoing investigations for fraud or irregularities?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-ongoingfraud'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-70-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this is</li><li>what the investigation is</li><li>any relevant dates</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation has any ongoing investigations for fraud or irregularities"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3340",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3320",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3331",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-71",
+					"QuestionTag": null,
+					"Label": "Do you have any ongoing investigations for fraud or irregularities?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-ongoingfraud-soletrader'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-71-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>what the investigation is</li><li>any relevant dates</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have any ongoing investigations for fraud or irregularities"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3341",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3321",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3340",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-80",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation had a contract terminated by a public body in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-contractterminated'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-80-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>which public body was involved</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation has had a contract terminated by a public body in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3350",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3330",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:<p><p class='govuk-body'>The provider:</p><p class='govuk-body'>III. Has a director, shadow director, person in control or with powers of representation, influence or management which has held or holds an equivalent or reasonably comparable position with another provider or in another organisation which has had (in relation to any ESFA monies) a contract for services, a grant funding agreement or an apprenticeship agreement with the ESFA terminated early for one or more of the criteria specified in this policy.</p>"
+			}
+		},
+		{
+			"PageId": "3341",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-81",
+					"QuestionTag": null,
+					"Label": "Have you had a contract terminated by a public body in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-contractterminated-soletrader'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-81-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>which public body was involved</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you had a contract terminated by a public body in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3351",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3331",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:<p><p class='govuk-body'>The provider:</p><p class='govuk-body'>III. Has a director, shadow director, person in control or with powers of representation, influence or management which has held or holds an equivalent or reasonably comparable position with another provider or in another organisation which has had (in relation to any ESFA monies) a contract for services, a grant funding agreement or an apprenticeship agreement with the ESFA terminated early for one or more of the criteria specified in this policy.</p>"
+			}
+		},
+		{
+			"PageId": "3350",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-90",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation withdrawn from a contract with a public body in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-contractwithdrawal'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-90-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>which public body was involved</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation withdrawn from a contract with a public body in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3360",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3340",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3351",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-91",
+					"QuestionTag": null,
+					"Label": "Have you withdrawn from a contract with a public body in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-contractwithdrawal-soletrader'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-91-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>which public body was involved</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you withdrawn from a contract with a public body in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3361",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3341",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3360",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-100",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation breached tax payments or social security contributions in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-paymentbreaches'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-100-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>what the breach related to</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation has breached tax payments or social security contributions in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3370",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3350",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3361",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-101",
+					"QuestionTag": null,
+					"Label": "Have you breached tax payments or social security contributions in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-paymentbreaches-soletrader'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-101-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>what the breach related to</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you breached tax payments or social security contributions in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3371",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3351",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3370",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-110",
+					"QuestionTag": null,
+					"Label": "Is anyone who's in control of your organisation on the Register of Removed Trustees?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-removedtrustees'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-110-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>why they were removed</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation is on the Register of Removed Trustees"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3380",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3360",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3371",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-111",
+					"QuestionTag": null,
+					"Label": "Are you on the Register of Removed Trustees?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-removedtrustees-soletrader'></p>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-111-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>why you were removed</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you are on the Register of Removed Trustees"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3381",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3361",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": ""
+		},
+		{
+			"PageId": "3380",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-120",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation or any of its partner organisations been made bankrupt in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-bankruptcy'>A partner organisation is an organisation who either:</p><ul class='govuk-list govuk-list--bullet'><li>shares the same UK ultimate parent company as your organisation - so they are part of the same group</li><li>has a legal contract with your organisation to deliver training</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-120-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was and the organisations involved</li><li>why they were made bankrupt</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation or any of its partner organisations been made bankrupt in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3390",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3300,3370",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>Section 4.4.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>A provider will be considered to be a high risk provider and the ESFA will take action where it, any of the directors, shadow directors, trustees or any person who is a member of the administrative, management or supervisory body of the provider or who has powers of representation, decision, influence, management or control of the provider organisation including through a blind trust, a partner organisation or a parent organisation:</p><p class='govuk-body'>I. Is bankrupt or is the subject of insolvency or winding-up proceedings, where its assets are being administered by a liquidator or by the court or where it is in an arrangement with creditors.</p><p class='govuk-body'>II. Have been served with a Public Interest Winding Up petition under section 124A of the Insolvency Act 1986.</p>"
+			}
+		},
+		{
+			"PageId": "3381",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-121",
+					"QuestionTag": "CC-People-Bankruptcy-SoleTrader",
+					"Label": "Have you been made bankrupt in the last 3 years?",
+					"ShortLabel": "",
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-121-1",
+										"QuestionTag": "CC-People-Bankruptcy-SoleTrader-Information",
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>why you were made bankrupt</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have been made bankrupt in the last 3 years"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3391",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3301,3371",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>Section 4.4.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>A provider will be considered to be a high risk provider and the ESFA will take action where it, any of the directors, shadow directors, trustees or any person who is a member of the administrative, management or supervisory body of the provider or who has powers of representation, decision, influence, management or control of the provider organisation including through a blind trust, a partner organisation or a parent organisation:</p><p class='govuk-body'>I. Is bankrupt or is the subject of insolvency or winding-up proceedings, where its assets are being administered by a liquidator or by the court or where it is in an arrangement with creditors.</p><p class='govuk-body'>II. Have been served with a Public Interest Winding Up petition under section 124A of the Insolvency Act 1986.</p>"
+			}
+		},
+		{
+			"PageId": "3390",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-130",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation, or any of its partner organisations, been subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-prohibition-order'>A partner organisation either:</p><ul class='govuk-list govuk-list--bullet'><li>shares the same UK ultimate parent company as your organisation, so they are part of the same group</li><li>has a legal contract with your organisation to deliver training</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-130-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>why they were subject to a prohibition order</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information"
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation, or any of its partner organisations, has been subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3395",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3380",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:<p><p class='govuk-body'>The provider:</p><p class='govuk-body'>XIII. Has a director, shadow director, person in control or with powers of representation, influence or management who is subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education.</p>"
+			}
+		},
+		{
+			"PageId": "3391",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-131",
+					"QuestionTag": "CC-People-Teaching-Regulations-SoleTrader",
+					"Label": "Have you been subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education?",
+					"ShortLabel": "",
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-131-1",
+										"QuestionTag": "CC-People-Teaching-Regulations-SoleTrader-Information",
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>why you were subject to a prohibition order</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have been subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "3396",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3381",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:<p><p class='govuk-body'>The provider:</p><p class='govuk-body'>XIII. Has a director, shadow director, person in control or with powers of representation, influence or management who is subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education.</p>"
+			}
+		},
+		{
+			"PageId": "3395",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-135",
+					"QuestionTag": null,
+					"Label": "Has anyone who's in control of your organisation, or any of its partner organisations, been subject to a ban from management or governance of schools?",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='cc-people-prohibition-order'>A partner organisation either:</p><ul class='govuk-list govuk-list--bullet'><li>shares the same UK ultimate parent company as your organisation - so they are part of the same group</li><li>has a legal contract with your organisation to deliver training</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-135-1",
+										"QuestionTag": null,
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>full names of who this was</li><li>why they were banned</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information"
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if anyone who's in control of your organisation, or any of its partner organisations, have been subject to a ban from management or governance of schools"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "4.1",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3390",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						"Sole trader"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>This is covered in section 128 of the Education and skills act 2008<p><p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>The provider:</p><p class='govuk-body'>V. Has a director, shadow director, person in control or with powers of representation, influence or management who is subject to a ban under s.128 of the Education and Skills Act.</p>"
+			}
+		},
+		{
+			"PageId": "3396",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Checks on who's in control of your organisation",
+			"LinkTitle": "Checks on who's in control of your organisation",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-136",
+					"QuestionTag": "CC-People-School-Management-Ban-SoleTrader",
+					"Label": "Have you been subject to a ban from  management or governance of schools?",
+					"ShortLabel": "",
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-136-1",
+										"QuestionTag": "CC-People-School-Management-SoleTrader-Information",
+										"Label": "Give us more information",
+										"ShortLabel": "",
+										"QuestionBodyText": "",
+										"Hint": "<p class='govuk-body govuk-hint govuk-!-margin-bottom-1'>You'll need to include:</p><ul class='govuk-list govuk-list--bullet govuk-hint'><li>why you were banned</li><li>if any actions were taken to resolve this</li></ul>",
+										"Input": {
+											"Type": "Textarea",
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter more information "
+												},
+												{
+													"Name": "MaxWordCount",
+													"Value": "500",
+													"ErrorMessage": "Your answer must be 500 words or less"
+												}
+											]
+										}
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us if you have been subject to a ban from management or governance of schools"
+							}
+						]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "4.1",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"ActivatedByPageId": "3391",
+			"NotRequiredConditions": [
+				{
+					"Field": "SoleTradeOrPartnership",
+					"IsOneOf": [
+						null,
+						"Partnership"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": {
+				"Title": "Further information",
+				"Body": "<p class='govuk-body'>This is covered in section 128 of the Education and skills act 2008<p><p class='govuk-body'>Section 5.1.1 of the Funding higher risk organisations and subcontractors policy:</p><p class='govuk-body'>The provider:</p><p class='govuk-body'>V. Has a director, shadow director, person in control or with powers of representation, influence or management who is subject to a ban under s.128 of the Education and Skills Act.</p>"
+			}
+		}
+	]
+}

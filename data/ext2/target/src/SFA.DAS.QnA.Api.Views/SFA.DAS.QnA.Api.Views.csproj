@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+        <PackageId>SFA.DAS.QnA.Api.Views</PackageId>
+        <Version>0.4.1</Version>
+        <Authors>EFSA</Authors>
+        <Company>EFSA</Company>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageOutputPath>..\NugetPackages</PackageOutputPath>
+        <PackageVersion>0.2.32.0</PackageVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="Views/**/*.*">
+            <IncludeInPackage>true</IncludeInPackage>
+            <BuildAction>Content</BuildAction>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+  <ItemGroup Condition=" $(TargetFramework) == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+</Project>

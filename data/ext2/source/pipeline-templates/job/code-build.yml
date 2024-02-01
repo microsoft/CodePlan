@@ -1,0 +1,92 @@
+parameters:
+  SolutionBaseName:
+
+jobs:
+- job: CodeBuild
+  pool:
+    name: DAS - Continuous Integration Agents
+    workspace:
+      clean: all
+  variables:
+  - group: BUILD Management Resources
+  - name: BuildConfiguration
+    value: release
+
+  steps:
+  - template: azure-pipelines-templates/build/step/gitversion.yml@das-platform-building-blocks
+
+  - template: azure-pipelines-templates/build/step/app-build.yml@das-platform-building-blocks
+    parameters:
+      SonarCloudProjectKey: SkillsFundingAgency_das-qna-api
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Publish Internal API'
+    inputs:
+      command: publish
+      publishWebProjects: false
+      projects: 'src/${{ parameters.SolutionBaseName }}.Api/${{ parameters.SolutionBaseName }}.Api.csproj'
+      arguments: '--configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)/publish --no-restore  --no-build'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Publish DB Job'
+    inputs:
+      command: publish
+      publishWebProjects: false
+      projects: src/${{ parameters.SolutionBaseName }}.Data/${{ parameters.SolutionBaseName }}.Data.csproj
+      arguments: '--configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)/publish --no-restore  --no-build'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet pack'
+    inputs:
+      command: pack
+      packagesToPack: src/${{ parameters.SolutionBaseName }}.Api.Types/${{ parameters.SolutionBaseName }}.Api.Types.csproj
+      packDirectory: '$(build.artifactstagingdirectory)/publish'
+      versioningScheme: byBuildNumber
+      buildProperties: 'Version="$(Build.BuildNumber)"'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet pack'
+    inputs:
+      command: pack
+      packagesToPack: src/${{ parameters.SolutionBaseName }}.Api.Client/${{ parameters.SolutionBaseName }}.Api.Client.csproj
+      packDirectory: '$(build.artifactstagingdirectory)/publish'
+      versioningScheme: byBuildNumber
+      buildProperties: 'Version="$(Build.BuildNumber)"'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet pack'
+    inputs:
+      command: pack
+      packagesToPack: src/${{ parameters.SolutionBaseName }}.Api.Views/${{ parameters.SolutionBaseName }}.Api.Views.csproj
+      packDirectory: '$(build.artifactstagingdirectory)/publish'
+      versioningScheme: byBuildNumber
+      buildProperties: 'Version="$(Build.BuildNumber)"'
+
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+    inputs:
+      Contents: |
+        azure/**
+        src/${{ parameters.SolutionBaseName }}.Database/projects/**
+      TargetFolder: '$(build.artifactstagingdirectory)/'
+      OverWrite: true
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact'
+    inputs:
+      PathtoPublish: '$(build.artifactstagingdirectory)/'
+
+  - template: azure-pipelines-templates/build/step/nuget-pack.yml@das-platform-building-blocks
+    parameters:
+      DotNetStandardPackagesToPack: |
+        src/${{ parameters.SolutionBaseName }}.Api.Views/${{ parameters.SolutionBaseName }}.Api.Views.csproj;
+
+  - template: azure-pipelines-templates/build/step/nuget-pack.yml@das-platform-building-blocks
+    parameters:
+      DotNetStandardPackagesToPack: |
+        src/${{ parameters.SolutionBaseName }}.Api.Client/${{ parameters.SolutionBaseName }}.Api.Client.csproj;
+        
+  - template: azure-pipelines-templates/build/step/nuget-pack.yml@das-platform-building-blocks
+    parameters:
+      DotNetStandardPackagesToPack: |
+        src/${{ parameters.SolutionBaseName }}.Api.Types/${{ parameters.SolutionBaseName }}.Api.Types.csproj;

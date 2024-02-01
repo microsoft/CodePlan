@@ -1,0 +1,97 @@
+{
+    "Title": "Introduction and what you'll need <span class='govuk-visually-hidden'> for delivering apprenticeship training</span>",
+    "LinkTitle": "Introduction and what you'll need",
+    "DisplayType": "",
+    "Pages": [
+        {
+            "PageId": "7000",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Delivering apprenticeship training",
+            "LinkTitle": "Delivering apprenticeship training",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "7.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body' id='dat-intro-main'>For this section, you'll need to know:</p><ul class='govuk-list govuk-list--bullet'><li>who has overall accountability for apprenticeships</li><li>your organisation's management hierarchy for apprenticeships</li><li>your management hierarchy's expectations for quality and high standards in apprenticeship training</li><li>who's responsible for quality and high standards in apprenticeship training</li><li>who's responsible for developing and delivering training</li><li>the sectors your organisation will offer apprenticeships in</li><li>the experience and qualifications of the people who will deliver training </li></ul><p class='govuk-body'>You'll also need to upload your organisation's policy for professional development of employees. We'll ask for examples of how this policy is implemented.</p><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "7001",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Delivering apprenticeship training",
+            "LinkTitle": "Delivering apprenticeship training",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "7.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body' id='dat-intro-emp'>For this section, you'll need to know:</p><ul class='govuk-list govuk-list--bullet'><li>who has overall accountability for apprenticeships</li><li>your organisation's management hierarchy for apprenticeships</li><li>your management hierarchy's expectations for quality and high standards in apprenticeship training</li><li>who's responsible for quality and high standards in apprenticeship training</li><li>the sectors your organisation will offer apprenticeships in</li><li>the experience and qualifications of the people who will deliver training</li></ul><p class='govuk-body'>You'll also need to upload your organisation's policy for professional development of employees. We'll ask for examples of how this policy is implemented.</p><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "7002",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Delivering apprenticeship training",
+            "LinkTitle": "Delivering apprenticeship training",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "7.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body' id='dat-intro-supp'>For this section, you'll need to know:</p><ul class='govuk-list govuk-list--bullet'><li>who has overall accountability for apprenticeships</li><li>your organisation's management hierarchy for apprenticeships</li><li>your organisation's expectations for quality and high standards in apprenticeship training</li><li>who's responsible for quality and high standards in apprenticeship training</li><li>who's responsible for developing and delivering training</li><li>the sectors your organisation will offer apprenticeships in</li><li>the experience and qualifications of the people who will deliver training</li></ul><p class='govuk-body'>You'll also need to upload your organisation's policy for professional development of employees. We'll ask for examples of how this policy is implemented.</p><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>",
+            "ActivatedByPageId": null
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "summary": {
+        "avg_diff_bleu": 0.6497069237250437,
+        "total_ld": 9146.0,
+        "matched_blocks": 34,
+        "missed_blocks": 30,
+        "spurious_blocks": 27
+    },
+    "full": {
+        "text": [
+            {
+                "input_type": "file_diff",
+                "metric_type": "bleu",
+                "results": {
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\IterablePublisherTest.cs": 1.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\SyncSubscriberTest.cs": 0.6518407939980942,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\SyncSubscriberWhiteboxTest.cs": 0.38320557920884285,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\UnboundedIntegerIncrementPublisherTest.cs": 1.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\EmptyLazyPublisherTest.cs": 1.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\IdentityProcessorVerificationTest.cs": 0.14300359629811157,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\PublisherVerificationTest.cs": 0.31332945321545763,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\RangePublisherTest.cs": 0.2324601752470436,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SingleElementPublisherTest.cs": 1.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SubscriberBlackboxVerificationTest.cs": 0.4551491937905096,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SubscriberWhiteboxVerificationTest.cs": 0.6270692714837809,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SyncTriggeredDemandSubscriberTest.cs": 1.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SyncTriggeredDemandSubscriberWhiteboxTest.cs": 1.0,
+                    "src\\tck\\Reactive.Streams.TCK\\PublisherVerification.cs": 0.3482041881980995,
+                    "src\\tck\\Reactive.Streams.TCK\\TestEnvironment.cs": 0.5913416044357174
+                }
+            },
+            {
+                "input_type": "file",
+                "metric_type": "levenshtein",
+                "results": {
+                    "src\\SharedAssemblyInfo.cs": 0.0,
+                    "src\\api\\Reactive.Streams\\IProcessor.cs": 0.0,
+                    "src\\api\\Reactive.Streams\\IPublisher.cs": 0.0,
+                    "src\\api\\Reactive.Streams\\ISubscriber.cs": 0.0,
+                    "src\\api\\Reactive.Streams\\ISubscription.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\AsyncSubscriberTest.cs": 35.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\IterablePublisherTest.cs": 6.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\Properties\\AssemblyInfo.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\SyncSubscriberTest.cs": 230.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\SyncSubscriberWhiteboxTest.cs": 39.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast.Tests\\UnboundedIntegerIncrementPublisherTest.cs": 6.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\AsyncIterablePublisher.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\AsyncSubscriber.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\AtomicBoolean.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\IllegalStateException.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\InfiniteIncrementNumberPublisher.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\NumberIterablePublisher.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\Properties\\AssemblyInfo.cs": 0.0,
+                    "src\\examples\\Reactive.Streams.Example.Unicast\\SyncSubscriber.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\EmptyLazyPublisherTest.cs": 8.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\IdentityProcessorVerificationDelegationTest.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\IdentityProcessorVerificationTest.cs": 394.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\Properties\\AssemblyInfo.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\PublisherVerificationTest.cs": 259.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\RangePublisherTest.cs": 5900.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SingleElementPublisherTest.cs": 8.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SubscriberBlackboxVerificationTest.cs": 491.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SubscriberWhiteboxVerificationTest.cs": 454.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\Support\\LamdaPublisher.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\Support\\LamdaSubscriber.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\Support\\LamdaSubscription.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\Support\\SyncTriggeredDemandSubscriber.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\Support\\TCKVerificationSupport.cs": 20.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SyncTriggeredDemandSubscriberTest.cs": 14.0,
+                    "src\\tck\\Reactive.Streams.TCK.Tests\\SyncTriggeredDemandSubscriberWhiteboxTest.cs": 8.0,
+                    "src\\tck\\Reactive.Streams.TCK\\IdentityProcessorVerification.cs": 12.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Properties\\AssemblyInfo.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\PublisherVerification.cs": 149.0,
+                    "src\\tck\\Reactive.Streams.TCK\\SubscriberBlackboxVerification.cs": 9.0,
+                    "src\\tck\\Reactive.Streams.TCK\\SubscriberWhiteboxVerification.cs": 9.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\AtomicBoolean.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\AtomicCounter.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\AtomicCounterLong.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\AtomicReference.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\HelperPublisher.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\IPublisherVerificationRules .cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\ISubscriberBlackboxVerificationRules.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\ISubscriberWhiteboxVerificationRules.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\IllegalStateException.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\InfiniteHelperPublisher.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\Option.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\SubscriberBufferOverflowException.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\Support\\TestException.cs": 0.0,
+                    "src\\tck\\Reactive.Streams.TCK\\TestEnvironment.cs": 1095.0,
+                    "src\\tck\\Reactive.Streams.TCK\\WithHelperPublisher.cs": 0.0
+                }
+            }
+        ],
+        "blocks": {
+            "matched_blocks": 34,
+            "missed_blocks": 30,
+            "spurious_blocks": 27
+        }
+    }
+}

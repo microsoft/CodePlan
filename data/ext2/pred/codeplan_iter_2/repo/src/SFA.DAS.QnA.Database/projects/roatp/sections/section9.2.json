@@ -1,0 +1,88 @@
+{
+    "Title": "Quality statement",
+    "LinkTitle": "Quality statement",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "9100",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Quality statement",
+            "LinkTitle": "Quality statement",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FIN-40",
+                    "QuestionTag": "FinishCommercialConfidence",
+                    "Label": "Do you understand that your organisation must develop and deliver apprenticeship training in line with the Institute for Apprenticeships and Technical Education's 'quality statement'?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Find out more about <a href='https://www.instituteforapprenticeships.org/quality/what-is-a-quality-apprenticeship/' class='govuk-link' target='_blank'>the Institute for Apprenticeships and Technical Education's 'quality statement' (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if you understand that your organisation must develop and deliver apprenticeship training in line with the Institute for Apprenticeships and Technical Education's 'quality statement'"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "100055",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FIN-40",
+                            "MustEqual": "No"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "9.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "100055",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Before you submit your application",
+            "LinkTitle": "Before you submit your application",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [],
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body'>Before you submit your application you must understand the Institute for Apprenticeships and Technical Education's 'quality statement'.</p>",
+            "ActivatedByPageId": "9100"
+        }
+    ]
+}

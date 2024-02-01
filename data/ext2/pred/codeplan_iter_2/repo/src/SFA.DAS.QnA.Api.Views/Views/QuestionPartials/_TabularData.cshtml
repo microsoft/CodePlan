@@ -1,0 +1,54 @@
+@using Newtonsoft.Json
+@model dynamic
+
+@{
+    var isError = Model.ErrorMessages != null && Model.ErrorMessages.Count > 0 ? "govuk-input--error" : "";
+
+    var tableData = JsonConvert.DeserializeObject<dynamic>(Model.Value);
+}
+
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+@if (tableData != null && tableData.HeadingTitles != null && tableData.DataRows != null)
+{
+    <table class="govuk-table">
+        @if (tableData.Caption != null)
+        {
+            <caption class="govuk-table__caption">
+                @tableData.Caption
+            </caption>
+        }
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                @foreach (var title in tableData.HeadingTitles)
+                {
+                    <th class="govuk-table__header" scope="col">@Html.Raw(title)</th>
+                }
+            </tr>
+        </thead>
+        <tbody class="govuk-table_body">
+            @foreach (var dataRow in tableData.DataRows)
+            {
+                <tr class="govuk-table__row">
+                    @foreach (var column in dataRow.Columns)
+                    {
+                        <td class="govuk-table__cell">@column</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+    <input type="hidden" id="@Model.QuestionId" name="@Model.QuestionId" value="@tableData" />
+}
+else
+{
+    <input type="hidden" id="@Model.QuestionId" name="@Model.QuestionId" value="{}" />
+}

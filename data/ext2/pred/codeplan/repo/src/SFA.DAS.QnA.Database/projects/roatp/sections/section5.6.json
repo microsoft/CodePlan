@@ -1,0 +1,97 @@
+{
+    "Title": "Prior learning of apprentices",
+    "LinkTitle": "Prior learning of apprentices",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "5500",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Prior learning of apprentices",
+            "LinkTitle": "Prior learning of apprentices",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "RTE-60",
+                    "QuestionTag": null,
+                    "Label": "What is your organisation's process for initial assessments to recognise prior learning?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-prior-learning'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>review personal learning records</li><li>review relevant education (including training, qualifications and work experience already achieved)</li><li>identify and analyse skill gaps</li><li>use apprenticeships to address any skill gaps</li></ul><p class='govuk-body'>Find out more about <a href='https://www.gov.uk/government/publications/apprenticeships-recognition-of-prior-learning/apprenticeships-initial-assessment-to-recognise-prior-learning' class='govuk-link' target='_blank'>initial assessments (opens in a new window or tab)</a>.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what your organisation's process is for initial assessments to recognise prior learning"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "5510",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "5510",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Prior learning of apprentices",
+            "LinkTitle": "Prior learning of apprentices",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "RTE-61",
+                    "QuestionTag": null,
+                    "Label": "What is your organisation's process to assess English and maths qualifications for apprentices?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-assess-qualifications'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>review existing English and maths qualifications</li><li>measure these qualifications against entry level requirements for apprenticeships</li><li>identify and analyse any learning gaps</li><li>identify no further learning requirements for English and maths</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what your organisation's process is to assess English and maths qualifications for apprentices"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.7",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }
+    ]
+}

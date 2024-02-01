@@ -1,0 +1,496 @@
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.TestEnvironment
+public TestEnvironment()
+            : this(EnvironmentDefaultTimeoutMilliseconds(), EnvironmentDefaultNoSignalsTimeoutMilliseconds())
+        {
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.Example.Unicast.Tests.SyncSubscriberTest._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.Example.Unicast.Tests.SyncSubscriberTest.Subscriber._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.SyncSubscriberTest.Subscriber.Subscriber
+public Subscriber(ITestOutputHelper output)
+            {
+                _output = output;
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.Output
+public ITestOutputHelper Output { get; }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.FindCallerMethodInStackTrace
+public string FindCallerMethodInStackTrace(string method)
+        {
+            var stack = Environment.StackTrace;
+
+            foreach (var line in stack.Split('\n', '\r'))
+                if (line.Contains(method))
+                    return line;
+
+            return string.Empty;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\AssertionException.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.AssertionException.AssertionException
+public AssertionException(string message) : base(message)
+        { }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\AssertionException.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.AssertionException.AssertionException
+public AssertionException(string message, Exception inner) :
+            base(message, inner)
+        { }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\AssertionException.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.AssertionException.AssertionException
+protected AssertionException(System.Runtime.Serialization.SerializationInfo info, 
+            System.Runtime.Serialization.StreamingContext context) : base(info,context)
+        {}
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\TckAssert.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.TckAssert.Fail
+public static void Fail(string message, params object[] args)
+        {
+            if (message == null) message = string.Empty;
+            else if (args != null && args.Length > 0)
+                message = string.Format(message, args);
+
+            throw new AssertionException(message);
+            //ReportFailure(message);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\TckAssert.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.TckAssert.Fail
+public static void Fail(string message)
+        {
+            Fail(message, null);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\TckAssert.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.TckAssert.Fail
+public static void Fail()
+        {
+            Fail(string.Empty, null);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\TckAssert.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.TckAssert.Skip
+public static void Skip(string message, params object[] args)
+        {
+            if (message == null) message = string.Empty;
+            else if (args != null && args.Length > 0)
+                message = string.Format(message, args);
+
+            /*
+            // If we are in a multiple assert block, this is an error
+            if (TestExecutionContext.CurrentContext.MultipleAssertLevel > 0)
+                throw new Exception("Assert.Ignore may not be used in a multiple assertion block.");
+            */
+
+            throw new SkipException(message);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\TckAssert.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.TckAssert.Skip
+public static void Skip(string message)
+        {
+            Skip(message, null);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\Support\TckAssert.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Support.TckAssert.Skip
+public static void Skip()
+        {
+            Skip(string.Empty, null);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest.IdentityProcessorVerificationTest
+public IdentityProcessorVerificationTest(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.PublisherVerificationTest._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.PublisherVerificationTest
+public PublisherVerificationTest(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.SubscriberBlackboxVerificationTest
+public SubscriberBlackboxVerificationTest(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberWhiteboxVerificationTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.SubscriberWhiteboxVerificationTest._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberWhiteboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberWhiteboxVerificationTest.SubscriberWhiteboxVerificationTest
+public SubscriberWhiteboxVerificationTest(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.CustomBlackboxVerification.CustomBlackboxVerification
+public CustomBlackboxVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.NoopPublisherVerification
+private PublisherVerification<int> NoopPublisherVerification()
+        {
+            var publisher = new LamdaPublisher<int>(onSubscribe: subscriber =>
+            {
+                subscriber.OnSubscribe(new LamdaSubscription());
+            });
+
+            return new SimpleVerification(new TestEnvironment(_output), publisher);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.CustomPublisherVerification
+private PublisherVerification<int> CustomPublisherVerification(IPublisher<int> publisher)
+            => new SimpleVerification(new TestEnvironment(_output), publisher);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.CustomSubscriberVerification
+private SubscriberBlackboxVerification<int?> CustomSubscriberVerification(ISubscriber<int?> subscriber)
+            => new CustomBlackboxVerification(new TestEnvironment(_output), subscriber);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.DemandIgnoringSynchronousPublisherVerification
+private PublisherVerification<int> DemandIgnoringSynchronousPublisherVerification()
+        {
+            var publisher = new LamdaPublisher<int>(onSubscribe: subscriber =>
+            {
+                subscriber.OnSubscribe(new LamdaSubscription(onRequest: n =>
+                {
+                    for (var i = 0L; i <= n; i++)
+                        // one too much
+                        subscriber.OnNext((int)i);
+                }));
+            });
+            return new SimpleVerification(new TestEnvironment(_output), publisher);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.DemandIgnoringAsynchronousPublisherVerification
+private PublisherVerification<int> DemandIgnoringAsynchronousPublisherVerification(bool swallowOnNextExceptions, CancellationToken token)
+            => new SimpleVerification(new TestEnvironment(_output), new DemandIgnoringAsyncPublisher(swallowOnNextExceptions, token));
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberWhiteboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberWhiteboxVerificationTest.SimpleSubscriberVerification
+private SubscriberWhiteboxVerification<int?> SimpleSubscriberVerification()
+            => new SimpleWhiteboxVerification(new TestEnvironment(_output));
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SingleElementPublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SingleElementPublisherTest.SingleElementPublisherTest
+public SingleElementPublisherTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+            
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.SimpleSubscriberVerification
+private SubscriberBlackboxVerification<int> SimpleSubscriberVerification()
+            => new SimpleBlackboxVerification(new TestEnvironment(_output));
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\EmptyLazyPublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.EmptyLazyPublisherTest.EmptyLazyPublisherTest
+public EmptyLazyPublisherTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+            
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.SyncSubscriberTest.Subscriber.OnComplete
+public override void OnComplete() => _output.WriteLine("Accumulated: " + _acc);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisherTest
+public RangePublisherTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\IterablePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.IterablePublisherTest.IterablePublisherTest
+public IterablePublisherTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.TestEnvironment
+public TestEnvironment(long defaultTimeoutMilliseconds, ITestOutputHelper output)
+            : this(defaultTimeoutMilliseconds, defaultTimeoutMilliseconds, output)
+        {
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\AsyncSubscriberTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.AsyncSubscriberTest.AsyncSubscriberTest
+public AsyncSubscriberTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\UnboundedIntegerIncrementPublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.UnboundedIntegerIncrementPublisherTest.UnboundedIntegerIncrementPublisherTest
+public UnboundedIntegerIncrementPublisherTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.SyncSubscriberTest.SyncSubscriberTest
+public SyncSubscriberTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+			_output = output;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\PublisherVerification.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.PublisherVerification.OptionalActivePublisherTest
+public void OptionalActivePublisherTest(long elements, bool completionSignalRequired, Action<IPublisher<T>> run)
+        {
+            if (elements > MaxElementsFromPublisher)
+                TckAssert.Skip($"Uable to run this test as required elements nr : {elements} is higher than supported by given producer {MaxElementsFromPublisher}");
+            if (completionSignalRequired && MaxElementsFromPublisher == long.MaxValue)
+                TckAssert.Skip("Unable to run this test, as it requires an onComplete signal, which this Publisher is unable to provide (as signalled by returning long.MaxValue from `MaxElementsFromPublisher");
+
+            var publisher = CreatePublisher(elements);
+            var skipMessage = "Skipped because tested publisher does NOT implement this OPTIONAL requirement.";
+
+            try
+            {
+                PotentiallyPendingTest(publisher, run);
+            }
+            catch (AssertionException ex)
+            {
+                NotVerified(skipMessage + "Reason for skipping was: " + ex.Message);
+            }
+            /*
+            catch (Exception)
+            {
+                NotVerified(skipMessage);
+            }
+            */
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberWhiteboxTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.ValueTypeSyncSubscriberWhiteboxTest.ValueTypeSyncSubscriberWhiteboxTest
+public ValueTypeSyncSubscriberWhiteboxTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.TestEnvironment
+public TestEnvironment(ITestOutputHelper output)
+            : this(EnvironmentDefaultTimeoutMilliseconds(), EnvironmentDefaultNoSignalsTimeoutMilliseconds(), output)
+        {
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.Optional_spec105_emptyStreamMustTerminateBySignallingOnComplete_shouldNotAllowEagerOnComplete
+[SkippableFact]
+        public void Optional_spec105_emptyStreamMustTerminateBySignallingOnComplete_shouldNotAllowEagerOnComplete()
+        {
+            var publisher = new LamdaPublisher<int>(onSubscribe: subscriber => subscriber.OnComplete());
+            var verification = new Spec105Verification(new TestEnvironment(_output), publisher);
+            RequireTestFailure(() => verification.Optional_spec105_emptyStreamMustTerminateBySignallingOnComplete(),
+                "Subscriber.OnComplete() called before Subscriber.OnSubscribe");
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SyncTriggeredDemandSubscriberTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SyncTriggeredDemandSubscriberTest.SyncTriggeredDemandSubscriberTest
+public SyncTriggeredDemandSubscriberTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.OnErroringPublisherVerification
+private PublisherVerification<int> OnErroringPublisherVerification()
+        {
+            var publisher = new LamdaPublisher<int>(onSubscribe: subscriber =>
+            {
+                subscriber.OnSubscribe(new LamdaSubscription(onRequest: n =>
+                {
+                    subscriber.OnError(new TestException());
+                }));
+            });
+
+            return new SimpleVerification(new TestEnvironment(_output), publisher);
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.SyncSubscriberTest.CreateSubscriber
+public override ISubscriber<int?> CreateSubscriber() => new Subscriber(_output);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberWhiteboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberWhiteboxVerificationTest.CustomWhiteboxVerification.CustomWhiteboxVerification
+public CustomWhiteboxVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest.NewTestEnvironment
+private static TestEnvironment NewTestEnvironment(ITestOutputHelper output)
+            => new TestEnvironment(DefaultTimeoutMilliseconds, DefaultNoSignalsTimeoutMilliseconds, output);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.NoopSubscriberVerification
+private SubscriberBlackboxVerification<int> NoopSubscriberVerification()
+            => new NoopBlackboxVerification(new TestEnvironment(_output));
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest.Spec104IgnoreVerification.Spec104IgnoreVerification
+public Spec104IgnoreVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\PublisherVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.PublisherVerificationTest.CustomPublisherVerification
+private PublisherVerification<int> CustomPublisherVerification(IPublisher<int> publisher,
+            IPublisher<int> errorPublisher)
+            => new SimpleVerification(new TestEnvironment(_output), publisher, errorPublisher);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.TestEnvironment
+public TestEnvironment(long defaultTimeoutMilliseconds, long defaultNoSignalsTimeoutMilliseconds, ITestOutputHelper output)
+        {
+            DefaultTimeoutMilliseconds = defaultTimeoutMilliseconds;
+            DefaultNoSignalsTimeoutMilliseconds = defaultNoSignalsTimeoutMilliseconds;
+            Output = output;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.Debug
+public void Debug(string message)
+        {
+            Output?.WriteLine($"[TCK-DEBUG] {message}");
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberWhiteboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberWhiteboxVerificationTest.SimpleWhiteboxVerification.SimpleWhiteboxVerification
+public SimpleWhiteboxVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SyncTriggeredDemandSubscriberWhiteboxTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SyncTriggeredDemandSubscriberWhiteboxTest.SyncTriggeredDemandSubscriberWhiteboxTest
+public SyncTriggeredDemandSubscriberWhiteboxTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest.Required_spec104_mustCallOnErrorOnAllItsSubscribersIfItEncountersANonRecoverableError_shouldBeIgnored
+[SkippableFact]
+        public void Required_spec104_mustCallOnErrorOnAllItsSubscribersIfItEncountersANonRecoverableError_shouldBeIgnored()
+        {
+            RequireTestSkip(() =>
+            {
+                new Spec104IgnoreVerification(NewTestEnvironment(_output))
+                    .Required_spec104_mustCallOnErrorOnAllItsSubscribersIfItEncountersANonRecoverableError();
+            }, "The Publisher under test only supports 1 subscribers, while this test requires at least 2 to run");
+        }
+--------------------------------------------------
+src\examples\Reactive.Streams.Example.Unicast.Tests\SyncSubscriberWhiteboxTest.cs
+BlockTypes.METHOD, Reactive.Streams.Example.Unicast.Tests.NullableSyncSubscriberWhiteboxTest.NullableSyncSubscriberWhiteboxTest
+public NullableSyncSubscriberWhiteboxTest(ITestOutputHelper output) : base(new TestEnvironment(output))
+        {
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\PublisherVerification.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.PublisherVerification.Optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront
+[SkippableFact]
+        public void Optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront()
+            => OptionalActivePublisherTest(3, false, publisher =>
+            {
+                var sub1 = _environment.NewManualSubscriber(publisher);
+                var sub2 = _environment.NewManualSubscriber(publisher);
+                var sub3 = _environment.NewManualSubscriber(publisher);
+
+                // if the publisher must touch it's source to notice it's been drained, the OnComplete won't come until we ask for more than it actually contains...
+                // edgy edge case?
+                sub1.Request(4);
+                sub2.Request(4);
+                sub3.Request(4);
+
+                var received1 = sub1.NextElements(3);
+                var received2 = sub2.NextElements(3);
+                var received3 = sub3.NextElements(3);
+
+                // NOTE: can't check completion, the Publisher may not be able to signal it
+                //       a similar test *with* completion checking is implemented
+
+                received1.Should().BeEquivalentTo(received2,
+                    "Expected elements to be signaled in the same sequence to 1st and 2nd subscribers");
+                received2.Should().BeEquivalentTo(received3,
+                    "Expected elements to be signaled in the same sequence to 2st and 3nd subscribers");
+            });
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.SimpleBlackboxVerification.SimpleBlackboxVerification
+public SimpleBlackboxVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberWhiteboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberWhiteboxVerificationTest.CustomSubscriberVerification
+private SubscriberWhiteboxVerification<int?> CustomSubscriberVerification(
+            Func<WhiteboxSubscriberProbe<int?>, ISubscriber<int?>> newSubscriber)
+            => new CustomWhiteboxVerification(new TestEnvironment(_output), newSubscriber);
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest.Spec104WaitingVerification.Spec104WaitingVerification
+public Spec104WaitingVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\IdentityProcessorVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.IdentityProcessorVerificationTest.Required_spec104_mustCallOnErrorOnAllItsSubscribersIfItEncountersANonRecoverableError_shouldFailWhileWaitingForOnError
+[SkippableFact]
+        public void Required_spec104_mustCallOnErrorOnAllItsSubscribersIfItEncountersANonRecoverableError_shouldFailWhileWaitingForOnError()
+        {
+            RequireTestFailure(() =>
+            {
+                new Spec104WaitingVerification(NewTestEnvironment(_output), DefaultTimeoutMilliseconds)
+                    .Required_spec104_mustCallOnErrorOnAllItsSubscribersIfItEncountersANonRecoverableError();
+            }, "Did not receive expected error on downstream within " + DefaultTimeoutMilliseconds);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\SubscriberBlackboxVerificationTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.SubscriberBlackboxVerificationTest.NoopBlackboxVerification.NoopBlackboxVerification
+public NoopBlackboxVerification(ITestOutputHelper output) : base(new TestEnvironment(output))
+            {
+
+            }
+--------------------------------------------------
+

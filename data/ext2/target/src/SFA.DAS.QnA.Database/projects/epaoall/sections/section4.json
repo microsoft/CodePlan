@@ -1,0 +1,2149 @@
+{
+	"Title": "Apply to assess a standard",
+	"LinkTitle": "Apply to assess a standard",
+	"DisplayType": "PagesWithSections",
+	"RequestedFeedbackAnswered": null,
+	"Pages": [
+		{
+			"PageId": "24",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Information commissioner's office registration",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-01",
+					"QuestionTag": null,
+					"Label": "Information commissioner's office (ICO) registration number",
+					"ShortLabel": "Information commissoner's office registration",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "Provide your ICO registration number",
+					"Input": {
+						"Type": "Text",
+						"InputClasses": "govuk-input--width-10",
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter your ICO registration number"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "25",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "25",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Internal audit policy",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-02",
+					"QuestionTag": null,
+					"Label": "Internal audit policy",
+					"ShortLabel": "Internal audit policy",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Upload a PDF of your organisation's internal audit policy in respect to fraud and financial irregularity</p>",
+					"Hint": "The PDF file must be smaller than 5MB",
+					"Input": {
+						"Type": "FileUpload",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select an internal audit policy document"
+							},
+							{
+								"Name": "FileType",
+								"Value": "pdf,application/pdf",
+								"ErrorMessage": "The selected file must be a PDF"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "26",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "26",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Public liability insurance",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-03",
+					"QuestionTag": null,
+					"Label": "Public liability insurance",
+					"ShortLabel": "Public liability insurance",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Upload a PDF of your public liability certificate of insurance</p>",
+					"Hint": "If you are providing any form of training or consultancy, you must have public liability insurance. The PDF file must be smaller than 5MB.",
+					"Input": {
+						"Type": "FileUpload",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select a public liability certificate of insurance"
+							},
+							{
+								"Name": "FileType",
+								"Value": "pdf,application/pdf",
+								"ErrorMessage": "The selected file must be a PDF"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "27",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "27",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Professional indemnity insurance",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-04",
+					"QuestionTag": null,
+					"Label": "Professional indemnity insurance",
+					"ShortLabel": "Professional indemnity insurance",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Upload a PDF of your professional indemnity certificate of insurance</p>",
+					"Hint": "If you are providing any form of training or consultancy, you must have professional indemnity insurance. The PDF file must be smaller than 5MB.",
+					"Input": {
+						"Type": "FileUpload",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select a professional indemnity certificate of insurance"
+							},
+							{
+								"Name": "FileType",
+								"Value": "pdf,application/pdf",
+								"ErrorMessage": "The selected file must be a PDF"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "28",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "28",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Employers liability insurance",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-05",
+					"QuestionTag": null,
+					"Label": "Employers liability insurance",
+					"ShortLabel": "Employers liability insurance",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Upload a PDF of your employers liability certificate of insurance (optional)</p>",
+					"Hint": "If you have any employees, you must have employers liability insurance. The PDF file must be smaller than 5MB.",
+					"Input": {
+						"Type": "FileUpload",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "FileType",
+								"Value": "pdf,application/pdf",
+								"ErrorMessage": "The selected file must be a PDF"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "29",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "29",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Safeguarding policy",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-06",
+					"QuestionTag": null,
+					"Label": "Safeguarding policy",
+					"ShortLabel": "Safeguarding policy",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Upload a PDF of your safeguarding policy</p>",
+					"Hint": "The PDF file must be smaller than 5MB",
+					"Input": {
+						"Type": "FileUpload",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select a safeguarding policy document"
+							},
+							{
+								"Name": "FileType",
+								"Value": "pdf,application/pdf",
+								"ErrorMessage": "The selected file must be a PDF"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "30",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "30",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your policies and procedures",
+			"LinkTitle": "Prevent agenda policy",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-07",
+					"QuestionTag": null,
+					"Label": "Prevent agenda policy",
+					"ShortLabel": "Prevent agenda policy",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Upload a PDF of your prevent agenda policy</p>",
+					"Hint": "The PDF file must be smaller than 5MB",
+					"Input": {
+						"Type": "FileUpload",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select a prevent agenda policy document"
+							},
+							{
+								"Name": "FileType",
+								"Value": "pdf,application/pdf",
+								"ErrorMessage": "The selected file must be a PDF"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "39",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "39",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your assessors",
+			"LinkTitle": "Number of assessors",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-20",
+					"QuestionTag": "number_of_assessors",
+					"Label": "How many assessors will you have?",
+					"ShortLabel": "Number of assessors",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "This should include invigilators where the end-point assessment is an examination",
+					"Input": {
+						"Type": "Number",
+						"InputClasses": "govuk-input--width-3",
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Provide the number of assessors your organisation will have"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "40",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "40",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your assessors",
+			"LinkTitle": "Assessment capacity",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-21",
+					"QuestionTag": "number_of_assessments",
+					"Label": "How many end-point assessments will you be able to deliver annually?",
+					"ShortLabel": "Assessment capacity",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "Number",
+						"InputClasses": "govuk-input--width-5",
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "What's the volume of end-point assessments you will be able to deliver"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "41",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "41",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your assessors",
+			"LinkTitle": "Ability to deliver assessments",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-22",
+					"QuestionTag": null,
+					"Label": "How will the volume of end-point assessments be achieved with the number of assessors you will have?",
+					"ShortLabel": "How will the volume of end-point assessments be achieved with the number of assessors you will have?",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how the volume of end-point assessments will be achieved"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How the volume of end-point assessments will be achieved must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "42",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "42",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your professional standards",
+			"LinkTitle": "Recruitment and training",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-23",
+					"QuestionTag": null,
+					"Label": "How do you recruit and train assessors?",
+					"ShortLabel": "Recruitment and training",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>All assessors must be qualified to undertake assessments in line with the requirements laid out in the assessment plan.</p><p class='govuk-body'>They must have expertise and experience in designing and developing assessment products and tools where this is a requirement of the assessment plan.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you recruit and train assessors"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How you recruit and train assessors must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "43",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "43",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your professional standards",
+			"LinkTitle": "Skills and qualifications",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-24",
+					"QuestionTag": null,
+					"Label": "What experience, skills and qualifications will your assessors have?",
+					"ShortLabel": "Skills and qualifications",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>You need to give examples of how, when and where the assessor have demonstrated their capability. Assessors must have current and relevant occupational and assessment experience. Give details, evidence and context of this experience for all assessors.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter the experience, skills and qualifications your assessors will have"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "Details of experience, skills and qualifications must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "44",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "44",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your professional standards",
+			"LinkTitle": "Continuous professional development",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-25",
+					"QuestionTag": null,
+					"Label": "How will you ensure your assessors' occupational expertise is maintained and kept current? ",
+					"ShortLabel": "Continuous professional development",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give examples, of up to 500 words, for current professional development and recent experience of where and how they have demonstrated their suitability.</p><p class='govuk-body'>Give details, evidence and context for this experience, for the assessors you have now or will have in place by the time you start delivery.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you ensure your assessors' occupational expertise is maintained"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How occupational expertise is maintained must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "45",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "45",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "End-point assessment delivery model",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-26",
+					"QuestionTag": null,
+					"Label": "How will you deliver an end-point assessment for this standard?",
+					"ShortLabel": "End-point assessment delivery model",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you will deliver an end-point assessment for this standard"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How you will deliver an end-point assessment must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "46",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "46",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Outsourcing of end-point assessments",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-27",
+					"QuestionTag": null,
+					"Label": "Do you intend to outsource any of your end-point assessments?",
+					"ShortLabel": "Outsourcing of end-point assessments",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"InputClasses": null,
+						"Options": [
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "CC-27.1",
+										"QuestionTag": null,
+										"Label": "Quality assurance of outsourced services",
+										"ShortLabel": "",
+										"InputClasses": null,
+										"QuestionBodyText": "",
+										"Hint": "",
+										"Input": {
+											"Type": "Textarea",
+											"InputClasses": null,
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter the quality assurance of outsourced services"
+												}
+											],
+											"DataEndpoint": null
+										},
+										"Order": null,
+										"Value": "",
+										"ErrorMessages": null
+									}
+								],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select yes if you intend to outsource any of your end-point assessments"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "47",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "47",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Engaging with employers and training providers",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-29",
+					"QuestionTag": null,
+					"Label": "How will you engage with employers and training organisations?",
+					"ShortLabel": "How will you engage with employers and training organisations?",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "You need to include a statement about how you will ensure the EPA will only take place after the gateway review.",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you will engage with employers and training organisations"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How you will engage with employers and training organisations must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "48",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "48",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Managing conflicts of interest",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-30",
+					"QuestionTag": null,
+					"Label": "How will you manage any potential conflict of interest, particular to other functions your organisation may have?",
+					"ShortLabel": "How will you manage any potential conflict of interest, particular to other functions your organisation may have?",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you will manage any potential conflict of interest"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How you will manage any potential conflict of interest must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "49",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "49",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Assessment locations",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-31",
+					"QuestionTag": "delivery_areas",
+					"Label": "Where will you deliver end-point assessments?",
+					"ShortLabel": "Assessment locations",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "DataFed_CheckboxList",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter where you will deliver end-point assessments"
+							}
+						],
+						"DataEndpoint": "DeliveryAreas"
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "18",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "18",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Providing services straight away",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "W_DEL-04",
+					"QuestionTag": null,
+					"Label": "If your application is successful, can you start an end-point assessment on the day you join the register?",
+					"ShortLabel": "Providing services straight away",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "ComplexRadio",
+						"InputClasses": null,
+						"Options": [
+							{
+								"FurtherQuestions": [],
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"FurtherQuestions": [
+									{
+										"QuestionId": "W_DEL-04.1",
+										"QuestionTag": "effective_from",
+										"Label": "When will you be ready to do your first assessment?",
+										"ShortLabel": "When will you be ready to do your first assessment?",
+										"InputClasses": null,
+										"QuestionBodyText": "",
+										"Hint": "For example, 31 3 1980",
+										"Input": {
+											"Type": "Date",
+											"InputClasses": null,
+											"Options": [],
+											"Validations": [
+												{
+													"Name": "Required",
+													"Value": "",
+													"ErrorMessage": "Enter a date"
+												},
+												{
+													"Name": "Date",
+													"Value": "",
+													"ErrorMessage": "Date must be correct"
+												},
+												{
+													"Name": "DateInFuture",
+													"Value": "",
+													"ErrorMessage": "Date must be in the future"
+												}
+											],
+											"DataEndpoint": null
+										},
+										"Order": null,
+										"Value": "",
+										"ErrorMessages": null
+									}
+								],
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Select yes if you can start an end-point assessment on the day you join the register"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "50",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "50",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Assessment methods",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-32",
+					"QuestionTag": null,
+					"Label": "How will you undertake the individual elements of the assessment plan?",
+					"ShortLabel": "Assessment methods",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "As a minimum this should cover where the assessment will take place, how long you expect it to take and who will be doing the assessment?",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you will undertake the individual elements of the assessment plan"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How you will undertake the individual elements of the assessment plan must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "51",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "51",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment delivery model",
+			"LinkTitle": "Continuous resource development",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-33",
+					"QuestionTag": null,
+					"Label": "How will you continuously review and maintain the required resources and assessment tools?",
+					"ShortLabel": "How will you continuously review and maintain the required resources and assessment tools?",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter how you will continuously review and maintain the required resources and assessment tools"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "How you will continuously review and maintain the required resources and assessment tools must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "52",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "52",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment competence",
+			"LinkTitle": "Secure IT infrastructure",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-34",
+					"QuestionTag": null,
+					"Label": "Secure IT infrastructure",
+					"ShortLabel": "Secure IT infrastructure",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give full details of the secure IT infrastructure you will implement before providing a complete end-point assessment.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter details of the secure IT infrastructure you will implement"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "Details of the secure IT infrastructure must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "53",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "53",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment competence",
+			"LinkTitle": "Assessment administration",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-35",
+					"QuestionTag": null,
+					"Label": "Assessment administration",
+					"ShortLabel": "Assessment administration",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give full details of processes in place for administration of assessments before providing a complete end-point assessment.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter details of processes in place for administration of assessments"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "Details of processes in place for administration of assessments must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "54",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "54",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment competence",
+			"LinkTitle": "Assessment products and tools",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-36",
+					"QuestionTag": null,
+					"Label": "Assessment products and tools",
+					"ShortLabel": "Assessment products and tools",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give full details of the strategies in place for development of assessment products and tools.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter the strategies in place for development of assessment products and tools"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "Strategies in place for development of assessment products and tools must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "55",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "55",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment competence",
+			"LinkTitle": "Assessment content",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-37",
+					"QuestionTag": null,
+					"Label": "Assessment content",
+					"ShortLabel": "Assessment content",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give full details of the actions you will take and the processes you will implement as part of delivering a complete end-point assessment.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter the actions you will take and the processes you will implement"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "The actions you will take and the processes you will implement must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "56",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "56",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment competence",
+			"LinkTitle": "Collation and confirmation of assessment outcomes",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-38",
+					"QuestionTag": null,
+					"Label": "Collation and confirmation of assessment outcomes",
+					"ShortLabel": "Collation and confirmation of assessment outcomes",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give full details of how you collate and confirm assessment outcomes to employers, training providers and apprentices</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter details of how you collate and confirm assessment outcomes to employers, training providers and apprentices"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "Details of how you collate and confirm assessment outcomes must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "57",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "57",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your end-point assessment competence",
+			"LinkTitle": "Recording assessment results",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-39",
+					"QuestionTag": null,
+					"Label": "Recording assessment results",
+					"ShortLabel": "Recording assessment results",
+					"InputClasses": null,
+					"QuestionBodyText": "<p class='govuk-body'>Give full details of the processes in place for recording and issuing assessment results and certificates.</p>",
+					"Hint": "",
+					"Input": {
+						"Type": "LongTextarea",
+						"InputClasses": null,
+						"Options": [],
+						"Validations": [
+							{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Enter details of the processes in place for recording and issuing assessment results and certificates"
+							},
+							{
+								"Name": "MaxWordCount",
+								"Value": "500",
+								"ErrorMessage": "Details of the processes in place for recording and issuing assessment results and certificates must be 500 words or less"
+							}
+						],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "NextPage",
+					"ReturnId": "58",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "58",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Your online information",
+			"LinkTitle": "Web address",
+			"InfoText": "",
+			"Questions": [
+				{
+					"QuestionId": "CC-40",
+					"QuestionTag": "standard_website",
+					"Label": "Enter your web address",
+					"ShortLabel": "Web address",
+					"InputClasses": null,
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "Text",
+						"InputClasses": "govuk-!-width-two-thirds",
+						"Options": [],
+						"Validations": [],
+						"DataEndpoint": null
+					},
+					"Order": null,
+					"Value": "",
+					"ErrorMessages": null
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "4",
+					"Condition": null,
+					"Conditions": [],
+					"ConditionMet": false
+				}
+			],
+			"Complete": false,
+			"AllowMultipleAnswers": false,
+			"Order": null,
+			"Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplicationType",
+					"IsOneOf": [
+						"version"
+					]
+				},
+				{
+					"Field": "OrganisationType",
+					"IsOneOf": [
+						"Awarding Organisations",
+						"Assessment Organisations",
+						"Trade Body",
+						"Professional Body",
+						"NSA or SSC",
+						"Training Provider",
+						"Public Sector",
+						"College",
+						"Academy or Free School"
+					]
+				}
+			],
+			"BodyText": "",
+			"Details": null,
+			"DisplayType": null,
+			"Feedback": null,
+			"ActivatedByPageId": null
+		}
+	]
+}

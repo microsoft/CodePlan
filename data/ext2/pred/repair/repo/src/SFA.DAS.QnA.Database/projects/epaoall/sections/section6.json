@@ -1,0 +1,606 @@
+{
+  "Title": "Withdrawal request questions",
+  "LinkTitle": "Withdrawal request questions",
+  "DisplayType": "Pages",
+  "RequestedFeedbackAnswered": null,
+  "Pages": [
+    {
+      "PageId": "6",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "What's the main reason you want to withdraw from assessing this standard?",
+      "LinkTitle": "Reason for withdrawing",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "WR-06",
+          "QuestionTag": null,
+          "Label": "What's the main reason you want to withdraw from assessing the {{StandardOrVersion}}?",
+          "ShortLabel": "",
+          "InputClasses": null,
+          "QuestionBodyText": "<p class='govuk-body'>You can tell us more about why you want to withdraw after you select a reason.</p>",
+          "Hint": "",
+          "Input": {
+            "Type": "ComplexRadio",
+            "InputClasses": null,
+            "Options": [
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.1",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "AssessmentPlanHasChanged",
+                "Label": "Assessment plan has changed",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.2",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "Competitors",
+                "Label": "Competitors",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.3",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "<b>Enter more details (optional)</b>",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "ConditionsOfAcceptanceHaveChanged",
+                "Label": "Conditions of acceptance have changed",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.4",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "CostsAreTooHigh",
+                "Label": "Costs are too high",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.5",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "ExternalQualityAssuranceProviderHasChanged",
+                "Label": "External quality assurance provider has changed",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.6",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "FundingBandHasChanged",
+                "Label": "Funding band has changed",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.7",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "LackOfAssessors",
+                "Label": "Lack of assessors",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.8",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "LackOfLearners",
+                "Label": "Lack of learners",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.9",
+                    "QuestionTag": null,
+                    "Label": "Enter more details (optional)",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "OrganisationalChanges",
+                "Label": "Organisational changes",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [
+                  {
+                    "QuestionId": "WR-06.10",
+                    "QuestionTag": null,
+                    "Label": "Enter the reason",
+                    "ShortLabel": "",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                      "Type": "Textarea",
+                      "InputClasses": null,
+                      "Options": [],
+                      "Validations": [
+                        {
+                          "Name": "Required",
+                          "Value": "",
+                          "ErrorMessage": "Enter the reason why you want to withdraw"
+                        }
+                      ],
+                      "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                  }
+                ],
+                "Value": "Other",
+                "Label": "Other",
+                "HintText": ""
+              }
+            ],
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": "",
+                "ErrorMessage": "Select the main reason you want to withdraw from assessing this standard"
+              }
+            ],
+            "DataEndpoint": null
+          },
+          "Order": null,
+          "Value": "",
+          "ErrorMessages": null
+        }
+      ],
+      "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "7",
+          "Conditions": [],
+          "ConditionMet": false
+        }
+      ],
+      "Complete": false,
+      "AllowMultipleAnswers": false,
+      "Order": null,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": "",
+      "Details": null,
+      "DisplayType": null,
+      "Feedback": null,
+      "ActivatedByPageId": null
+    },
+    {
+      "PageId": "7",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "Will you complete the end-point assessments for all registered learners?",
+      "LinkTitle": "Completing assessments for registered learners",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "WR-07",
+          "QuestionTag": null,
+          "Label": "Will you complete the end-point assessments for all registered learners?",
+          "ShortLabel": "",
+          "InputClasses": null,
+          "QuestionBodyText": "<p class=\"govuk-body\">The pipeline shows that your organisation has {{PipelinesCount}} registered learners.</p><p class=\"govuk-body\">This number may vary because of data changes on the individualised learner record (ILR) and certification service.</p><p class=\"govuk-body\">If your organisation has no registered learners, select 'No'.</p>",
+          "Hint": "",
+          "Input": {
+            "Type": "ComplexRadio",
+            "InputClasses": null,
+            "Options": [
+              {
+                "FurtherQuestions": [],
+                "Value": "Yes",
+                "Label": "Yes",
+                "HintText": ""
+              },
+              {
+                "FurtherQuestions": [],
+                "Value": "No",
+                "Label": "No",
+                "HintText": ""
+              }
+            ],
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": "",
+                "ErrorMessage": "Select yes if you'll complete the end-point assessments for all registered learners"
+              }
+            ],
+            "DataEndpoint": null
+          },
+          "Order": null,
+          "Value": "",
+          "ErrorMessages": null
+        }
+      ],
+      "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "8",
+          "Conditions": [
+            {
+              "QuestionId": "WR-07",
+              "MustEqual": "No"
+            }
+          ],
+          "ConditionMet": false
+        },
+        {
+          "Action": "NextPage",
+          "ReturnId": "9",
+          "Conditions": [
+            {
+              "QuestionId": "WR-07",
+              "MustEqual": "Yes"
+            }
+          ],
+          "ConditionMet": false
+        }
+      ],
+      "Complete": false,
+      "AllowMultipleAnswers": false,
+      "Order": null,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": "",
+      "Details": null,
+      "DisplayType": null,
+      "Feedback": null,
+      "ActivatedByPageId": null
+    },
+    {
+      "PageId": "8",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "How will you support the learners you are not going to assess?",
+      "LinkTitle": "Supporting current learners",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "WR-08",
+          "QuestionTag": null,
+          "Label": "How will you support the learners you are not going to assess?",
+          "ShortLabel": "",
+          "InputClasses": null,
+          "QuestionBodyText": "<p class='govuk-body'>Your answer must include:</p><ul class='govuk-list govuk-list--bullet'><li>how you'll transfer these learners to other EPAOs</li><li>details of any EPAOs you've spoken to</li></ul><p class='govuk-body'>If you have no registered learners, enter 'not applicable'.</p>",
+          "Hint": "",
+          "Input": {
+            "Type": "Textarea",
+            "InputClasses": "govuk-!-width-full",
+            "Options": [],
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": "",
+                "ErrorMessage": "Enter how you'll support the learners you are not going to assess"
+              },
+              {
+                "Name": "MaxWordCount",
+                "Value": "500",
+                "ErrorMessage": "Your answer must be 500 words or less"
+              }
+            ],
+            "DataEndpoint": null
+          },
+          "Order": null,
+          "Value": "",
+          "ErrorMessages": null
+        }
+      ],
+      "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "9",
+          "Conditions": [],
+          "ConditionMet": false
+        }
+      ],
+      "Complete": false,
+      "AllowMultipleAnswers": false,
+      "Order": null,
+      "Active": false,
+      "NotRequiredConditions": [
+        {
+          "Field": "WR-07",
+          "IsOneOf": [
+            "Yes"
+          ]
+        }
+      ],
+      "BodyText": "",
+      "Details": null,
+      "DisplayType": null,
+      "Feedback": null,
+      "ActivatedByPageId": "7"
+    },
+    {
+      "PageId": "9",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "How will you communicate your market exit to customers?",
+      "LinkTitle": "Communicating your market exit to customers",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "WR-09",
+          "QuestionTag": null,
+          "Label": "How will you communicate your market exit to customers?",
+          "ShortLabel": "",
+          "InputClasses": null,
+          "QuestionBodyText": "<p class='govuk-body'>You must tell ESFA that you want to withdraw before you tell your customers.</p>",
+          "Hint": "",
+          "Input": {
+            "Type": "Textarea",
+            "InputClasses": null,
+            "Options": [],
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": "",
+                "ErrorMessage": "Enter how you'll communicate your market exit to customers"
+              },
+              {
+                "Name": "MaxWordCount",
+                "Value": "500",
+                "ErrorMessage": "Your answer must be 500 words or less"
+              }
+            ],
+            "DataEndpoint": null
+          },
+          "Order": null,
+          "Value": "",
+          "ErrorMessages": null
+        }
+      ],
+      "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "NextPage",
+          "ReturnId": "10",
+          "Conditions": [],
+          "ConditionMet": false
+        }
+      ],
+      "Complete": false,
+      "AllowMultipleAnswers": false,
+      "Order": null,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": "",
+      "Details": null,
+      "DisplayType": null,
+      "Feedback": null,
+      "ActivatedByPageId": null
+    },
+    {
+      "PageId": "10",
+      "SequenceId": null,
+      "SectionId": null,
+      "Title": "When do you want to withdraw from the standard?",
+      "LinkTitle": "Withdrawal date",
+      "InfoText": "",
+      "Questions": [
+        {
+          "QuestionId": "WR-10",
+          "QuestionTag": null,
+          "Label": "When do you want to withdraw from assessing the {{StandardOrVersion}}?",
+          "ShortLabel": "",
+          "InputClasses": null,
+          "QuestionBodyText": "<p class='govuk-body'>If you have at least 1 registered learner, the earliest date you can withdraw is <span class='das-no-wrap'>{{EarliestDateOfWithdrawal:d MMM yyyy}}</span>.</p>",
+          "Hint": "",
+          "Input": {
+            "Type": "Date",
+            "InputClasses": null,
+            "Validations": [
+              {
+                "Name": "Required",
+                "Value": "",
+                "ErrorMessage": "Enter a date"
+              },
+              {
+                "Name": "Date",
+                "Value": "",
+                "ErrorMessage": "Enter a valid date"
+              },
+              {
+                "Name": "DateInFuture",
+                "Value": "",
+                "ErrorMessage": "The date must be in the future"
+              },
+              {
+                "Name": "ClientApiCall",
+                "Value": "Validations/WithdrawalDate",
+                "ErrorMessage": ""
+              }
+            ],
+            "DataEndpoint": null
+          },
+          "Order": null,
+          "Value": "",
+          "ErrorMessages": null
+        }
+      ],
+      "PageOfAnswers": [],
+      "Next": [
+        {
+          "Action": "ReturnToSection",
+          "ReturnId": "6",
+          "Conditions": [],
+          "ConditionMet": false
+        }
+      ],
+      "Complete": false,
+      "AllowMultipleAnswers": false,
+      "Order": null,
+      "Active": true,
+      "NotRequiredConditions": [],
+      "BodyText": "",
+      "Details": null,
+      "DisplayType": null,
+      "Feedback": null,
+      "ActivatedByPageId": null
+    }
+  ],
+  "ShowTitleAsCaption": true
+}

@@ -1,0 +1,103 @@
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler.RemovePages
+private void RemovePages(Data.Entities.Application application, Section section)
+        {
+            var applicationData = JsonNode.Parse(application.ApplicationData);
+
+            RemovePagesBasedOnNotRequiredConditions(section, applicationData);
+            RemoveInactivePages(section);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler.RemovePagesBasedOnNotRequiredConditions
+private void RemovePagesBasedOnNotRequiredConditions(Section section, JsonNode applicationData)
+        {
+            section.QnAData.Pages =
+                _notRequiredProcessor.PagesWithoutNotRequired(section.QnAData.Pages, applicationData.AsObject()).ToList();
+
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSection\GetSectionHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSection.GetSectionHandler.RemovePagesBasedOnNotRequiredConditions
+private void RemovePagesBasedOnNotRequiredConditions(ApplicationSection section, JObject applicationData)
+        {
+            section.QnAData.Pages =
+               _notRequiredProcessor.PagesWithoutNotRequired(section.QnAData.Pages, applicationData).ToList();
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSequenceSections\GetSequenceSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSequenceSections.GetSequenceSectionsHandler.RemovePagesBasedOnNotRequiredConditions
+private void RemovePagesBasedOnNotRequiredConditions(Section section, JObject applicationData)
+        {
+            section.QnAData.Pages =
+               _notRequiredProcessor.PagesWithoutNotRequired(section.QnAData.Pages, applicationData).ToList();
+
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Services\NotRequiredProcessor.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Services.NotRequiredProcessor.PagesWithoutNotRequired
+public IEnumerable<Page> PagesWithoutNotRequired(List<Page> pages, JObject applicationData)
+        {
+            pages.RemoveAll(p => p.NotRequiredConditions != null &&
+                                 p.NotRequiredConditions.Any(nrc => nrc.IsOneOf != null && nrc.IsOneOf.Contains(applicationData[nrc.Field]?.Value<string>())));
+
+            var pagesToRemove = new List<string>();
+            foreach (var page in pages.Where(p => p.NotRequiredConditions != null))
+            {
+                if (page.NotRequiredConditions == null) continue;
+                foreach (var notRequiredCondition in page.NotRequiredConditions.Where(n => n.ContainsAllOf != null && n.ContainsAllOf.Any()))
+                {
+                    var fieldToCheck = notRequiredCondition.Field;
+                    var fieldValue = applicationData[fieldToCheck]?.Value<string>();
+                    if (string.IsNullOrEmpty(fieldValue)) continue;
+
+                    var applicationDataValues = fieldValue.Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                    var containsAllValues =
+                        applicationDataValues.Select(p => p)
+                            .Intersect(notRequiredCondition.ContainsAllOf.Distinct()).Count() ==
+                        notRequiredCondition.ContainsAllOf.Distinct().Count();
+
+                    if (containsAllValues)
+                        pagesToRemove.Add(page.PageId);
+                }
+
+                foreach (var notRequiredCondition in page.NotRequiredConditions.Where(n =>
+                    n.DoesNotContain != null && n.DoesNotContain.Any(x => !string.IsNullOrEmpty(x))))
+                {
+                    var isPresent = false;
+                    var fieldToCheck = notRequiredCondition.Field;
+                    var fieldValue = applicationData[fieldToCheck]?.Value<string>();
+                    if (!string.IsNullOrEmpty(fieldValue))
+                    {
+
+                        var applicationDataValues = fieldValue.Split(",", StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var adv in applicationDataValues)
+                        {
+                            foreach (var condition in notRequiredCondition.DoesNotContain)
+                            {
+                                if (string.Equals(adv, condition, StringComparison.InvariantCultureIgnoreCase)) isPresent = true;
+                            }
+                        }
+
+                    }
+
+                    if (!isPresent)
+                        pagesToRemove.Add(page.PageId);
+                }
+            }
+
+            pages.RemoveAll(p => pagesToRemove.Any(pr => pr == p.PageId));
+
+
+            return pages;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSection\GetSectionBySectionNoHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSection.GetSectionBySectionNoHandler.RemovePagesBasedOnNotRequiredConditions
+private void RemovePagesBasedOnNotRequiredConditions(ApplicationSection section, JObject applicationData)
+        {
+            section.QnAData.Pages =
+                _notRequiredProcessor.PagesWithoutNotRequired(section.QnAData.Pages, applicationData).ToList();
+        }
+--------------------------------------------------

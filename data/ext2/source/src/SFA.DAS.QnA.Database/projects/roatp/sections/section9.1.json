@@ -1,0 +1,213 @@
+{
+    "Title": "Application permissions and checks",
+    "LinkTitle": "Application permissions and checks",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "9000",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Do you have permission from everyone named in this application to use their details?",
+            "LinkTitle": "Application permissions and checks",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FIN-10",
+                    "QuestionTag": "FinishPermissionPersonalDetails",
+                    "Label": "Do you have permission from everyone named in this application to use their details?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if you have permission from everyone named in this application to use their details"
+                            }
+                        ],
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "10005",
+                    "Conditions": [
+                        {
+                            "MustEqual": "No",
+                            "QuestionId": "FIN-10"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "9010",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        },
+        {
+            "PageId": "9010",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Have you checked with everyone named in this application that the details provided for them are accurate?",
+            "LinkTitle": "Application permissions and checks",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FIN-20",
+                    "QuestionTag": "FinishAccuratePersonalDetails",
+                    "Label": "Have you checked with everyone named in this application that the details provided for them are accurate?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if you have checked with everyone named in this application that the details provided for them are accurate"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "10005",
+                    "Conditions": [
+                        {
+                            "MustEqual": "No",
+                            "QuestionId": "FIN-20"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "9020",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "9020",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Do you have permission from your organisation to submit this application?",
+            "LinkTitle": "Do you have permission from your organisation to submit this application?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FIN-30",
+                    "QuestionTag": "FinishPermissionSubmitApp",
+                    "Label": "Do you have permission from your organisation to submit this application?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if you have permission from your organisation to submit this application"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "10005",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FIN-30",
+                            "MustEqual": "No"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "9.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "10005",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Before you submit your application",
+            "LinkTitle": "Before you submit your application",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [],
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body'>Before you submit your application you must:</p> <p class='govuk-body'> <ul class='govuk-list govuk-list--bullet'><li>have permission from everyone named in the application to use their details</li><li>check with everyone named in the application that the details provided for them are accurate</li><li>have permission from your organisation to submit the application</li></ul></p>",
+            "ActivatedByPageId": "9000,9010,9020"
+        }
+    ]
+}

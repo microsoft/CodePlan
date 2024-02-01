@@ -1,0 +1,102 @@
+{
+    "Title": "Working with subcontractors",
+    "LinkTitle": "Working with subcontractors",
+    "DisplayType": "Pages",
+    "Pages": [{
+            "PageId": "5600",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Working with subcontractors",
+            "LinkTitle": "Working with subcontractors",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "RTE-70",
+                    "QuestionTag": null,
+                    "Label": "Does your organisation expect to use subcontractors in the first 12 months of joining RoATP?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-subcontractors-use'>This includes using subcontractors for any part of apprenticeship training.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [{
+                                "Label": "Yes",
+                                "Value": "Yes",
+                                "FurtherQuestions": null
+                            }, {
+                                "Label": "No",
+                                "Value": "No",
+                                "FurtherQuestions": null
+                            }
+                        ],
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation expects to use subcontractors in the first 12 months of joining RoATP"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "NextPage",
+                    "ReturnId": "5610",
+                    "Conditions": [{
+                            "QuestionId": "RTE-70",
+                            "MustEqual": "Yes"
+                        }]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }, {
+            "PageId": "5610",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Working with subcontractors",
+            "LinkTitle": "Working with subcontractors",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "RTE-71",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation carry out due diligence on its subcontractors?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-subcontractors-diligence'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>ensure extremist organisations are not funded</li><li>ensure its commitments to ESFA are maintained through subcontractor delivery</li><li>manage and monitor subcontractors to ensure they deliver high quality training</li><li>manage subcontracting agreements including capacity and capability risks</li><li>assess the financial health of its subcontractors</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how your organisation will carry out due diligence on its subcontractors"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "5600"
+        }
+    ]
+}

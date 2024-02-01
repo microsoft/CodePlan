@@ -1,0 +1,64 @@
+{
+    "Title": "Acting as a subcontractor",
+    "LinkTitle": "Acting as a subcontractor",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "4050",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Acting as a subcontractor",
+            "LinkTitle": "Acting as a subcontractor",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PYA-60",
+                    "QuestionTag": "",
+                    "Label": "When acting as a subcontractor, will your organisation follow its lead provider's policies and plans?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your organisation has an obligation to follow its lead provider's policies and plans if asked by them.</p><p class='govuk-body'>If you do not currently plan to act as a subcontractor, please confirm you understand your obligation in case you choose to subcontract in the future.</p>",
+                    "Hint": "",
+                    "Input":
+                    {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation will follow its lead provider's policies and plans"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": {
+              "Title": "What is a lead provider?",
+              "Body": "<p class='govuk-body'>A lead provider is a main or employer provider who has a direct contractual relationship with ESFA.</p>"
+          }
+        }
+    ]
+}

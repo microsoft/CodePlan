@@ -1,0 +1,94 @@
+{
+    "Title": "Introduction and what you'll need <span class='govuk-visually-hidden'> for readiness to engage</span>",
+    "LinkTitle": "Introduction and what you'll need",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "5000",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Readiness to engage",
+            "LinkTitle": "Readiness to engage",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body' id='rte-intro-main'>For this section, you'll need to know how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>engage with employers and subcontractors</li><li>manage its relationship with employers and subcontractors</li><li>assess prior learning, including English and maths qualifications</li><li>deliver and assess English and maths</li></ul><p class='govuk-body'>You'll also need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>complaints policy</li><li>contract for services template with employers</li></ul><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>"
+        },
+        {
+            "PageId": "5010",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Readiness to engage",
+            "LinkTitle": "Readiness to engage",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.5",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body' id='rte-intro-emp'>For this section, you'll need to know how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>engage with subcontractors</li><li>manage its relationship with subcontractors</li><li>assess prior learning, including English and maths qualifications</li><li>deliver and assess English and maths</li></ul><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>"
+        },
+        {
+            "PageId": "5020",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Readiness to engage",
+            "LinkTitle": "Readiness to engage",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body' id='rte-intro-supp'>For this section, you'll need to know how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>engage with employers and subcontractors</li><li>manage its relationship with employers and subcontractors</li><li>assess prior learning, including English and maths qualifications</li></ul><p class='govuk-body'>You'll also need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>complaints policy</li><li>contract for services template with employers</li><li>commitment statement template</li></ul><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>"
+        }
+    ]
+}

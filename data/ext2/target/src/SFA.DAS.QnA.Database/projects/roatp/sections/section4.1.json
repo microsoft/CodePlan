@@ -1,0 +1,94 @@
+{
+	"Title": "Introduction and what you'll need <span class='govuk-visually-hidden'> for protecting your apprentices</span>",
+	"LinkTitle": "Introduction and what you'll need",
+	"DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "4000",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Protecting your apprentices",
+            "LinkTitle": "link title",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "4.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplyProviderRoute",
+					"IsOneOf": [
+						"2",
+						"3"
+					]
+				}
+			],
+			"BodyText": "<p class='govuk-body' id='pya-intro-main'>For this section you'll need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>continuity plan for apprenticeship training</li><li>equality and diversity policy</li><li>safeguarding policy</li><li>prevent duty policy (if needed)</li><li>health and safety policy</li></ul><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>"
+		},
+		{
+            "PageId": "4001",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Protecting your apprentices",
+            "LinkTitle": "link title",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "4.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+			"NotRequiredConditions": [
+				{
+					"Field": "ApplyProviderRoute",
+					"IsOneOf": [
+						"1",
+						"3"
+					]
+				}
+			],
+			"BodyText": "<p class='govuk-body' id='pya-intro-emp'>For this section you'll need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>continuity plan for apprenticeship training</li><li>equality and diversity policy</li><li>safeguarding policy</li><li>prevent duty policy (if needed)</li><li>health and safety policy</li></ul><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All policies and processes must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept policies or processes that are generic or taken from a third party.</strong></div>"
+        },
+        {
+            "PageId": "4002",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Protecting your apprentices",
+            "LinkTitle": "link title",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "4.2",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+				{
+					"Field": "ApplyProviderRoute",
+					"IsOneOf": [
+						"1",
+						"2"
+					]
+				}
+			],
+			"BodyText": "<p class='govuk-body' id='pya-intro-supp'>For this section you'll need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>equality and diversity policy</li><li>safeguarding policy</li><li>prevent duty policy (if needed)</li><li>health and safety policy</li></ul><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'><span class='govuk-warning-text__assistive'>Warning</span>All uploads must be specific to your organisation, apprentices and trainers. They must also be signed by a senior employee. For example, a director or CEO. We will not accept uploads that are generic or taken from a third party.</strong></div>"
+		}
+    ]
+}

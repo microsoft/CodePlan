@@ -1,0 +1,49 @@
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.VARIABLE, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler._dataContext
+private readonly QnaDataContext _dataContext;
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.VARIABLE, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler._mapper
+private readonly IMapper _mapper;
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.VARIABLE, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler._notRequiredProcessor
+private readonly INotRequiredProcessor _notRequiredProcessor;
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler.GetSectionsHandler
+public GetSectionsHandler(QnaDataContext dataContext, IMapper mapper, INotRequiredProcessor notRequiredProcessor)
+        {
+            _dataContext = dataContext;
+            _mapper = mapper;
+            _notRequiredProcessor = notRequiredProcessor;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler.Handle
+public async Task<HandlerResponse<List<Section>>> Handle(GetSectionsRequest request, CancellationToken cancellationToken)
+        {
+            var application = await _dataContext.Applications.AsNoTracking().SingleOrDefaultAsync(app => app.Id == request.ApplicationId, cancellationToken);
+            if (application is null) return new HandlerResponse<List<Section>>(false, "Application does not exist");
+
+            var sections = await _dataContext.ApplicationSections.AsNoTracking()
+                .Where(seq => seq.ApplicationId == request.ApplicationId)
+                .ToListAsync(cancellationToken: cancellationToken);
+
+            var mappedSections = _mapper.Map<List<Section>>(sections);
+
+            foreach (var section in mappedSections)
+            {
+                RemovePages(application, section);
+            }
+
+            return new HandlerResponse<List<Section>>(mappedSections);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSections\GetSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSections.GetSectionsHandler.RemoveInactivePages
+private static void RemoveInactivePages(Section section)
+        {
+            section.QnAData.Pages.RemoveAll(p => !p.Active);
+        }
+--------------------------------------------------

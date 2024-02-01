@@ -1,0 +1,2478 @@
+{
+    "Title": "Your organisation's financial evidence",
+    "LinkTitle": "Your organisation's financial evidence",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "2100",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Was your organisation's total annual turnover over &pound;75 million for the latest reported financial year?",
+            "LinkTitle": "Was your organisation's total annual turnover over &pound;75 million for the latest reported financial year?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-30",
+                    "QuestionTag": "FHATurnoverOver75m",
+                    "Label": "Was your organisation's total annual turnover over &pound;75 million for the latest reported financial year?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",    
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us if your organisation's total annual turnover was over &pound;75 million for the latest reported financial year"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2110",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2130",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCompany",
+                            "MustEqual": "TRUE"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCharity",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2130",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCompany",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2130",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCharity",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2140",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "SoleTradeOrPartnership",
+                            "MustEqual": "Sole trader"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2140",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "SoleTradeOrPartnership",
+                            "MustEqual": "Partnership"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2120",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-30",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body'>You can find your organisation's total annual turnover on its:</p><ul class='govuk-list govuk-list--bullet'><li>profit and loss statement</li><li>income and expenditure account</li><li>statement of financial activities</li></ul>",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "2110",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Does your organisation expect its funding from ESFA to be less than 5% of its total annual turnover?",
+            "LinkTitle": "Does your organisation expect its funding from ESFA to be less than 5% of its total annual turnover?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-40",
+                    "QuestionTag": "FHAFundingTurnover5pc",
+                    "Label": "Does your organisation expect its funding from ESFA to be less than 5% of its total annual turnover?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",    
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us if your organisation expects its funding from ESFA to be less than 5% of its total annual turnover"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2150",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2130",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCompany",
+                            "MustEqual": "TRUE"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCharity",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2130",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCompany",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2130",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "UKRLPVerificationCharity",
+                            "MustEqual": "TRUE"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2140",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "SoleTradeOrPartnership",
+                            "MustEqual": "Sole trader"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2140",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "SoleTradeOrPartnership",
+                            "MustEqual": "Partnership"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2120",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-40",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHATurnoverOver75m",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>We'll check your organisation's financial statements to confirm your answer.</p><p class='govuk-body'>If your answer is incorrect, we may ask you to provider further financial information for your organisation.</p>",
+            "Details": {
+                "Title": "Show me an example",
+                "Body": "<p class='govuk-body'>Your organisation's total annual turnover is &pound;80 million and it expects to receive &pound;3 million of funding from the ESFA.</p><p class='govuk-body'>This is less than 5% of its total annual turnover, so the answer is yes.</p>"
+            },
+            "ActivatedByPageId": "2100"
+        },
+        {
+            "PageId": "2120",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Financial evidence",
+            "LinkTitle": "Financial evidence",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-50",
+                    "QuestionTag": "FHATurnover",
+                    "Label": "Enter your organisation's total annual turnover for the latest reported financial year",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "You can find this on your organisation's 'profit and loss statement', 'income and expenditure account' or 'statement of financial activities'.",
+                    "Input": {
+                        "Type": "Number",
+                        "InputClasses": "govuk-input--width-10",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Enter your organisation's total annual turnover for the latest reported financial year"
+                            },
+                            {
+                                "Name": "Regex",
+                                "Value": "^-?[0-9]+$",
+                                "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "10",
+                                "ErrorMessage": "The amount must be 10 characters or less"
+                            }
+                        ],
+                        "InputPrefix": "&pound;"
+                    }
+                },
+                {
+                    "QuestionId": "FH-60",
+                    "QuestionTag": "FHADepreciation",
+                    "Label": "Enter your organisation's total depreciation and amortisation charges for the latest reported financial year",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Number",
+                        "InputClasses": "govuk-input--width-10",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Enter your organisation's total depreciation and amortisation charges for the latest reported financial year"
+                            },
+                            {
+                                "Name": "Regex",
+                                "Value": "^-?[0-9]+$",
+                                "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                            },
+                            {
+                                "Name": "MaxLength",
+                                "Value": "10",
+                                "ErrorMessage": "The amount must be 10 characters or less"
+                            }
+                        ],
+                        "InputPrefix": "&pound;"
+                    }
+                },
+              {
+                "QuestionId": "FH-70",
+                "QuestionTag": "FHAProfitLoss",
+                "Label": "Enter your organisation's profit or loss for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "Profit or loss is the net amount earned after tax.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's profit or loss for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-80",
+                "QuestionTag": "FHADividends",
+                "Label": "Enter your organisation's total dividends for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'notes to the accounts'. It may also be displayed in the calculation of shareholder funds / net assets or on a statement of changes in equity.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total dividends for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-90",
+                "QuestionTag": "FHAAssets",
+                "Label": "Enter your organisation's total current assets for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet'. It may be a combination of trade debtors, amounts due from group undertakings and cash.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total current assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-100",
+                "QuestionTag": "FHALiabilities",
+                "Label": "Enter your organisation's total current liabilities for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'creditors: amount falling due within one year'. If your current liabilities include other creditors you must supply a breakdown of these creditors as 'other creditors' is not an acceptable classification.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total current liabilities for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-110",
+                "QuestionTag": "FHABorrowings",
+                "Label": "Enter your organisation's total borrowings for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You will need to add up a total of: <ul class='govuk-list govuk-list--bullet govuk-hint'><li>bank overdraft</li><li>loans</li><li>amounts owed to directors - including director loans and director accounts</li><li>amounts owed to subsidiaries - if your organisation is part of a group</li><li>amounts due under finance leases or hire purchase contracts</li><li>additional borrowings not listed above, please refer to the <a href='https://www.gov.uk/government/publications/esfa-financial-health-assessment' class='govuk-link' target='_blank'>ESFA's financial health policy (opens in a new window or tab)</a> regarding other creditors.</li></ul>",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total borrowings for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-120",
+                "QuestionTag": "FHAShareholderFunds",
+                "Label": "Enter your organisation's net assets for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's net assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-130",
+                "QuestionTag": "FHAIntangibleAssets",
+                "Label": "Enter your organisation's total intangible assets for the latest reported financial year",
+                "ShortLabel": "",
+                "InputClasses": "govuk-input--width-10",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'fixed assets' or 'goodwill'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total intangible assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                      "Name": "MaxLength",
+                      "Value": "10",
+                      "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-550",
+                "QuestionTag": "FHAAverageNumberofFTEEmployees",
+                "Label": "Enter your organisation's average number of Full Time Equivalent (FTE) employees for the last financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "Value": "",
+                      "ErrorMessage": "Enter your organisation's average number of Full Time Equivalent (FTE) employees for the last financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                      "Name": "MaxLength",
+                      "Value": "10",
+                      "ErrorMessage": "The number must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": ""
+                }
+              }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2150",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAFundingTurnover5pc",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "Field": "UKRLPVerificationCompany",
+                    "IsOneOf": [
+                        "TRUE"
+                    ]
+                },
+                {
+                    "Field": "UKRLPVerificationCharity",
+                    "IsOneOf": [
+                        "TRUE"
+                    ]
+                },
+                {
+                    "Field": "UKRLPVerificationSoleTraderPartnership",
+                    "IsOneOf": [
+                        "TRUE"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>For negative numbers, use a negative value. For example, '-1000'.</p>",
+            "ActivatedByPageId": "2100,2110"
+        },
+        {
+            "PageId": "2130",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Financial evidence",
+            "LinkTitle": "Financial evidence",
+            "InfoText": "",
+            "Questions": [
+              {
+                "QuestionId": "FH-140",
+                "QuestionTag": "FHATurnover",
+                "Label": "Enter your organisation's total annual turnover for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'profit and loss statement', 'income and expenditure account' or 'statement of financial activities'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total annual turnover for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-150",
+                "QuestionTag": "FHADepreciation",
+                "Label": "Enter your organisation's total depreciation and amortisation charges for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'operating profit note to the accounts'. You'll need to add up the depreciation and amortisation items under what would normally be 'note 2' and enter the total figure.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total depreciation and amortisation charges for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-160",
+                "QuestionTag": "FHAProfitLoss",
+                "Label": "Enter your organisation's profit or loss for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "Profit or loss is the net amount earned after tax.<br /><br />If your organisation is a company, you can find this on your organisation's 'profit and loss statement'.<br /><br />If your organisation is a charity, you can find this under 'net profit' or 'net movement in funds' in your organisation's accounts.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's profit or loss for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-170",
+                "QuestionTag": "FHADividends",
+                "Label": "Enter your organisation's total dividends for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'notes to the accounts'. It may also be displayed in the calculation of shareholder funds / net assets or on a statement of changes in equity.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total dividends for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-180",
+                "QuestionTag": "FHAAssets",
+                "Label": "Enter your organisation's total current assets for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet'. It may be a combination of trade debtors, amounts due from group undertakings and cash.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total current assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-190",
+                "QuestionTag": "FHALiabilities",
+                "Label": "Enter your organisation's total current liabilities for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'creditors: amount falling due within one year'. If your current liabilities include other creditors you must supply a breakdown of these creditors as 'other creditors' is not an acceptable classification.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total current liabilities for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-200",
+                "QuestionTag": "FHABorrowings",
+                "Label": "Enter your organisation's total borrowings for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You will need to add up a total of: <ul class='govuk-list govuk-list--bullet govuk-hint'><li>bank overdraft</li><li>loans</li><li>amounts owed to directors - including director loans and director accounts</li><li>amounts owed to subsidiaries - if your organisation is part of a group</li><li>amounts due under finance leases or hire purchase contracts</li><li>additional borrowings not listed above, please refer to the <a href='https://www.gov.uk/government/publications/esfa-financial-health-assessment' class='govuk-link' target='_blank'>ESFA's financial health policy (opens in a new window or tab)</a> regarding other creditors.</li></ul>",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total borrowings for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-210",
+                "QuestionTag": "FHAShareholderFunds",
+                "Label": "Enter your organisation's net assets for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'the sum of all assets less all liabilities'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's net assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-220",
+                "QuestionTag": "FHAIntangibleAssets",
+                "Label": "Enter your organisation's total intangible assets for the latest reported financial year",
+                "ShortLabel": "",
+                "InputClasses": "govuk-input--width-10",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'fixed assets' or 'goodwill'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total intangible assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-225",
+                "QuestionTag": "FHAAverageNumberofFTEEmployees",
+                "Label": "Enter your organisation's average number of Full Time Equivalent (FTE) employees for the last financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "Value": "",
+                      "ErrorMessage": "Enter your organisation's average number of Full Time Equivalent (FTE) employees for the last financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                      "Name": "MaxLength",
+                      "Value": "10",
+                      "ErrorMessage": "The number must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": ""
+                }
+              }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2150",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "UKRLPVerificationSoleTraderPartnership",
+                    "IsOneOf": [
+                        "TRUE"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>For negative numbers, use a negative value. For example, '-1000'.</p>",
+            "ActivatedByPageId": "2100,2110"
+        },
+        {
+            "PageId": "2140",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Financial evidence",
+            "LinkTitle": "Financial evidence",
+            "InfoText": "",
+            "Questions": [
+              {
+                "QuestionId": "FH-230",
+                "QuestionTag": "FHATurnover",
+                "Label": "Enter your organisation's total annual turnover for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'profit and loss statement', 'income and expenditure account' or 'statement of financial activities'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total annual turnover for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-240",
+                "QuestionTag": "FHADepreciation",
+                "Label": "Enter your organisation's total depreciation and amortisation charges for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'operating profit note to the accounts'. You'll need to add up all the items of depreciation and amortisation and enter the total figure.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total depreciation and amortisation charges for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-250",
+                "QuestionTag": "FHAProfitLoss",
+                "Label": "Enter your organisation's profit or loss for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "Profit or loss is the net amount earned after tax. You can find this under 'net profit' in your organisation accounts.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's profit or loss for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-260",
+                "QuestionTag": "FHADividends",
+                "Label": "Enter your organisation's total dividends for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'notes to the accounts'. It may also be displayed in the calculation of shareholder funds / net assets or on a statement of changes in equity.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total dividends for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-270",
+                "QuestionTag": "FHAAssets",
+                "Label": "Enter your organisation's total current assets for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet'. It may be a combination of trade debtors, amounts due from group undertakings and cash.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total current assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-280",
+                "QuestionTag": "FHALiabilities",
+                "Label": "Enter your organisation's total current liabilities for the latest reported financial year",
+                "ShortLabel": "",
+
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'creditors: amount falling due within one year'. If your current liabilities include other creditors you must supply a breakdown of these creditors as 'other creditors' is not an acceptable classification.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total current liabilities for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-290",
+                "QuestionTag": "FHABorrowings",
+                "Label": "Enter your organisation's total borrowings for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You will need to add up a total of: <ul class='govuk-list govuk-list--bullet govuk-hint'><li>bank overdraft</li><li>loans</li><li>amounts owed to directors - including director loans and director accounts</li><li>amounts owed to subsidiaries - if your organisation is part of a group</li><li>amounts due under finance leases or hire purchase contracts</li><li>additional borrowings not listed above, please refer to the <a href='https://www.gov.uk/government/publications/esfa-financial-health-assessment' class='govuk-link' target='_blank'>ESFA's financial health policy (opens in a new window or tab)</a> regarding other creditors.</li></ul>",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total borrowings for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-300",
+                "QuestionTag": "FHAShareholderFunds",
+                "Label": "Enter your organisation's net assets for the latest reported financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under the 'capital account balance'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's net assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-310",
+                "QuestionTag": "FHAIntangibleAssets",
+                "Label": "Enter your organisation's total intangible assets for the latest reported financial year",
+                "ShortLabel": "",
+                "InputClasses": "govuk-input--width-10",
+                "QuestionBodyText": "",
+                "Hint": "You can find this on your organisation's 'balance sheet' under 'fixed assets' or 'goodwill'.",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "ErrorMessage": "Enter your organisation's total intangible assets for the latest reported financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^-?[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                        "Name": "MaxLength",
+                        "Value": "10",
+                        "ErrorMessage": "The amount must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": "&pound;"
+                }
+              },
+              {
+                "QuestionId": "FH-315",
+                "QuestionTag": "FHAAverageNumberofFTEEmployees",
+                "Label": "Enter your organisation's average number of Full Time Equivalent (FTE) employees for the last financial year",
+                "ShortLabel": "",
+                "QuestionBodyText": "",
+                "Hint": "",
+                "Input": {
+                  "Type": "Number",
+                  "InputClasses": "govuk-input--width-10",
+                  "Validations": [
+                    {
+                      "Name": "Required",
+                      "Value": "",
+                      "ErrorMessage": "Enter your organisation's average number of Full Time Equivalent (FTE) employees for the last financial year"
+                    },
+                    {
+                      "Name": "Regex",
+                      "Value": "^[0-9]+$",
+                      "ErrorMessage": "Enter a figure using numbers only. For example, 1300000"
+                    },
+                    {
+                      "Name": "MaxLength",
+                      "Value": "10",
+                      "ErrorMessage": "The number must be 10 characters or less"
+                    }
+                  ],
+                  "InputPrefix": ""
+                }
+              }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2150",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "UKRLPVerificationCompany",
+                    "IsOneOf": [
+                        "TRUE"
+                    ]
+                },
+                {
+                    "Field": "UKRLPVerificationCharity",
+                    "IsOneOf": [
+                        "TRUE"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>For negative numbers, use a negative value. For example, '-1000'.</p>",
+            "ActivatedByPageId": "2100,2110"
+        },
+        {
+            "PageId": "2150",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation produced its latest full financial statements covering a minimum of 12 months?",
+            "LinkTitle": "Has your organisation produced its latest full financial statements covering a minimum of 12 months?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-320",
+                    "QuestionTag": "FHAHas12MonthsStatements",
+                    "Label": "Has your organisation produced its latest full financial statements covering a minimum of 12 months?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",    
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us if your organisation has produced full financial statements covering a minimum of 12 months"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2160",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-320",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2170",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-320",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140"
+        },
+        {
+            "PageId": "2160",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's latest full financial statements covering the last 12 months",
+            "LinkTitle": "Upload your organisation's latest full financial statements covering the last 12 months",
+            "InfoText": "<div class='govuk-warning-text'> <span class='govuk-warning-text__icon' aria-hidden='true'>!</span> <strong class='govuk-warning-text__text'> <span class='govuk-warning-text__assistive'>Warning</span>Financial statement uploads must not be abbreviated, filleted or accounts for a micro entity.</strong> </div>",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-330",
+                    "QuestionTag": "",
+                    "Label": "Upload your organisation's latest full financial statements covering the last 12 months",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Financial statements must include a:</p><ul class='govuk-list govuk-list--bullet'><li>balance sheet - showing the value of everything your organisation owns, owes and is owed on the last day of the financial year</li><li>profit and loss account - showing your organisation's sales, running costs and profit and loss it made over the financial year</li><li>detailed notes about the accounts</li><li>breakdown of creditors, other creditors and borrowings</li></ul><p class='govuk-body'>If applicable, financial statements should be signed and filed with Companies House or the Charity Commission of England and Wales, Scottish Charities Regulator or other regulatory body.</p><p class='govuk-body'>You can upload a maximum of 4 files</p><p class='govuk-body'>Each file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-331",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-332",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-333",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2260",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150"
+        },
+        {
+            "PageId": "2170",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation produced financial statements covering any period within the last 12 months?",
+            "LinkTitle": "Has your organisation produced financial statements covering any period within the last 12 months?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-340",
+                    "QuestionTag": "FHAPartialFinancialStatements",
+                    "Label": "Has your organisation produced financial statements covering any period within the last 12 months?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",    
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us if your organisation has produced financial statements covering any period within the last 12 months"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2180",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-340",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2195",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-340",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "1"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2195",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-340",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "2"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2210",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-340",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "3"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150"
+        },
+        {
+            "PageId": "2180",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What you need to upload",
+            "LinkTitle": "What you need to upload",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2190",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "Field": "FHAPartialFinancialStatements",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>You'll need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>financial statements covering any period within the last 12 months</li><li>management accounts covering the remaining period to date</li></ul><p class='govuk-body'>Your management accounts must start from the date your financial statements end.</p><p class='govuk-body'>For example, if your financial statements end on 31 January, your management accounts must start on 1 February.</p>",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170"
+        },
+        {
+            "PageId": "2190",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's financial statements covering any period within the last 12 months",
+            "LinkTitle": "Upload your organisation's financial statements covering any period within the last 12 months",
+            "InfoText": "<div class='govuk-warning-text'> <span class='govuk-warning-text__icon' aria-hidden='true'>!</span> <strong class='govuk-warning-text__text'> <span class='govuk-warning-text__assistive'>Warning</span>Financial statement uploads must not be abbreviated, filleted or accounts for a micro entity.</strong> </div>",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-350",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's financial statements covering any period within the last 12 months",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Financial statements must include a:</p><ul class='govuk-list govuk-list--bullet'><li>balance sheet - showing the value of everything your organisation owns, owes and is owed</li><li>profit and loss account - showing your organisation's sales, running costs and profit or loss it's made</li><li>detailed notes about the accounts</li><li>breakdown of creditors, other creditors and borrowings</li></ul><p class='govuk-body'>If applicable, financial statements should be signed and filed with Companies House or the Charity Commission of England and Wales, Scottish Charities Regulator or other regulatory body.</p><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-351",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-352",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-353",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2200",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "Field": "FHAPartialFinancialStatements",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2180"
+        },
+        {
+            "PageId": "2195",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What you need to upload",
+            "LinkTitle": "What you need to upload",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2225", 
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                },
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>You'll need to upload your organisation's full management accounts for the last 12 months.</p>",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170"
+        },
+        {
+            "PageId": "2200",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's management accounts covering the remaining period to date",
+            "LinkTitle": "Upload your organisation's management accounts covering the remaining period to date",
+            "InfoText": "",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-360",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's management accounts covering the remaining period to date",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Management accounts must include:</p><ul class='govuk-list govuk-list--bullet'><li>a balance sheet - showing the value of everything your organisation owns, owes and is owed to date</li><li>a cash flow statement</li><li>profit and loss account - showing your organisation's sales, running costs and profit or loss it's made</li><li>detailed notes about any assumptions made</li></ul><p class='govuk-body'>Your management accounts must start from the date your financial statements end.</p><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-361",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-362",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-363",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2260",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2190"
+        },
+        {
+            "PageId": "2210",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Has your organisation produced full management accounts covering the last 12 months?",
+            "LinkTitle": "Has your organisation produced full management accounts covering the last 12 months?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-370",
+                    "QuestionTag": "FHAHas12MonthsManagementAccs",
+                    "Label": "Has your organisation produced full management accounts covering the last 12 months?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",    
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us if your organisation has produced full management accounts covering the last 12 months"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2220",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-370",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2230",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-370",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170"
+        },
+        {
+            "PageId": "2220",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What you need to upload",
+            "LinkTitle": "What you need to upload",
+            "InfoText": "",
+            "Questions": [],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2225",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>You'll need to upload your organisation's full management accounts for the last 12 months.</p>",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2210"
+        },
+        {
+            "PageId": "2225",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's full management accounts for the last 12 months",
+            "LinkTitle": "Upload your organisation's full management accounts for the last 12 months",
+            "InfoText": "",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-380",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's full management accounts for the last 12 months",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Management accounts must include:</p><ul class='govuk-list govuk-list--bullet'><li>a balance sheet - showing the value of everything your organisation owns, owes and is owed for the last 12 months</li><li>a cash flow statement</li><li>profit and loss account - showing your organisation's sales, running costs and profit or loss it's made</li><li>detailed notes about any assumptions made</li></ul><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-381",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-382",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-383",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2260",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2195,2210,2220"
+        },
+        {
+            "PageId": "2230",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What you need to upload",
+            "LinkTitle": "What you need to upload",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2240",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "<p class='govuk-body'>You'll need to upload your organisation's:</p><ul class='govuk-list govuk-list--bullet'><li>management accounts covering at least 3 months within the last 12 months that evidence your organisation has actively traded</li><li>financial projections covering the remaining period</li></ul><p class='govuk-body'>Management accounts and financial projections must cover a 12-month period in total.</p>",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2210"
+        },
+        {
+            "PageId": "2240",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's management accounts covering at least 3 months within the last 12 months",
+            "LinkTitle": "Upload your organisation's management accounts covering at least 3 months within the last 12 months",
+            "DisplayType": "MultipleFileUpload",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-390",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's management accounts covering at least 3 months within the last 12 months",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Management accounts must include:</p><ul class='govuk-list govuk-list--bullet'><li>a balance sheet - showing the value of everything your organisation owns, owes and is owed</li><li>a cash flow statement</li><li>profit and loss account - showing your organisation's sales, running costs and profit or loss it's made</li><li>detailed notes about any assumptions made</li></ul><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-391",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-392",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-393",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2250",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2210,2230"
+        },
+        {
+            "PageId": "2250",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's financial projections covering the remaining period",
+            "LinkTitle": "Upload your organisation's financial projections covering the remaining period",
+            "InfoText": "",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-400",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's financial projections covering the remaining period",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Financial projections must include:</p><ul class='govuk-list govuk-list--bullet'><li>a balance sheet - showing a forecast of everything your organisation will own, owe and be owed</li><li>a profit and loss account - showing a forecast of your organisation's sales, running costs and the profit or loss</li><li>detailed notes about the accounts</li><li>a breakdown of creditors, other creditors and borrowings</li></ul><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-401",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-402",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-403",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2260",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAHas12MonthsStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2100,2110,2120,2130,2140,2150,2170,2210,2230,2240"
+        },
+        {
+            "PageId": "2260",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Who prepared the answers and uploads in this section?",
+            "LinkTitle": "Who prepared the answers and uploads in this section?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-410",
+                    "QuestionTag": null,
+                    "Label": "Who prepared the answers and uploads in this section?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-hint'>Select all that apply.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "CheckboxList",    
+                        "Options": [
+                            {
+                                "Value": "An employee in your organisation",
+                                "Label": "An employee in your organisation",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "An accountant or auditor",
+                                "Label": "An accountant or auditor",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "A paid consultant",
+                                "Label": "A paid consultant",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "Another third party",
+                                "Label": "Another third party",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us who prepared the answers and uploads in this section"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2270",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": ""
+        },
+        {
+            "PageId": "2270",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What's the accounting reference date for the financial information you are submitting?",
+            "LinkTitle": "What's the accounting reference date for the financial information you are submitting?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-420",
+                    "QuestionTag": "FHAAccountingReferenceDate",
+                    "Label": "What's the accounting reference date for the financial information you are submitting?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Enter the accounting reference date.</p>",
+                    "Hint": "For example, 12 11 2018",
+                    "Input": {
+                        "Type": "Date",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Enter your accounting reference date"
+                            },
+                            {
+                                "Name": "Date",
+                                "ErrorMessage": "Enter a valid accounting reference date"
+                            },
+                            {
+                                "Name": "DateNotInFuture",
+                                "ErrorMessage": "The accounting reference date must be in the past"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2280",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": ""
+        },
+        {
+            "PageId": "2280",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "How many months does the accounting period cover for the financial information you are submitting?",
+            "LinkTitle": "How many months does the accounting period cover for the financial information you are submitting?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-430",
+                    "QuestionTag": "FHAAccountingPeriod",
+                    "Label": "How many months does the accounting period cover for the financial information you are submitting?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your accounting period will be between 1 and 23 months.</p>",
+                    "Hint": "Enter a number between 1 and 23",
+                    "Input": {
+                        "Type": "Number",
+                        "InputClasses": "govuk-input--width-2",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "ErrorMessage": "Tell us what your accounting period is"
+                            },
+                            {
+                                "Name": "Regex",
+                                "Value": "^([1-9]|1[0-9]|2[0-3])$",
+                                "ErrorMessage": "Enter a number between 1 and 23"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2.3",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": ""
+        }
+    ]
+}

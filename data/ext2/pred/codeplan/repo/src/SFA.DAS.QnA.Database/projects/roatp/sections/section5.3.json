@@ -1,0 +1,108 @@
+{
+    "Title": "Complaints policy",
+    "LinkTitle": "Complaints policy",
+    "DisplayType": "Pages",
+    "Pages": [{
+            "PageId": "5200",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Complaints policy",
+            "LinkTitle": "Complaints policy",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "RTE-30",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's complaints policy",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-complaints-policy'>This must include:</p><ul class='govuk-list govuk-list--bullet'><li>what a complaint is</li><li>how to raise a complaint</li><li>how long it takes for a complaint to be resolved</li></ul><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select your organisation's complaints policy"
+                            }, {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "NextPage",
+                    "ReturnId": "5210",
+                    "Conditions": [{
+                            "QuestionTag": "HasWebsite",
+                            "MustEqual": "Yes"
+                        }]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "5210",
+                    "Conditions": [{
+                            "QuestionTag": "UKRLPNoWebsite",
+                            "MustEqual": ""
+                        }]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.4",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }, {
+            "PageId": "5210",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Complaints policy",
+            "LinkTitle": "Complaints policy",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "RTE-31",
+                    "QuestionTag": null,
+                    "Label": "Enter the website link for your organisation's complaints policy",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='rte-complaints-policy'>The complaints policy must be published on your organisation's website and be available to apprentices and employers.</p><p class='govuk-body'>Website link</p>",
+                    "Hint": "For example, www.example.com/complaintspolicy",
+                    "Input": {
+                        "Type": "Text",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter the website link for your organisation's complaints policy"
+                            }, {
+                                "Name": "Url",
+                                "Value": "",
+                                "ErrorMessage": "Enter a website link in the correct format, like www.example.com/complaintspolicy"
+                            }, {
+                                "Name": "MaxLength",
+                                "Value": "200",
+                                "ErrorMessage": "Enter a website link using 200 characters or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "ReturnToSection",
+                    "ReturnId": "5.4",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "5200"
+        }
+    ]
+}

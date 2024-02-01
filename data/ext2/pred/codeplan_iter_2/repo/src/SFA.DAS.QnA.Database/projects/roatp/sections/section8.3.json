@@ -1,0 +1,240 @@
+{
+    "Title": "Process of evaluating the quality of apprenticeship training",
+    "LinkTitle": "Process of evaluating the quality of apprenticeship training",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "8200",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Process of evaluating the quality of apprenticeship training",
+            "LinkTitle": "Process of evaluating the quality of apprenticeship training",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "EAT-30",
+                    "QuestionTag": null,
+                    "Label": "Does your organisation's process for evaluating the quality of training delivered include apprenticeship training?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='eat-evaluating-apprenticeshiptraining'>This means your existing process includes how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>respond and act on feedback from apprentices</li><li>continuously improve apprenticeship training</li><li>identify and address poor apprenticeship training</li></ul>",
+                    "Hint": "",
+                    "Input":
+                    {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "Yes",
+                                "Value": "Yes",
+                                "FurtherQuestions": null
+                            },
+                            {
+                                "Label": "No",
+                                "Value": "No",
+                                "FurtherQuestions": null
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": null,
+                                "ErrorMessage": "Tell us if your organisation's process for evaluating the quality of training delivered includes apprenticeship training"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "8230",
+                    "Conditions": [
+                        {
+                            "QuestionId": "EAT-30",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "8210",
+                    "Conditions": [
+                        {
+                            "QuestionId": "EAT-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "1"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "8210",
+                    "Conditions": [
+                        {
+                            "QuestionId": "EAT-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "2"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "8220",
+                    "Conditions": [
+                        {
+                            "QuestionId": "EAT-30",
+                            "MustEqual": "No"
+                        },
+                        {
+                            "QuestionTag": "ApplyProviderRoute",
+                            "MustEqual": "3"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        },
+        {
+            "PageId": "8210",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Process of evaluating the quality of apprenticeship training",
+            "LinkTitle": "Process of evaluating the quality of apprenticeship training",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "EAT-40",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation evaluate the quality of apprenticeship training?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='eat-evaluating-quality-mainemp'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>respond and act on feedback from employers and apprentices</li><li>continuously improve apprenticeship training</li><li>identify and address poor apprenticeship training</li></ul><p class='govuk-body'>You'll also need to include any systems or processes your organisation will use to assess the quality of apprenticeship training.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": null,
+                                "ErrorMessage": "Tell us how your organisation will evaluate the quality of apprenticeship training"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value": 275,
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "NextPage",
+                    "ReturnId": "8230",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "ActivatedByPageId": "8200",
+            "NotRequiredConditions": [{
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": ["3"]
+                }
+            ],
+            "BodyText": ""
+        },
+        {
+            "PageId": "8220",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Process of evaluating the quality of apprenticeship training",
+            "LinkTitle": "Process of evaluating the quality of apprenticeship training",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "EAT-41",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation evaluate the quality of apprenticeship training?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='eat-evaluating-quality-supp'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>respond and act on feedback from employers, lead providers and apprentices</li><li>continuously improve apprenticeship training</li><li>identify and address poor apprenticeship training</li></ul><p class='govuk-body'>You'll also need to include any systems or processes your organisation will use to assess the quality of apprenticeship training.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": null,
+                                "ErrorMessage": "Tell us how your organisation will evaluate the quality of apprenticeship training"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value": 275,
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "NextPage",
+                    "ReturnId": "8230",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "ActivatedByPageId": "8200",
+            "NotRequiredConditions": [{
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": ["1", "2"]
+                }
+            ],
+            "BodyText": ""
+        },
+        {
+            "PageId": "8230",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Process of evaluating the quality of apprenticeship training",
+            "LinkTitle": "Process of evaluating the quality of apprenticeship training",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "EAT-50",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation review its process for evaluating the quality of training delivered?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='eat-evaluating-reviewquality'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>regularly review the process - for example, quarterly or yearly</li><li>identify gaps and make improvements to the process</li><li>ensure quality is maintained throughout the process</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": null,
+                                "ErrorMessage": "Tell us how your organisation will review its process for evaluating the quality of training delivered"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value": 275,
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [{
+                    "Action": "ReturnToSection",
+                    "ReturnId": "8.4",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": ""
+        }
+    ]
+}

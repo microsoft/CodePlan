@@ -1,0 +1,29 @@
+{
+    "Title": "Introduction and what you'll need <span class='govuk-visually-hidden'> for criminal and compliance checks on who's in control</span>",
+    "LinkTitle": "Introduction and what you'll need",
+    "DisplayType": "Pages",
+    "Pages": [
+      {
+        "PageId": "3200",
+        "SequenceId": null,
+        "SectionId": null,
+        "Title": "Criminal and compliance checks on who's in control of your organisation",
+        "LinkTitle": "Criminal and compliance checks on who's in control of your organisation",
+        "InfoText": "",
+        "Questions": [],
+        "PageOfAnswers": [],
+        "Next": [
+          {
+            "Action": "ReturnToSection",
+            "ReturnId": "3.4",
+            "Conditions": []
+          }
+        ],
+        "AllowMultipleAnswers": false,
+        "Active": true,
+        "NotRequiredConditions": [],
+        "ActivatedByPageId": null,
+        "BodyText": "<p class='govuk-body' id='crim-intro-organisation-all'>This section is to ensure public funds, employers and apprentices are protected.</p><p class='govuk-body'>All organisations applying to join the RoATP are subject to <a class='govuk-link' target='_blank' href='https://www.gov.uk/government/publications/esfa-policy-on-funding-higher-risk-organisations-and-subcontractors'>the Funding higher risk organisations and subcontractors policy (opens in new tab)</a>.</p><p class='govuk-body'>You'll need to provide a brief summary if anyone who's in control of your organisation has:</p><ul class='govuk-list govuk-list--bullet'><li>any unspent criminal convictions</li><li>failed to pay back funds to ESFA or any other public body</li><li>been investigated for fraud or irregularities</li><li>had a contract terminated by a public body</li><li>had early withdrawal from a contract with a public body</li><li>breached tax payments or social security contributions</li><li>been removed from the Register of Removed Trustees</li><li>been subject to insolvency or winding up proceedings</li><li>been subject to a prohibition order from the Teaching Regulation Agency on behalf of the Secretary of State for Education</li><li>been subject to a ban from management or governance of schools</li></ul><p class='govuk-body'>Depending on the answers you give, we may ask for further information.</p>"
+      }
+    ]
+}

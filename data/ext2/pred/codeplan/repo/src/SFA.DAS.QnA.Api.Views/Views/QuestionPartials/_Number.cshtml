@@ -1,0 +1,36 @@
+@model dynamic
+
+@{
+    var isError = Model.ErrorMessages != null && Model.ErrorMessages.Count > 0 ? "govuk-input--error" : "";
+    var inputClasses = Model.InputClasses != null ? Model.InputClasses : "";
+}
+
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.InputPrefix))
+{
+    <span class="govuk-body govuk-!-margin-right-2">@Html.Raw(Model.InputPrefix)</span>
+}
+
+<input
+    class="govuk-input @inputClasses @isError"
+    type="number"
+    id="@Model.QuestionId"
+    name="@Model.QuestionId"
+    value="@Model.Value"
+    pattern="[0-9]*"
+/>
+
+@if (!string.IsNullOrWhiteSpace(Model.InputSuffix))
+{
+    <span class="govuk-body govuk-!-margin-left-2">@Html.Raw(Model.InputSuffix)</span>
+}

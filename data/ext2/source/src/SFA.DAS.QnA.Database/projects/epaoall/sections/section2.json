@@ -1,0 +1,2090 @@
+{
+    "Title": "Declarations",
+    "LinkTitle": "Declarations",
+    "DisplayType": "PagesWithSections",
+    "RequestedFeedbackAnswered": null,
+    "Pages": [
+        {
+            "PageId": "15",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Authoriser details",
+            "LinkTitle": "Name and job title",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "W_DEL-01",
+                    "QuestionTag": null,
+                    "Label": "Name",
+                    "ShortLabel": "Name",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter the name of the person named as authoriser"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                },
+                {
+                    "QuestionId": "W_DEL-02",
+                    "QuestionTag": null,
+                    "Label": "Job title",
+                    "ShortLabel": "Job title",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter the job title of the person named as authoriser"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "193",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body'>Who is signing your application?</p><p class='govuk-body'>Include the name and job title of the person named as authoriser.</p>",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "193",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for Mandatory exclusion",
+            "LinkTitle": "Criminal convictions",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "M_DEL-09",
+                    "QuestionTag": null,
+                    "Label": "Criminal convictions",
+                    "ShortLabel": "Criminal convictions",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has any person of significant control (PSC) in the last 5 years been convicted of:</p><ul class='govuk-list govuk-list--bullet'><li>any offence under sections 44 to 46 of the Serious Crime Act 2007 which relates to an offence covered by subparagraph (f)</li><li>conspiracy within the meaning of section 1 or 1A of the Criminal Law Act 1977</li><li>conspiracy within article 9 or 9A of the criminal attempts and conspiracy (Northern Ireland) order 1983, relating to participation in a criminal organisation</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any convictions apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "194",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": {
+                "Title": "What classifies as a person with significant control?",
+                "Body": "<p class='govuk-body'>A <a class='govuk-link' target='_blank' href='https://www.gov.uk/government/news/people-with-significant-control-psc-who-controls-your-company'>person with significant control (PSC)</a> is someone who owns or controls your organisation. They're sometimes called 'beneficial owners'</p>"
+            },
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "194",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for Mandatory exclusion",
+            "LinkTitle": "Financial convictions",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "M_DEL-10",
+                    "QuestionTag": null,
+                    "Label": "Financial convictions",
+                    "ShortLabel": "Financial convictions",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has any person of significant control (PSC) in the last 5 years been convicted of fraud affecting European communities, including:</p><ul class='govuk-list govuk-list--bullet'><li>the common law offence of cheating the Revenue (HMRC)</li><li>the common law offence of conspiracy to defraud</li><li>fraud or theft within the meaning of the Theft Act 1968, the Theft Act (Northern Ireland) 1969, the Theft Act 1978 or the Theft (Northern Ireland) Order 1978</li><li>fraudulent trading within the meaning of section 458 of the Companies Act 1985, article 451 of the Companies (Northern Ireland) Order 1986 or section 993 of the Companies Act 2006</li><li>fraudulent evasion within the meaning of section 170 of the Customs and Excise Management Act 1979 or section 72 of the Value Added Tax Act 1994</li><li>an offence in connection with taxation in the European Union within the meaning of section 71 of the Criminal Justice Act 1993</li><li>destroying, defacing or concealing of documents or procuring the execution of a valuable security within the meaning of section 20 of the Theft Act 1968 or section 19 of the Theft Act (Northern Ireland) 1969</li><li>fraud within the meaning of section 2, 3 or 4 of the Fraud Act 2006</li><li>the possession of articles for use in frauds within the meaning of section 6 of the Fraud Act 2006, or the making, adapting, supplying or offering to supply articles for use in frauds within the meaning of section 7 of that Act</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any convictions apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "195",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "195",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for Mandatory exclusion",
+            "LinkTitle": "Counter terrorism",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "M_DEL-11",
+                    "QuestionTag": null,
+                    "Label": "Counter terrorism",
+                    "ShortLabel": "Counter terrorism",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has any person with significant control in the last 5 years been convicted of:</p><ul class='govuk-list govuk-list--bullet'><li>section 41 of the <a class='govuk-link' target='_blank' href='https://www.gov.uk/government/collections/counter-terrorism-and-security-bill'>Counter Terrorism Act 2008</a></li><li>schedule 2 of the Counter Terrorism Act 2008 where the court has determined that there is a terrorist connection</li><li>any offence under sections 44 to 46 of the Serious Crime Act 2007</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any convictions apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "196",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "196",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for Mandatory exclusion",
+            "LinkTitle": "Other criminal convictions",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "M_DEL-12",
+                    "QuestionTag": null,
+                    "Label": "Other criminal convictions",
+                    "ShortLabel": "Other criminal convictions",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has any person of significant control (PSC) in the last 5 years been convicted of:</p><ul class='govuk-list govuk-list--bullet'><li>money laundering within the meaning of sections 340(11) and 415 of the Proceeds of Crime Act 2002</li><li>an offence in connection with the proceeds of criminal conduct within the meaning of section 93A, 93B or 93C of the Criminal Justice Act 1988 or article 45, 46 or 47 of the Proceeds of Crime (Northern Ireland) Order 1996</li><li>an offence under section 4 of the Asylum and Immigration (Treatment of Claimants etc) Act 2004</li><li>an offence under section 59A of the Sexual Offences Act 2003</li><li>an offence under section 71 of the Coroners and Justice Act 2009</li><li>an offence in connection with the proceeds of drug trafficking within the meaning of section 49, 50 and 51 of the Drug Trafficking Act 1994</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any convictions apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "20",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "20",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Tax and social security irregularities",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "D_DEL-13",
+                    "QuestionTag": null,
+                    "Label": "Tax and social security irregularities",
+                    "ShortLabel": "Cessation of trading",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has any person of significant control (PSC) breached tax payments or social security contributions?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "D_DEL-13.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details whether you've paid, or have entered into a binding arrangement with a view to paying, including, where applicable, any accrued interest and/or fines",
+                                        "ShortLabel": "",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of payments or payment agreements"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any convictions apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "201",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "201",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Bankruptcy and insolvency",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "D_DEL-14",
+                    "QuestionTag": null,
+                    "Label": "Bankruptcy and insolvency",
+                    "ShortLabel": "Tax and social security irregularities",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>In the past 3 years has your organisation or partner organisation:</p><ul class='govuk-list govuk-list--bullet'><li>been made bankrupt</li><li>been the subject of insolvency</li><li>started winding-up proceedings</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any bankruptcy or insolvency proceedings apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "20.1",
+                    "Condition": null,
+                    "Conditions": [
+                        {
+                            "QuestionId": "D_DEL-14",
+                            "QuestionTag": null,
+                            "MustEqual": "Yes"
+                        }
+                    ],
+                    "ConditionMet": false
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "202",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "20.1",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Bankruptcy and insolvency details",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "D_DEL-13-1",
+                    "QuestionTag": null,
+                    "Label": "Type of proceeding",
+                    "ShortLabel": "Type of proceeding",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter the type of proceeding"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                },
+                {
+                    "QuestionId": "D_DEL-13-2",
+                    "QuestionTag": null,
+                    "Label": "Date of proceedings",
+                    "ShortLabel": "Date of proceedings",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "For example, 31 3 1980",
+                    "Input": {
+                        "Type": "Date",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a date"
+                            },
+                            {
+                                "Name": "Date",
+                                "Value": "",
+                                "ErrorMessage": "Date must be correct"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                },
+                {
+                    "QuestionId": "D_DEL-13-3",
+                    "QuestionTag": null,
+                    "Label": "If repaying debts, how you are repaying the debt?",
+                    "ShortLabel": "If repaying debts, how you are repaying the debt?",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter how you are repaying the debts"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                },
+                {
+                    "QuestionId": "D_DEL-13-4",
+                    "QuestionTag": null,
+                    "Label": "Date the debt will be cleared",
+                    "ShortLabel": "Date the debt will be cleared",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "For example, 31 3 1980",
+                    "Input": {
+                        "Type": "Date",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a date"
+                            },
+                            {
+                                "Name": "Date",
+                                "Value": "",
+                                "ErrorMessage": "Date must be correct"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "202",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": true,
+            "Order": null,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": "201"
+        },
+        {
+            "PageId": "202",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Cessation of trading",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-21",
+                    "QuestionTag": null,
+                    "Label": "Cessation of trading",
+                    "ShortLabel": "Cessation of trading",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Confirm whether your organisation or any partner organisation are in:</p><ul class='govuk-list govuk-list--bullet'><li>voluntary administration or company voluntary arrangement</li><li>compulsory winding up</li><li>receivership</li><li>composition with creditors</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-21.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any cessation of trading proceedings apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "203",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "203",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Incorrect tax returns",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-22",
+                    "QuestionTag": null,
+                    "Label": "Incorrect tax returns",
+                    "ShortLabel": "Incorrect tax returns",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Have your organisation or partner organisation's tax returns on or after the 1 October 2013:</p><ul class='govuk-list govuk-list--bullet'><li>been found to be incorrect as of 1 April 2013</li><li>resulted in a criminal conviction for tax-related offences which are unspent, or to a civil penalty for fraud or evasion</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-22.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any tax returns have been found to be incorrect"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "204",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "204",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "HMRC challenges to tax returns",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-23",
+                    "QuestionTag": null,
+                    "Label": "HMRC challenges to tax returns",
+                    "ShortLabel": "HMRC challenges to tax returns",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has your organisation or your partner organisation tax returns between 1 October 2012 and 1 April 2013:</p><ul class='govuk-list govuk-list--bullet'><li>been successfully challenged by HMRC under the general anti-abuse rule (GAAR) or the Halifax abuse principle</li><li>been challenged by a tax authority in the jurisdiction your organisation is based with rules or legislation similar to GAAR or Halifax</li><li>resulted in criminal convictions for tax-related offences which are unspent, or to a civil penalty for fraud or evasion</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-23.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any tax returns have been found to be incorrect"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "205",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "205",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Contracts withdrawn from you",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-24",
+                    "QuestionTag": null,
+                    "Label": "Contracts withdrawn from you",
+                    "ShortLabel": "Contracts withdrawn from you",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has your organisation had any contracts for the delivery of services withdrawn within the last 3 financial years?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-24.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your organisation has had any contracts withdrawn"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "206",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "206",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Contracts you have withdrawn from",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-25",
+                    "QuestionTag": null,
+                    "Label": "Contracts you have withdrawn from",
+                    "ShortLabel": "Contracts you have withdrawn from",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has your organisation withdrawn from a contract for the delivery of services within the last 3 years?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-25.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    },
+                                    {
+                                        "QuestionId": "A_DEL-25.2",
+                                        "QuestionTag": null,
+                                        "Label": "Full name",
+                                        "ShortLabel": "Full name",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Text",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a full name"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    },
+                                    {
+                                        "QuestionId": "A_DEL-25.3",
+                                        "QuestionTag": null,
+                                        "Label": "Dates involved",
+                                        "ShortLabel": "Dates involved",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Date",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a date"
+                                                },
+                                                {
+                                                    "Name": "Date",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Date must be correct"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your organisation has withdrawn from any contracts"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "207",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "207",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Organisation removal from registers",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-26",
+                    "QuestionTag": null,
+                    "Label": "Organisation removal from registers",
+                    "ShortLabel": "Organisation removal from registers",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has your organisation been removed from:</p><ul class='govuk-list govuk-list--bullet'><li>Education and skills funding agency's register of training organisations (RoATP)</li><li>End-point assessor organisations (EPAO) register</li><li>Ofqual's register</li><li>other professional or trade registers</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-26.1",
+                                        "QuestionTag": null,
+                                        "Label": "Date of removal",
+                                        "ShortLabel": "Date of removal",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Date",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a date"
+                                                },
+                                                {
+                                                    "Name": "Date",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Date must be correct"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    },
+                                    {
+                                        "QuestionId": "A_DEL-26.2",
+                                        "QuestionTag": null,
+                                        "Label": "Reasons why your organisation was removed",
+                                        "ShortLabel": "Reasons why your organisation was removed",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter the reasons why your organisation was removed from those registers"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your organisation been removed from the listed registers"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "208",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "208",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Direction and sanctions",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-27",
+                    "QuestionTag": null,
+                    "Label": "Direction and sanctions",
+                    "ShortLabel": "Direction and sanctions",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has your organisation received direction or sanctions from any of the following?</p><ul class='govuk-list govuk-list--bullet'><li>Ofqual</li><li>Quality Assurance Agency (QAA) for higher education</li><li>awarding organisations</li><li>other similar bodies</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-27.1",
+                                        "QuestionTag": null,
+                                        "Label": "Date of sanction",
+                                        "ShortLabel": "Date of sanction",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "For example, 31 3 1980",
+                                        "Input": {
+                                            "Type": "Date",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a date"
+                                                },
+                                                {
+                                                    "Name": "Date",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Date must be correct"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    },
+                                    {
+                                        "QuestionId": "A_DEL-27.2",
+                                        "QuestionTag": null,
+                                        "Label": "Reasons why your organisation received direction or sanctions",
+                                        "ShortLabel": "Reasons why your organisation received direction or sanctions",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter the reasons why your organisation received direction or sanctions"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your organisation has received direction or sanctions"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "209",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "209",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Repayment of public money",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-28",
+                    "QuestionTag": null,
+                    "Label": "Repayment of public money",
+                    "ShortLabel": "Repayment of public money",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has your organisation ever had to repay public money?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-28.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your organisation has ever had to repay public money"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "210",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "210",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Public body funds and contracts",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-29",
+                    "QuestionTag": null,
+                    "Label": "Public body funds and contracts",
+                    "ShortLabel": "Public body funds and contracts",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Has any person of significant control in your organisation had:</p><ul class='govuk-list govuk-list--bullet'><li>a failure to repay funding due to any public body</li><li>early termination of a contract with a public body</li><li>early withdrawal from a contract with a public body</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-29.1",
+                                        "QuestionTag": null,
+                                        "Label": "Provide details of any mitigating factors that you think should be taken into consideration",
+                                        "ShortLabel": "",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of any mitigating factors"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if any of the listed apply"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "211",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "211",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Grounds for discretionary exclusion",
+            "LinkTitle": "Legal dispute",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-30",
+                    "QuestionTag": null,
+                    "Label": "Legal dispute",
+                    "ShortLabel": "Legal dispute",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Does your organisation have any outstanding or ongoing legal dispute that could prevent you from conducting end-point assessments?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "ComplexRadio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [
+                                    {
+                                        "QuestionId": "A_DEL-30.1",
+                                        "QuestionTag": null,
+                                        "Label": "Date",
+                                        "ShortLabel": "",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "For example, 31 3 1980",
+                                        "Input": {
+                                            "Type": "Date",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter a date"
+                                                },
+                                                {
+                                                    "Name": "Date",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Date must be correct"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    },
+                                    {
+                                        "QuestionId": "A_DEL-30.2",
+                                        "QuestionTag": null,
+                                        "Label": "Details of the dispute",
+                                        "ShortLabel": "",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter details of the dispute"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    },
+                                    {
+                                        "QuestionId": "A_DEL-30.3",
+                                        "QuestionTag": null,
+                                        "Label": "Current status of the dispute",
+                                        "ShortLabel": "",
+                                        "InputClasses": null,
+                                        "QuestionBodyText": "",
+                                        "Hint": "",
+                                        "Input": {
+                                            "Type": "Textarea",
+                                            "InputClasses": null,
+                                            "Options": [],
+                                            "Validations": [
+                                                {
+                                                    "Name": "Required",
+                                                    "Value": "",
+                                                    "ErrorMessage": "Enter current status of the dispute"
+                                                }
+                                            ],
+                                            "DataEndpoint": null
+                                        },
+                                        "Order": null,
+                                        "Value": "",
+                                        "ErrorMessages": null
+                                    }
+                                ],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your organisation has an outstanding or ongoing legal dispute"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "22",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "OrganisationType",
+                    "IsOneOf": [
+                        "HEI"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "22",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Application accuracy",
+            "LinkTitle": "False declarations",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-28",
+                    "QuestionTag": null,
+                    "Label": "False declarations",
+                    "ShortLabel": "False declarations",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>I certify that the information provided is accurate and accept the conditions and undertakings requested in this application. It's understood that false information may result in:</p><ul class='govuk-list govuk-list--bullet'><li>exclusion from this and future registers</li><li>the removal from the Register of End-point Assessments Organisations</li><li>the withdrawal of contracts with employers</li><li>civil or criminal proceedings</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if you understand the false declarations statement"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "221",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "221",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Application accuracy",
+            "LinkTitle": "Accurate and true representation",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-29",
+                    "QuestionTag": null,
+                    "Label": "Accurate and true representation",
+                    "ShortLabel": "Accurate and true representation",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Will your applications to deliver end-point assessments for standards be accurate and true representations?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if your applications to deliver end-point assessments will be accurate and true representations"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "222",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "222",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Application accuracy",
+            "LinkTitle": "Agreement to appear on the register",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "A_DEL-30",
+                    "QuestionTag": null,
+                    "Label": "Agreement to appear on the register",
+                    "ShortLabel": "Agreement to appear on the register",
+                    "InputClasses": null,
+                    "QuestionBodyText": "<p class='govuk-body'>Do you agree your organisation details will be added to the register of end-point assessment organisations if your application is successful?</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "InputClasses": null,
+                        "Options": [
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "FurtherQuestions": [],
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select yes if you agree for your organisation details to be added to the register"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "2",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "Details": null,
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        }
+    ]
+}

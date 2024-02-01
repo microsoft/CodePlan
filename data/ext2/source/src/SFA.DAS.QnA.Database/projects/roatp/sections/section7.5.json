@@ -1,0 +1,1059 @@
+{
+	"Title": "Developing and delivering training",
+	"LinkTitle": "Developing and delivering training",
+	"DisplayType": "Pages",
+	"Pages": [{
+			"PageId": "7500",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Developing and delivering training",
+			"LinkTitle": "Developing and delivering training",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-750",
+				"QuestionTag": "DeliveringTeamResponsible",
+				"Label": "Does your organisation have a team responsible for developing and delivering training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-section_7_5_q1_not_sole_trader'>Training includes things like:</p><ul class='govuk-list govuk-list--bullet'><li>training of technical skills</li><li>apprenticeships</li><li>work based training</li><li>commercial training</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Radio",
+					"Options": [{
+							"Value": "Yes",
+							"Label": "Yes",
+							"HintText": ""
+						},
+						{
+							"Value": "No",
+							"Label": "No",
+							"HintText": ""
+						}
+					],
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us if your organisation has a team responsible for developing and delivering training"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7520",
+					"Conditions": [{
+						"QuestionId": "DAT-750",
+						"MustEqual": "No"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7530",
+					"Conditions": [{
+							"QuestionId": "DAT-750",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"MustEqual": "1"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7530",
+					"Conditions": [{
+							"QuestionId": "DAT-750",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"MustEqual": "3"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+							"QuestionId": "DAT-750",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"MustEqual": "2"
+						}
+					]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": true,
+			"NotRequiredConditions": [{
+				"Field": "SoleTradeOrPartnership",
+				"IsOneOf": [
+					"Sole trader"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "7510",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Developing and deliverint training",
+			"LinkTitle": "Developing and delivering training",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-751",
+				"QuestionTag": "DeliveringPersonResponsible",
+				"Label": "Does your organisation have someone responsible for developing and delivering training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-section_7_5_q1_sole_trader'>This person is you if you're the only person in your organisation.</p><p class='govuk-body'>Training includes things like:</p><ul class='govuk-list govuk-list--bullet'><li>training of technical skills</li><li>apprenticeships</li><li>work based training</li><li>commercial training</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Radio",
+					"Options": [{
+							"Value": "Yes",
+							"Label": "Yes",
+							"HintText": ""
+						},
+						{
+							"Value": "No",
+							"Label": "No",
+							"HintText": ""
+						}
+					],
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us if your organisation has someone responsible for developing and delivering training"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7560",
+					"Conditions": [{
+							"QuestionId": "DAT-751",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "1"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7560",
+					"Conditions": [{
+							"QuestionId": "DAT-751",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "3"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+							"QuestionId": "DAT-751",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "2"
+						}
+					]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": true,
+			"NotRequiredConditions": [{
+				"Field": "SoleTradeOrPartnership",
+				"IsOneOf": [
+					null,
+					"Partnership"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": null
+		},
+		{
+			"PageId": "7520",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Developing and delivering training",
+			"LinkTitle": "Developing and delivering training",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-752",
+				"QuestionTag": "DeliveringPersonResponsible",
+				"Label": "Does your organisation have someone responsible for developing and delivering training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-section_7_5_q1_sole_trader_b'>This person is you if you're the only person in your organisation.</p><p class='govuk-body'>Training includes things like:</p><ul class='govuk-list govuk-list--bullet'><li>training of technical skills</li><li>apprenticeships</li><li>work based training</li><li>commercial training</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Radio",
+					"Options": [{
+							"Value": "Yes",
+							"Label": "Yes",
+							"HintText": ""
+						},
+						{
+							"Value": "No",
+							"Label": "No",
+							"HintText": ""
+						}
+					],
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us if your organisation has someone responsible for developing and delivering training"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7560",
+					"Conditions": [{
+							"QuestionId": "DAT-752",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "1"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7560",
+					"Conditions": [{
+							"QuestionId": "DAT-752",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "3"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+							"QuestionId": "DAT-752",
+							"MustEqual": "Yes"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "2"
+						}
+					]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [],
+			"BodyText": "",
+			"ActivatedByPageId": "7500"
+		},
+		{
+			"PageId": "7530",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Developing and delivering training",
+			"LinkTitle": "Developing and delivering training",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-753",
+				"QuestionTag": null,
+				"Label": "Who has the team worked with to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "",
+				"Hint": "",
+				"Input": {
+					"Type": "Radio",
+					"Options": [{
+							"Value": "Other Organisations",
+							"Label": "Other Organisations",
+							"HintText": ""
+						},
+						{
+							"Value": "Employers - to deliver training to their employees",
+							"Label": "Employers - to deliver training to their employees",
+							"HintText": ""
+						},
+						{
+							"Value": "Both other organisations and employers",
+							"Label": "Both other organisations and employers",
+							"HintText": ""
+						},
+						{
+							"Value": "No one yet",
+							"Label": "No one yet",
+							"HintText": ""
+						}
+					],
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us who the team worked with to develop and deliver training"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7570",
+					"Conditions": [{
+						"QuestionId": "DAT-753",
+						"MustEqual": "Other Organisations"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7591",
+					"Conditions": [{
+						"QuestionId": "DAT-753",
+						"MustEqual": "Both other organisations and employers"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7592",
+					"Conditions": [{
+						"QuestionId": "DAT-753",
+						"MustEqual": "Employers - to deliver training to their employees"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+							"QuestionId": "DAT-753",
+							"MustEqual": "No one yet"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "1"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+							"QuestionId": "DAT-753",
+							"MustEqual": "No one yet"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "3"
+						}
+					]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7500"
+		},
+		{
+			"PageId": "7540",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Tell us who's the overall manager for this team",
+			"LinkTitle": "Tell us who's the overall manager for this team",
+			"InfoText": "",
+			"Questions": [{
+					"QuestionId": "DAT-754-1",
+					"QuestionTag": null,
+					"Label": "Full name",
+					"ShortLabel": "",
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "Text",
+						"Validations": [{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us who the overall manager is for this team and how much experience in developing and delivering training they have"
+							},
+							{
+								"Name": "MaxLength",
+								"Value": "255",
+								"ErrorMessage": "Enter a full name using 255 characters or less"
+							}
+						]
+					}
+				},
+				{
+					"QuestionId": "DAT-754-2",
+					"QuestionTag": null,
+					"Label": "<h1 class='govuk-heading-l'>How much experience do they have in developing and delivering training?</h1>",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='dat-section_7_5_experience'>This experience can be from either:\n</p><ul class='govuk-list govuk-list--bullet'><li>your organisation</li><li>previous employment</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "Radio",
+						"Options": [{
+								"Value": "Less than 9 months",
+								"Label": "Less than 9 months",
+								"HintText": ""
+							},
+							{
+								"Value": "Between 9 to 18 months ",
+								"Label": "Between 9 to 18 months ",
+								"HintText": ""
+							},
+							{
+								"Value": "Over 18 months",
+								"Label": "Over 18 months",
+								"HintText": ""
+							}
+						],
+						"Validations": [{
+							"Name": "Required",
+							"Value": "",
+							"ErrorMessage": "Tell us how much experience they have in developing and delivering training"
+						}]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [{
+				"Action": "ReturnToSection",
+				"ReturnId": "7.6",
+				"Conditions": []
+			}],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "ApplyProviderRoute",
+				"IsOneOf": [
+					"3"
+				]
+			}],
+			"BodyText": "<p class='govuk-body' id='dat-section_7_5_overall_manager'>This must be someone who is accountable for the team responsible for developing and delivering training.</p>",
+			"ActivatedByPageId": "7500,7510,7520,7530,7560,7570,7591,7592,7593,7954,7955"
+		},
+		{
+			"PageId": "7560",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Developing and delivering training",
+			"LinkTitle": "Developing and delivering training",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-756",
+				"QuestionTag": null,
+				"Label": "Who has this person worked with to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "",
+				"Hint": "",
+				"Input": {
+					"Type": "Radio",
+					"Options": [{
+							"Value": "Other Organisations",
+							"Label": "Other Organisations",
+							"HintText": ""
+						},
+						{
+							"Value": "Employers - to deliver training to their employees",
+							"Label": "Employers - to deliver training to their employees",
+							"HintText": ""
+						},
+						{
+							"Value": "Both other organisations and employers",
+							"Label": "Both other organisations and employers",
+							"HintText": ""
+						},
+						{
+							"Value": "No one yet",
+							"Label": "No one yet",
+							"HintText": ""
+						}
+					],
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us who this person worked with to develop and deliver training"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7593",
+					"Conditions": [{
+						"QuestionId": "DAT-756",
+						"MustEqual": "Other Organisations"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7594",
+					"Conditions": [{
+						"QuestionId": "DAT-756",
+						"MustEqual": "Both other organisations and employers"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7595",
+					"Conditions": [{
+						"QuestionId": "DAT-756",
+						"MustEqual": "Employers - to deliver training to their employees"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+							"QuestionId": "DAT-756",
+							"MustEqual": "No one yet"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "1"
+						}
+					]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+							"QuestionId": "DAT-756",
+							"MustEqual": "No one yet"
+						},
+						{
+							"QuestionTag": "ApplyProviderRoute",
+							"Contains": "3"
+						}
+					]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "ApplyProviderRoute",
+				"IsOneOf": [
+					"2"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7510,7520"
+		},
+		{
+			"PageId": "7570",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "How has the team worked with other organisations to develop and deliver training?",
+			"LinkTitle": "How has the team worked with other organisations to develop and deliver training?",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-757",
+				"QuestionTag": "",
+				"Label": "How has the team worked with other organisations to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-team-worked-with-other-orgs'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>training needs were identified</li><li>training was determined for the right solution</li><li>learning objectives were identified and measured</li><li>training was developed from learning objectives</li><li>learning objectives will be delivered to apprentices</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Textarea",
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us how the team worked with other organisations to develop and deliver training"
+					}, {
+						"Name": "MaxWordCount",
+						"Value": "275",
+						"ErrorMessage": "Your answer must be 275 words or less"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "1"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "3"
+					}]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7530"
+		},
+		{
+			"PageId": "7590",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "Tell us who's the overall manager for this team",
+			"LinkTitle": "Tell us who's the overall manager for this team",
+			"InfoText": "",
+			"Questions": [{
+					"QuestionId": "DAT-759-1",
+					"QuestionTag": null,
+					"Label": "Full name",
+					"ShortLabel": "",
+					"QuestionBodyText": "",
+					"Hint": "",
+					"Input": {
+						"Type": "Text",
+						"Validations": [{
+								"Name": "Required",
+								"Value": "",
+								"ErrorMessage": "Tell us who the overall manager is for this team and how much experience in developing and delivering training they have"
+							},
+							{
+								"Name": "MaxLength",
+								"Value": "255",
+								"ErrorMessage": "Enter a full name using 255 characters or less"
+							}
+						]
+					}
+				},
+				{
+					"QuestionId": "DAT-759-2",
+					"QuestionTag": null,
+					"Label": "<h1 class='govuk-heading-l'>Do they have at least 3 months experience in developing and delivering training?</h1>",
+					"ShortLabel": "",
+					"QuestionBodyText": "<p class='govuk-body' id='dat-section_7_5_experience_supporting'>This experience can be from either:\n</p><ul class='govuk-list govuk-list--bullet'><li>your organisation</li><li>previous employment</li></ul>",
+					"Hint": "",
+					"Input": {
+						"Type": "Radio",
+						"Options": [{
+								"Value": "Yes",
+								"Label": "Yes",
+								"HintText": ""
+							},
+							{
+								"Value": "No",
+								"Label": "No",
+								"HintText": ""
+							}
+						],
+						"Validations": [{
+							"Name": "Required",
+							"Value": "",
+							"ErrorMessage": "Tell us if they have at least 3 months experience in developing and delivering training"
+						}]
+					}
+				}
+			],
+			"PageOfAnswers": [],
+			"Next": [{
+				"Action": "ReturnToSection",
+				"ReturnId": "7.6",
+				"Conditions": []
+			}],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "ApplyProviderRoute",
+				"IsOneOf": [
+					"1","2"
+				]
+			}],
+			"BodyText": "<p class='govuk-body' id='dat-section_7_5_overall_manager_supporting'>This must be someone who is accountable for the team responsible for developing and delivering training.</p>",
+			"ActivatedByPageId": "7500,7510,7520,7530,7560,7570,7591,7592,7593,7954,7955"
+		},
+		{
+			"PageId": "7591",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "How has the team worked with other organisations and employers to develop and deliver training?",
+			"LinkTitle": "How has the team worked with other organisations and employers to develop and deliver training?",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-7591",
+				"QuestionTag": "",
+				"Label": "How has the team worked with other organisations and employers to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-team-worked-with-both'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>training needs were identified</li><li>training was determined for the right solution</li><li>learning objectives were identified and measured</li><li>training was developed from learning objectives</li><li>learning objectives will be delivered to apprentices</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Textarea",
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us how the team worked with employers and other organisations to develop and deliver training"
+					}, {
+						"Name": "MaxWordCount",
+						"Value": "275",
+						"ErrorMessage": "Your answer must be 275 words or less"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "1"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "3"
+					}]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7530"
+		},
+		{
+			"PageId": "7592",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "How has the team worked with employers to develop and deliver training?",
+			"LinkTitle": "How has the team worked with employers to develop and deliver training?",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-7592",
+				"QuestionTag": "",
+				"Label": "How has the team worked with employers to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-team-worked-with-both'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>training and sector needs were identified</li><li>training was determined for the right solution</li><li>learning objectives were identified and measured</li><li>training was developed from learning objectives</li><li>learning objectives will be delivered to apprentices</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Textarea",
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us how the team worked with employers to develop and deliver training"
+					}, {
+						"Name": "MaxWordCount",
+						"Value": "275",
+						"ErrorMessage": "Your answer must be 275 words or less"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "1"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "3"
+					}]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7530"
+		},
+		{
+			"PageId": "7593",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "How has this person worked with other organisations to develop and deliver training?",
+			"LinkTitle": "How has this person worked with other organisations to develop and deliver training?",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-7593",
+				"QuestionTag": "",
+				"Label": "How has this person worked with other organisations to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-team-worked-with-both'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>training needs were identified</li><li>training was determined for the right solution</li><li>learning objectives were identified and measured</li><li>training was developed from learning objectives</li><li>learning objectives will be delivered to apprentices</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Textarea",
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us how this person worked with other organisations to develop and deliver training"
+					}, {
+						"Name": "MaxWordCount",
+						"Value": "275",
+						"ErrorMessage": "Your answer must be 275 words or less"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "1"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "3"
+					}]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"Yes"
+				]
+			},
+			{
+				"Field": "Apply-ProviderRoute",
+				"IsOneOf": [
+					"2"
+				]
+			},{
+				"Field": "DeliveringPersonResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7560"
+		},
+		{
+			"PageId": "7594",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "How has this person worked with other organisations and employers to develop and deliver training?",
+			"LinkTitle": "How has this person worked with other organisations and employers to develop and deliver training?",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-7594",
+				"QuestionTag": "",
+				"Label": "How has this person worked with other organisations and employers to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-team-worked-with-both-person'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>training needs were identified</li><li>training was determined for the right solution</li><li>learning objectives were identified and measured</li><li>training was developed from learning objectives</li><li>learning objectives will be delivered to apprentices</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Textarea",
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us how this person worked with employers and other organisations to develop and deliver training"
+					}, {
+						"Name": "MaxWordCount",
+						"Value": "275",
+						"ErrorMessage": "Your answer must be 275 words or less"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "1"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "3"
+					}]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"Yes"
+				]
+			},
+			{
+				"Field": "Apply-ProviderRoute",
+				"IsOneOf": [
+					"2"
+				]
+			},{
+				"Field": "DeliveringPersonResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7560"
+		},
+		{
+			"PageId": "7595",
+			"SequenceId": null,
+			"SectionId": null,
+			"Title": "How has this person worked with employers to develop and deliver training?",
+			"LinkTitle": "How has this person worked with employers to develop and deliver training?",
+			"InfoText": "",
+			"Questions": [{
+				"QuestionId": "DAT-7595",
+				"QuestionTag": "",
+				"Label": "How has this person worked with employers to develop and deliver training?",
+				"ShortLabel": "",
+				"QuestionBodyText": "<p class='govuk-body' id='dat-team-worked-with-both-person'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>training and sector needs were identified</li><li>training was determined for the right solution</li><li>learning objectives were identified and measured</li><li>training was developed from learning objectives</li><li>learning objectives will be delivered to apprentices</li></ul>",
+				"Hint": "",
+				"Input": {
+					"Type": "Textarea",
+					"Validations": [{
+						"Name": "Required",
+						"Value": "",
+						"ErrorMessage": "Tell us how this person worked with employers to develop and deliver training"
+					}, {
+						"Name": "MaxWordCount",
+						"Value": "275",
+						"ErrorMessage": "Your answer must be 275 words or less"
+					}]
+				}
+			}],
+			"PageOfAnswers": [],
+			"Next": [{
+					"Action": "NextPage",
+					"ReturnId": "7540",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "1"
+					}]
+				},
+				{
+					"Action": "NextPage",
+					"ReturnId": "7590",
+					"Conditions": [{
+						"QuestionTag": "ApplyProviderRoute",
+						"Contains": "3"
+					}]
+				},
+				{
+					"Action": "ReturnToSection",
+					"ReturnId": "7.6",
+					"Conditions": []
+				}
+			],
+			"AllowMultipleAnswers": false,
+			"Active": false,
+			"NotRequiredConditions": [{
+				"Field": "DeliveringTeamResponsible",
+				"IsOneOf": [
+					"Yes"
+				]
+			},
+			{
+				"Field": "ApplyProviderRoute",
+				"IsOneOf": [
+					"2"
+				]
+			},{
+				"Field": "DeliveringPersonResponsible",
+				"IsOneOf": [
+					"No"
+				]
+			}],
+			"BodyText": "",
+			"ActivatedByPageId": "7560"
+		}
+	]
+}

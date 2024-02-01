@@ -1,0 +1,66 @@
+{
+    "Title": "Training apprentices",
+    "LinkTitle": "Training apprentices",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "6300",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "How will your organisation train its apprentices?",
+            "LinkTitle": "How will your organisation train its apprentices?",
+            "InfoText": "",
+            "Details": {
+                "Title": "What is a connected company or charity?",
+                "Body": "<p class='govuk-body'>A connected company is part of the same group and has the same ultimate parent company as your organisation.</p><p class='govuk-body'>A connected charity is part of the same group of charities and has a majority of the same controlling trustees as your organisation.</p>"
+            },
+            "Questions": [
+                {
+                    "QuestionId": "PAT-630",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation train its apprentices?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Label": "In your organisation",
+                                "Value": "In your organisation"
+                            },
+                            {
+                                "Label": "In connected companies or charities",
+                                "Value": "In connected companies or charities"
+                            },
+                            {
+                                "Label": "In your organisation and connected companies or charities",
+                                "Value": "In your organisation and connected companies or charities"
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how your organisation will train its apprentices"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.4",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "ActivatedByPageId": "",
+            "BodyText": ""
+        }
+    ]
+}

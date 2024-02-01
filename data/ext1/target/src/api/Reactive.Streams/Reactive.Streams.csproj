@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Reactive.Streams</AssemblyName>
+    <Description>Reactive Streams API</Description>
+    <Copyright>MIT-0</Copyright>
+    <VersionPrefix>1.0.3</VersionPrefix>
+    <Authors>Reactive Streams</Authors>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <PackageTags>reactive;stream</PackageTags>
+    <PackageProjectUrl>https://github.com/reactive-streams/reactive-streams-dotnet</PackageProjectUrl>
+    <PackageLicenseUrl>http://creativecommons.org/publicdomain/zero/1.0/</PackageLicenseUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+
+</Project>

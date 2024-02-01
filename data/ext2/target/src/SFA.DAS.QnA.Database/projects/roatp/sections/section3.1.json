@@ -1,0 +1,30 @@
+{
+    "Title": "Introduction and what you'll need <span class='govuk-visually-hidden'> for criminal and compliance checks on your organisation</span>",
+    "LinkTitle": "Introduction and what you'll need",
+    "DisplayType": "Pages",
+    "Pages": [
+      {
+        "PageId": "3000",
+        "SequenceId": null,
+        "SectionId": null,
+        "Title": "Criminal and compliance checks on your organisation",
+        "LinkTitle": "Criminal and compliance checks on your organisation",
+        "InfoText": "",
+        "Questions": [],
+        "PageOfAnswers": [],
+        "Next": [
+          {
+            "Action": "ReturnToSection",
+            "ReturnId": "3.2",
+            "Conditions": []
+          }
+        ],
+        "AllowMultipleAnswers": false,
+        "Order": null,
+        "Active": true,
+        "NotRequiredConditions": [],
+        "ActivatedByPageId": null,
+        "BodyText": "<p class='govuk-body' id='crim-intro-all'>This section is to ensure public funds, employers and apprentices are protected.</p><p class='govuk-body'>All organisations applying to join the RoATP are subject to <a class='govuk-link' target='_blank' href='https://www.gov.uk/government/publications/esfa-policy-on-funding-higher-risk-organisations-and-subcontractors'>the Funding higher risk organisations and subcontractors policy (opens in new tab)</a>.</p><p class='govuk-body'>You'll need to provide a brief summary if your organisation has:</p><ul class='govuk-list govuk-list--bullet'><li>composition with creditors</li><li>failed to pay back funds to ESFA or any other public body</li><li>had a contract terminated by a public body</li><li>had early withdrawal from a contract with a public body</li><li>been removed from the Register of Training Organisations (RoTO)</li><li>had funds removed from any education bodies</li><li>been removed from any professional or trade registers</li><li>had involuntary withdrawal from Initial Teacher Training accreditation</li><li>been removed from any charity register</li><li>been investigated due to safeguarding issues</li><li>been investigated due to whistleblowing issues</li><li>been made bankrupt</li></ul>"
+      }
+    ]
+}

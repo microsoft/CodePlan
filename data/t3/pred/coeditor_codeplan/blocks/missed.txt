@@ -1,0 +1,177 @@
+
+
+
+
+t3\pred\coeditor_codeplan\repo\server\awesome_chat.py
+BlockTypes.METHOD, run_task
+def run_task(input, command, results, api_key, api_type):
+    id = command["id"]
+    args = command["args"]
+    task = command["task"]
+    deps = command["dep"]
+    if deps[0] != -1:
+        dep_tasks = [results[dep] for dep in deps]
+    else:
+        dep_tasks = []
+    
+    logger.debug(f"Run task: {id} - {task}")
+    logger.debug("Deps: " + json.dumps(dep_tasks))
+
+    if deps[0] != -1:
+        if "image" in args and "<GENERATED>-" in args["image"]:
+            resource_id = int(args["image"].split("-")[1])
+            if "generated image" in results[resource_id]["inference result"]:
+                args["image"] = results[resource_id]["inference result"]["generated image"]
+        if "audio" in args and "<GENERATED>-" in args["audio"]:
+            resource_id = int(args["audio"].split("-")[1])
+            if "generated audio" in results[resource_id]["inference result"]:
+                args["audio"] = results[resource_id]["inference result"]["generated audio"]
+        if "text" in args and "<GENERATED>-" in args["text"]:
+            resource_id = int(args["text"].split("-")[1])
+            if "generated text" in results[resource_id]["inference result"]:
+                args["text"] = results[resource_id]["inference result"]["generated text"]
+
+    text = image = audio = None
+    for dep_task in dep_tasks:
+        if "generated text" in dep_task["inference result"]:
+            text = dep_task["inference result"]["generated text"]
+            logger.debug("Detect the generated text of dependency task (from results):" + text)
+        elif "text" in dep_task["task"]["args"]:
+            text = dep_task["task"]["args"]["text"]
+            logger.debug("Detect the text of dependency task (from args): " + text)
+        if "generated image" in dep_task["inference result"]:
+            image = dep_task["inference result"]["generated image"]
+            logger.debug("Detect the generated image of dependency task (from results): " + image)
+        elif "image" in dep_task["task"]["args"]:
+            image = dep_task["task"]["args"]["image"]
+            logger.debug("Detect the image of dependency task (from args): " + image)
+        if "generated audio" in dep_task["inference result"]:
+            audio = dep_task["inference result"]["generated audio"]
+            logger.debug("Detect the generated audio of dependency task (from results): " + audio)
+        elif "audio" in dep_task["task"]["args"]:
+            audio = dep_task["task"]["args"]["audio"]
+            logger.debug("Detect the audio of dependency task (from args): " + audio)
+
+    if "image" in args and "<GENERATED>" in args["image"]:
+        if image:
+            args["image"] = image
+    if "audio" in args and "<GENERATED>" in args["audio"]:
+        if audio:
+            args["audio"] = audio
+    if "text" in args and "<GENERATED>" in args["text"]:
+        if text:
+            args["text"] = text
+
+    for resource in ["image", "audio"]:
+        if resource in args and not args[resource].startswith("public/") and len(args[resource]) > 0 and not args[resource].startswith("http"):
+            args[resource] = f"public/{args[resource]}"
+    
+    if "-text-to-image" in command['task'] and "text" not in args:
+        logger.debug("control-text-to-image task, but text is empty, so we use control-generation instead.")
+        control = task.split("-")[0]
+        
+        if control == "seg":
+            task = "image-segmentation"
+            command['task'] = task
+        elif control == "depth":
+            task = "depth-estimation"
+            command['task'] = task
+        else:
+            task = f"{control}-control"
+
+    command["args"] = args
+    logger.debug(f"parsed task: {command}")
+
+    if task.endswith("-text-to-image") or task.endswith("-control"):
+        if inference_mode != "huggingface":
+            if task.endswith("-text-to-image"):
+                control = task.split("-")[0]
+                best_model_id = f"lllyasviel/sd-controlnet-{control}"
+            else:
+                best_model_id = task
+            hosted_on = "local"
+            reason = "ControlNet is the best model for this task."
+            choose = {"id": best_model_id, "reason": reason}
+            logger.debug(f"chosen model: {choose}")
+        else:
+            logger.warning(f"Task {command['task']} is not available. ControlNet need to be deployed locally.")
+            record_case(success=False, **{"input": input, "task": command, "reason": f"Task {command['task']} is not available. ControlNet need to be deployed locally.", "op":"message"})
+            inference_result = {"error": f"service related to ControlNet is not available."}
+            results[id] = collect_result(command, "", inference_result)
+            return False
+    elif task in ["summarization", "translation", "conversational", "text-generation", "text2text-generation"]: # ChatGPT Can do
+        best_model_id = "ChatGPT"
+        reason = "ChatGPT performs well on some NLP tasks as well."
+        choose = {"id": best_model_id, "reason": reason}
+        messages = [{
+            "role": "user",
+            "content": f"[ {input} ] contains a task in JSON format {command}. Now you are a {command['task']} system, the arguments are {command['args']}. Just help me do {command['task']} and give me the result. The result must be in text form without any urls."
+        }]
+        response = chitchat(messages, api_key, api_type)
+        results[id] = collect_result(command, choose, {"response": response})
+        return True
+    else:
+        if task not in MODELS_MAP:
+            logger.warning(f"no available models on {task} task.")
+            record_case(success=False, **{"input": input, "task": command, "reason": f"task not support: {command['task']}", "op":"message"})
+            inference_result = {"error": f"{command['task']} not found in available tasks."}
+            results[id] = collect_result(command, "", inference_result)
+            return False
+
+        candidates = MODELS_MAP[task][:10]
+        all_avaliable_models = get_avaliable_models(candidates, config["num_candidate_models"])
+        all_avaliable_model_ids = all_avaliable_models["local"] + all_avaliable_models["huggingface"]
+        logger.debug(f"avaliable models on {command['task']}: {all_avaliable_models}")
+
+        if len(all_avaliable_model_ids) == 0:
+            logger.warning(f"no available models on {command['task']}")
+            record_case(success=False, **{"input": input, "task": command, "reason": f"no available models: {command['task']}", "op":"message"})
+            inference_result = {"error": f"no available models on {command['task']} task."}
+            results[id] = collect_result(command, "", inference_result)
+            return False
+            
+        if len(all_avaliable_model_ids) == 1:
+            best_model_id = all_avaliable_model_ids[0]
+            hosted_on = "local" if best_model_id in all_avaliable_models["local"] else "huggingface"
+            reason = "Only one model available."
+            choose = {"id": best_model_id, "reason": reason}
+            logger.debug(f"chosen model: {choose}")
+        else:
+            cand_models_info = [
+                {
+                    "id": model["id"],
+                    "inference endpoint": all_avaliable_models.get(
+                        "local" if model["id"] in all_avaliable_models["local"] else "huggingface"
+                    ),
+                    "likes": model.get("likes"),
+                    "description": model.get("description", "")[:config["max_description_length"]],
+                    # "language": model.get("meta").get("language") if model.get("meta") else None,
+                    "tags": model.get("meta").get("tags") if model.get("meta") else None,
+                }
+                for model in candidates
+                if model["id"] in all_avaliable_model_ids
+            ]
+
+            choose_str = choose_model(input, command, cand_models_info, api_key, api_type)
+            logger.debug(f"chosen model: {choose_str}")
+            try:
+                choose = json.loads(choose_str)
+                reason = choose["reason"]
+                best_model_id = choose["id"]
+                hosted_on = "local" if best_model_id in all_avaliable_models["local"] else "huggingface"
+            except Exception as e:
+                logger.warning(f"the response [ {choose_str} ] is not a valid JSON, try to find the model id and reason in the response.")
+                choose_str = find_json(choose_str)
+                best_model_id, reason, choose  = get_id_reason(choose_str)
+                hosted_on = "local" if best_model_id in all_avaliable_models["local"] else "huggingface"
+    inference_result = model_inference(best_model_id, args, hosted_on, command['task'])
+
+    if "error" in inference_result:
+        logger.warning(f"Inference error: {inference_result['error']}")
+        record_case(success=False, **{"input": input, "task": command, "reason": f"inference error: {inference_result['error']}", "op":"message"})
+        results[id] = collect_result(command, choose, inference_result)
+        return False
+    
+    results[id] = collect_result(command, choose, inference_result)
+    return True
+--------------------------------------------------

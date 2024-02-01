@@ -1,0 +1,10 @@
+# CODEOWNERS file for das-qna-api
+# The following users will be automatically added as Reviewers to all PRs.
+
+* @chrisfoster76 @ChrisJWoodcock
+
+.github/CODEOWNERS      @SkillsFundingAgency/das-platform-engineering
+/azure/                 @SkillsFundingAgency/das-platform-engineering
+azure-pipelines.yml     @SkillsFundingAgency/das-platform-engineering
+/pipeline-templates/    @SkillsFundingAgency/das-platform-engineering
+GitVersion.yml          @SkillsFundingAgency/das-platform-engineering

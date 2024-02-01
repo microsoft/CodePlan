@@ -1,0 +1,37 @@
+{
+    "summary": {
+        "avg_diff_bleu": 0.9416421206127129,
+        "total_ld": 288.0,
+        "matched_blocks": 11,
+        "missed_blocks": 0,
+        "spurious_blocks": 0
+    },
+    "full": {
+        "text": [
+            {
+                "input_type": "file_diff",
+                "metric_type": "bleu",
+                "results": {
+                    "server\\awesome_chat.py": 0.9393151425863909,
+                    "server\\models_server.py": 1.0,
+                    "server\\run_gradio_demo.py": 0.8856112192517477
+                }
+            },
+            {
+                "input_type": "file",
+                "metric_type": "levenshtein",
+                "results": {
+                    "server\\awesome_chat.py": 249.0,
+                    "server\\get_token_ids.py": 0.0,
+                    "server\\models_server.py": 0.0,
+                    "server\\run_gradio_demo.py": 39.0
+                }
+            }
+        ],
+        "blocks": {
+            "matched_blocks": 11,
+            "missed_blocks": 0,
+            "spurious_blocks": 0
+        }
+    }
+}

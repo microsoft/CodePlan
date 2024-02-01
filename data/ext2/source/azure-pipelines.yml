@@ -1,0 +1,31 @@
+name: das-qna-api
+trigger:
+  batch: true
+  branches:
+    include:
+      - "master"
+
+resources:
+  repositories:
+  - repository: das-platform-building-blocks
+    type: github
+    name: SkillsFundingAgency/das-platform-building-blocks
+    ref: refs/tags/2.1.0
+    endpoint: SkillsFundingAgency
+
+variables:
+  - name: SolutionBaseName
+    value: SFA.DAS.QnA
+
+stages:
+- stage: Build
+  jobs:
+  - template: pipeline-templates/job/code-build.yml
+    parameters:
+      SolutionBaseName: $(SolutionBaseName)
+  - template: azure-pipelines-templates/build/job/dacpac-template.yml@das-platform-building-blocks
+    parameters:
+      SolutionBaseName: $(SolutionBaseName).dacpac
+      SqlProjectPath: src/$(SolutionBaseName).Database/$(SolutionBaseName).Database.sqlproj
+
+- template: azure-pipelines-templates/deploy/stage/nuget-publish.yml@das-platform-building-blocks

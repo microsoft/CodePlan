@@ -1,0 +1,93 @@
+{
+    "Title": "Post application tasks",
+    "LinkTitle": "Post application tasks",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "9200",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Do you understand that your organisation will not join the RoATP until it completes all post application tasks?",
+            "LinkTitle": "Do you understand that your organisation will not join the RoATP until it completes all post application tasks?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FIN-50",
+                    "QuestionTag": "COAPart2MainEmployer",
+                    "Label": "Do you understand that your organisation will not join the RoATP until it completes all post application tasks?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>We'll tell you more about the post application tasks after you submit your application.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if you understand that your organisation will not join the RoATP until it completes all post application tasks"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "10006",
+                    "Conditions": [
+                        {
+                            "MustEqual": "No",
+                            "QuestionId": "FIN-50"
+                        }
+                    ]
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "10006",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Before you submit your application",
+            "LinkTitle": "Before you submit your application",
+            "InfoText": "",
+            "Questions": [],
+            "PageOfAnswers": [],
+            "Next": [],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body'>Before you submit your application you must understand that your organisation will not join the RoATP until it completes all post application tasks.</p>",
+            "ActivatedByPageId": "9200"
+        }
+    ]
+}

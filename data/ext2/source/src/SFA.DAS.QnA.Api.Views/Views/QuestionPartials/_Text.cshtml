@@ -1,0 +1,26 @@
+@model dynamic
+
+@{
+    var isError = Model.ErrorMessages != null && Model.ErrorMessages.Count > 0 ? "govuk-input--error" : "";
+    var inputClasses = Model.InputClasses != null ? Model.InputClasses : "";
+}
+
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+
+<input 
+    class="govuk-input @inputClasses @isError"
+    type="text"
+    id="@Model.QuestionId"
+    name="@Model.QuestionId"
+    value="@Model.Value"
+    maxlength="10000"
+/>

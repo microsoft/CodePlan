@@ -1,0 +1,79 @@
+@using SFA.DAS.QnA.Api.Views
+@model dynamic
+
+@{
+    var isError = Model.ErrorMessages != null && Model.ErrorMessages.Count > 0 ? "govuk-input--error" : "";
+
+    var maxCharacterCount = 0;
+    var maxWordCount = 0;
+
+    var validations = ViewHelpers.GetValidations(Model);
+
+    if (validations != null)
+    {
+        foreach (var validator in validations)
+        {
+            if (validator.Name == "MaxLength")
+            {
+                if (int.TryParse(validator.Value, out int _maxCharacterCount))
+                {
+                    maxCharacterCount = _maxCharacterCount;
+                }
+            }
+            else if (validator.Name == "MaxWordCount")
+            {
+                if (int.TryParse(validator.Value, out int _maxWordCount))
+                {
+                    maxWordCount = _maxWordCount;
+                }
+            }
+        }
+    }
+}
+
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+
+@if (maxCharacterCount > 0)
+{
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="@maxCharacterCount">
+        <textarea class="govuk-textarea govuk-js-character-count @isError"
+                  id="@Model.QuestionId"
+                  name="@Model.QuestionId"
+                  rows="5"
+                  aria-describedby="@Model.Label @Model.QuestionId-info">@Model.Value</textarea>
+        <span id="@Model.QuestionId-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to @maxCharacterCount characters
+        </span>
+    </div>
+}
+else if (maxWordCount > 0)
+{
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="@maxWordCount">
+        <textarea class="govuk-textarea govuk-js-character-count @isError"
+                  id="@Model.QuestionId"
+                  name="@Model.QuestionId"
+                  rows="5"
+                  aria-describedby="@Model.Label @Model.QuestionId-info">@Model.Value</textarea>
+        <span id="@Model.QuestionId-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to @maxWordCount words
+        </span>
+    </div>
+}
+else
+{
+    <textarea class="govuk-textarea govuk-!-margin-bottom-0 @isError"
+              id="@Model.QuestionId"
+              name="@Model.QuestionId"
+              rows="5"
+              aria-describedby="@Model.QuestionId-label"
+              maxlength="10000">@Model.Value</textarea>
+}

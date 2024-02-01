@@ -1,0 +1,96 @@
+{
+    "Title": "Financial health assessment",
+    "LinkTitle": "Financial health assessment",
+    "DisplayType": "Pages",
+    "RequestedFeedbackAnswered": null,
+    "Pages": [
+        {
+            "PageId": "23",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Financial health",
+            "LinkTitle": "Financial health assessment",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FHA-01",
+                    "QuestionTag": null,
+                    "Label": "Upload your accounts",
+                    "ShortLabel": "Upload your accounts",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "The PDF file must be smaller than 5MB",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select a file containing your accounts"
+                            },
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf,application/pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                },
+                {
+                    "QuestionId": "FHA-02",
+                    "QuestionTag": null,
+                    "Label": "Upload your parent company's accounts (optional)",
+                    "ShortLabel": "Upload your parent company's accounts (optional)",
+                    "InputClasses": null,
+                    "QuestionBodyText": "",
+                    "Hint": "If you have a parent company, upload your parent company's statutory accounts. The PDF file must be smaller than 5MB.",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "InputClasses": null,
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf,application/pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ],
+                        "DataEndpoint": null
+                    },
+                    "Order": null,
+                    "Value": "",
+                    "ErrorMessages": null
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "3",
+                    "Condition": null,
+                    "Conditions": [],
+                    "ConditionMet": false
+                }
+            ],
+            "Complete": false,
+            "AllowMultipleAnswers": false,
+            "Order": null,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "<p class='govuk-body'>If you have been trading for more than 12 months, upload your last financial years' statutory accounts and your parent company's accounts (if you have a parent company).</p><p class='govuk-body'>If you have been trading for less than 12 months, upload your management accounts.</p>",
+            "Details": {
+                "Title": "Help with accounts",
+                "Body": "<h3 class='govuk-heading-m'>Sole trader and partnerships</h3><p class='govuk-body'>Trading for more than 12 months</p><ul class='govuk-list govuk-list--bullet'><li>submit management accounts (profit and loss or income and expenditure account, balance sheet and relevant notes to the accounts)</li></ul><p class='govuk-body'>Trading for more than 3 months but less than 12</p><ul class='govuk-list govuk-list--bullet'><li>submit management accounts and a forecast for your first 12 months of trading</li></ul><h3 class='govuk-heading-m'>All other organisations</h3><p class='govuk-body'>Trading for more than 12 months</p><ul class='govuk-list govuk-list--bullet'><li>submit your full <a class='govuk-link' target='_blank' href='https://www.gov.uk/annual-accounts'>statutory accounts</a> including notes</li></ul><p class='govuk-body'>Trading for more than 3 months but less than 12</p><ul class='govuk-list govuk-list--bullet'><li>submit management accounts and a forecast for your first 12 months of trading</li></ul><h3 class='govuk-heading-m'>Subsidiary organisation</h3><p class='govuk-body'>Trading for more than 12 months</p><ul class='govuk-list govuk-list--bullet'><li>submit your parent company's statutory accounts and your statutory accounts</li></ul><p class='govuk-body'>Trading for more than 3 months but less than 12</p><ul class='govuk-list govuk-list--bullet'><li>submit your parent company's statutory accounts, your management accounts and a forecast for your first 12 months of trading</li></ul>"
+            },
+            "DisplayType": null,
+            "Feedback": null,
+            "ActivatedByPageId": null
+        }
+    ]
+}

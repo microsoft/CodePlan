@@ -1,0 +1,117 @@
+{
+    "Title": "Where will your apprentices be trained",
+    "LinkTitle": "Where will your apprentices be trained",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "6700",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Where will your apprentices be trained?",
+            "LinkTitle": "Where will your apprentices be trained?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-670",
+                    "QuestionTag": null,
+                    "Label": "Building and Street",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a building and street"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "PAT-671",
+                    "QuestionTag": null,
+                    "Label": "Town or City",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a town or city"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "PAT-672",
+                    "QuestionTag": null,
+                    "Label": "County",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a county"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "PAT-673",
+                    "QuestionTag": null,
+                    "Label": "Postcode",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Text",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter a postcode"
+                            },
+                            {
+                                "Name": "Regex",
+                                "Value": "([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\\s?[0-9][A-Za-z]{2})",
+                                "ErrorMessage": "Enter a real postcode"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "7.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": null,
+            "BodyText": "<p class='govuk-body' id='pat-where-apprentices-trained'>This must be your organisation's main training location.</p>\n<p class='govuk-body' id='pat-where-apprentices-trained-2'>We will use this address for visits including an early monitoring visit.</p>"
+        }
+    ]
+}

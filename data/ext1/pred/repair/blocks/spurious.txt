@@ -1,0 +1,298 @@
+src\tck\Reactive.Streams.TCK\PublisherVerification.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.PublisherVerification._output
+private readonly ITestOutputHelper _output;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.stacks
+static readonly ConcurrentDictionary<int, string> stacks = new ConcurrentDictionary<int, string>();
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.states
+static readonly ConcurrentDictionary<int, bool> states = new ConcurrentDictionary<int, bool>();
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.id
+static int id;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.CreatePublisher
+public override IPublisher<int> CreatePublisher(long elements)
+        {
+            return new RangePublisher(1, elements);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.CreateFailedPublisher
+public override IPublisher<int> CreateFailedPublisher()
+        {
+            return null;
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.stacktrace
+readonly string stacktrace;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.start
+readonly long start;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.count
+readonly long count;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangePublisher
+internal RangePublisher(long start, long count)
+            {
+                this.stacktrace = Environment.StackTrace;
+                this.start = start;
+                this.count = count;
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.Subscribe
+public void Subscribe(ISubscriber<int> s)
+            {
+                if (s == null)
+                {
+                    throw new ArgumentNullException();
+                }
+
+                int ids = Interlocked.Increment(ref id);
+
+                RangeSubscription parent = new RangeSubscription(s, ids, start, start + count);
+                stacks.AddOrUpdate(ids, (a) => stacktrace, (a, b) => stacktrace);
+                states.AddOrUpdate(ids, (a) => false, (a, b) => false);
+                s.OnSubscribe(parent);
+            }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.actual
+readonly ISubscriber<int> actual;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.ids
+readonly int ids;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.end
+readonly long end;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.index
+long index;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.cancelled
+volatile bool cancelled;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.VARIABLE, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.requested
+long requested;
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.RangeSubscription
+internal RangeSubscription(ISubscriber<int> actual, int ids, long start, long end)
+                {
+                    this.actual = actual;
+                    this.ids = ids;
+                    this.index = start;
+                    this.end = end;
+                }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.Request
+public void Request(long n)
+                {
+                    if (!cancelled)
+                    {
+                        if (n <= 0L)
+                        {
+                            cancelled = true;
+                            states[ids] = true;
+                            actual.OnError(new ArgumentException("ยง3.9 violated"));
+                            return;
+                        }
+
+                        for (;;)
+                        {
+                            long r = Volatile.Read(ref requested);
+                            long u = r + n;
+                            if (u < 0L)
+                            {
+                                u = long.MaxValue;
+                            }
+                            if (Interlocked.CompareExchange(ref requested, u, r) == r)
+                            {
+                                if (r == 0)
+                                {
+                                    break;
+                                }
+                                return;
+                            }
+                        }
+
+                        long idx = index;
+                        long f = end;
+
+                        for (;;)
+                        {
+                            long e = 0;
+                            while (e != n && idx != f)
+                            {
+                                if (cancelled)
+                                {
+                                    return;
+                                }
+
+                                actual.OnNext((int)idx);
+
+                                idx++;
+                                e++;
+                            }
+
+                            if (idx == f)
+                            {
+                                if (!cancelled)
+                                {
+                                    states[ids] = true;
+                                    actual.OnComplete();
+                                }
+                                return;
+                            }
+
+                            index = idx;
+                            n = Interlocked.Add(ref requested, -n);
+                            if (n == 0)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.RangePublisher.RangeSubscription.Cancel
+public void Cancel()
+                {
+                    cancelled = true;
+                    states[ids] = true;
+                }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\RangePublisherTest.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.RangePublisherTest.Dispose
+public void Dispose()
+        {
+            bool fail = false;
+            StringBuilder b = new StringBuilder();
+            foreach (var t in states)
+            {
+                if (!t.Value)
+                {
+                    b.Append("\r\n-------------------------------");
+
+                    b.Append("\r\nat ").Append(stacks[t.Key]);
+
+                    fail = true;
+                }
+            }
+            states.Clear();
+            stacks.Clear();
+            if (fail)
+            {
+                throw new InvalidOperationException("Cancellations were missing:" + b);
+            }
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.Flop
+public void Flop(Exception exception, string message)
+        {
+            try
+            {
+                Assert.False(true, message);
+            }
+            catch (Exception)
+            {
+                AsyncErrors.Enqueue(exception);
+            }
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.Flop
+public void Flop(Exception exception)
+        {
+            try
+            {
+                Assert.False(true, exception.Message);
+            }
+            catch (Exception)
+            {
+                Output?.WriteLine(exception.Message);
+            }
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.FlopAndFail
+public T FlopAndFail<T>(string message)
+        {
+            try
+            {
+                Assert.False(true, message);
+            }
+            catch (Exception ex)
+            {
+                AsyncErrors.Enqueue(ex);
+                Output?.WriteLine(message);
+                Output?.WriteLine(ex.ToString());
+            }
+
+            return default(T); // unreachable, the previous block will always exit by throwing
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.Flop
+public void Flop(string message)
+        {
+            try
+            {
+                Assert.False(true, message);
+            }
+            catch (Exception ex)
+            {
+                AsyncErrors.Enqueue(ex);
+            }
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK.Tests\Support\TCKVerificationSupport.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.Tests.Support.TCKVerificationSupport.FindDeepErrorMessage
+private bool FindDeepErrorMessage(Exception exception, string messagePart, int depth)
+        {
+            if (exception is NullReferenceException)
+            {
+                TckTckTckTckTckTckTckAssert.Fail($"{nameof(NullReferenceException)} was thrown, definitely not a helpful error!",
+                    exception);
+            }
+            if (exception == null || depth == 0)
+                return false;
+
+            var message = exception.Message;
+            return message.Contains(messagePart) ||
+                   FindDeepErrorMessage(exception.InnerException, messagePart, depth - 1);
+        }
+--------------------------------------------------
+src\tck\Reactive.Streams.TCK\TestEnvironment.cs
+BlockTypes.METHOD, Reactive.Streams.TCK.TestEnvironment.VerifyNoAsyncErrorsNoDelay
+public void VerifyNoAsyncErrorsNoDelay()
+        {
+            foreach (var error in AsyncErrors)
+            {
+                if (error is AssertionException exception)
+                    throw exception;
+
+                Output?.WriteLine($"Async error during test execution: {error.Message}");
+                Assert.False(true, $"Async error during test execution: {error.Message}");
+            }
+        }
+--------------------------------------------------
+

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Reactive.Streams.TCK</AssemblyName>
+    <Description>Reactive Streams Technology Compatibility Kit</Description>
+    <Copyright>MIT-0</Copyright>
+    <VersionPrefix>1.0.3</VersionPrefix>
+    <Authors>Reactive Streams</Authors>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <PackageTags>reactive;stream</PackageTags>
+    <PackageProjectUrl>https://github.com/reactive-streams/reactive-streams-dotnet</PackageProjectUrl>
+    <PackageLicenseUrl>http://creativecommons.org/publicdomain/zero/1.0/</PackageLicenseUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\api\Reactive.Streams\Reactive.Streams.csproj" />
+    <ProjectReference Include="..\..\examples\Reactive.Streams.Example.Unicast\Reactive.Streams.Example.Unicast.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
+    <PackageReference Include="FluentAssertions" Version="4.14.0" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+
+</Project>

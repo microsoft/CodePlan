@@ -1,0 +1,57 @@
+﻿{
+  "ReferenceNumber": null,
+  "OrganisationReferenceId": "c3333b62-a07c-415e-8778-84222231b0s1",
+  "OrganisationName": "TEST INSTITUTE",
+  "OrganisationType": "Awarding Organisations",
+  "ApplicationType": null,
+  "StandardCode": null,
+  "StandardReference": null,
+  "StandardName": null,
+  "TradingName": null,
+  "UseTradingName": false,
+  "ContactGivenName": null,
+  "PipelinesCount": null,
+  "EarliestDateOfWithdrawal": "0001-01-01T00:00:00",
+  "StandardOrVersion": null,
+  "CompanySummary": {
+    "CompanyName": "TEST INSTITUTE",
+    "CompanyNumber": "RC123456",
+    "Status": "active",
+    "CompanyType": "royal-charter",
+    "CompanyTypeDescription": "Royal charter company",
+    "IncorporationDate": null,
+    "Directors": [],
+    "PersonsWithSignificantControl": [],
+    "ManualEntryRequired": true
+  },
+  "CharitySummary": {
+    "CharityName": "TEST INSTITUTE",
+    "CharityNumber": "312832",
+    "IncorporatedOn": "1965-05-25T00:00:00",
+    "Trustees": [
+      {
+        "Id": "1111111",
+        "Name": "test name 1"
+      },
+      {
+        "Id": "2222222",
+        "Name": "test name 2"
+      }
+    ],
+    "TrusteeManualEntryRequired": false
+  },
+  "trading_name": "Test",
+  "use_trading_name": "Yes",
+  "contact_given_name": "test first name",
+  "contact_family_name": "test surname",
+  "contact_address": "{\r\n  \"AddressLine1\": \"48 test Street\",\r\n  \"AddressLine2\": \"\",\r\n  \"AddressLine3\": \"London\",\r\n  \"AddressLine4\": \"\",\r\n  \"Postcode\": \"M38 9RZ\"\r\n}",
+  "contact_email": "test.gov.uk",
+  "contact_phone_number": "+441234567809",
+  "company_ukprn": "12346333",
+  "company_number": "",
+  "charity_number": "",
+  "number_of_assessors": "3",
+  "number_of_assessments": "3",
+  "delivery_areas": "North East,North West,Yorkshire and the Humber,East Midlands,West Midlands,East of England,London,South East,South West",
+  "effective_from": ""
+}

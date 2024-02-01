@@ -1,0 +1,92 @@
+@model dynamic
+
+<div id="addressLookupWrapper" class="hide-nojs form-group disabled">
+    <div class="govuk-form-group govuk-!-margin-bottom-2" id="address-lookup">
+        <label for="postcode-search" class="govuk-label govuk-label--m">Start typing the address or postcode</label>
+        <input id="postcode-search" name="postcodeSearch" type="text" class="govuk-input" spellcheck="false" autocomplete="off" autocorrect="off" disabled="disabled" />
+        <span class="govuk-visually-hidden" id="ariaAddressEntered" aria-live="polite"></span>
+    </div>
+    <div class="govuk-form-group" id="address-manual">
+        <p class="govuk-body"><a class="govuk-link" href="#" id="enterAddressManually">Enter the address manually</a></p>
+        <p class="govuk-body toggle-content loading-text" id="addressLoading">Loading address...</p>
+        <p id="postcodeServiceUnavailable" class="govuk-body error toggle-content text">Service is currently unavailable, please enter the address manually</p>
+    </div>
+    <div class="govuk-form-group govuk-!-margin-bottom-0 hidden" id="search-again">
+        <p class="govuk-body">
+            <a class="govuk-link" href="#" id="searchAgain">Search for a new address</a>
+        </p>
+    </div>
+
+    <div class="info-highlighted js-address-panel hidden">
+        <ul class="govuk-list"></ul>
+    </div>
+</div>
+<div id="addressManualWrapper">
+    <div id="address-details" class="address-manual-input js-hidden">
+        <div class="govuk-form-group">
+            @{ var id = string.Format("{0}_Key_AddressLine1", Model.QuestionId); }
+            <label class="govuk-label govuk-label--m" for="@(id)">
+                Building and street
+            </label>
+            <sfa-validationerror-detail sfa-validation-for="@(id)" sfa-validationerror-class="govuk-error-message"></sfa-validationerror-detail>
+            <input class="govuk-input govuk-!-margin-bottom-2 address-manual-input-address-line-1 address-manual-input-focus"
+                   sfa-validation-for="@(id)"
+                   sfa-validationerror-class="govuk-input--error"
+                   type="text"
+                   id="@(id)"
+                   name="@(id)"
+                   value="@Model.JsonValue?.AddressLine1" />
+            @{ id = string.Format("{0}_Key_AddressLine2", Model.QuestionId); }
+            <sfa-validationerror-detail sfa-validation-for="@(id)" sfa-validationerror-class="govuk-error-message"></sfa-validationerror-detail>
+            <input class="govuk-input address-manual-input-address-line-2"
+                   sfa-validation-for="@(id)"
+                   sfa-validationerror-class="govuk-input--error"
+                   type="text"
+                   id="@(id)"
+                   name="@(id)"
+                   value="@Model.JsonValue?.AddressLine2" />
+        </div>
+        <div class="govuk-form-group">
+            @{ id = string.Format("{0}_Key_AddressLine3", Model.QuestionId); }
+            <label class="govuk-label govuk-label--m" for="@(id)">
+                Town or city
+            </label>
+            <sfa-validationerror-detail sfa-validation-for="@(id)" sfa-validationerror-class="govuk-error-message"></sfa-validationerror-detail>
+            <input class="govuk-input govuk-!-width-two-thirds address-manual-input-address-line-3"
+                   sfa-validation-for="@(id)"
+                   sfa-validationerror-class="govuk-input--error"
+                   type="text"
+                   id="@(id)"
+                   name="@(id)"
+                   value="@Model.JsonValue?.AddressLine3" />
+        </div>
+        <div class="govuk-form-group">
+            @{ id = string.Format("{0}_Key_AddressLine4", Model.QuestionId); }
+            <label class="govuk-label govuk-label--m" for="@(id)">
+                County
+            </label>
+            <sfa-validationerror-detail sfa-validation-for="@(id)" sfa-validationerror-class="govuk-error-message"></sfa-validationerror-detail>
+            <input class="govuk-input govuk-!-width-two-thirds address-manual-input-address-line-4"
+                   sfa-validation-for="@(id)"
+                   sfa-validationerror-class="govuk-input--error"
+                   type="text"
+                   id="@(id)"
+                   name="@(id)"
+                   value="@Model.JsonValue?.AddressLine4" />
+        </div>
+        <div class="govuk-form-group">
+            @{ id = string.Format("{0}_Key_Postcode", Model.QuestionId); }
+            <label class="govuk-label govuk-label--m" for="@(id)">
+                Postcode
+            </label>
+            <sfa-validationerror-detail sfa-validation-for="@(id)" sfa-validationerror-class="govuk-error-message"></sfa-validationerror-detail>
+            <input class="govuk-input govuk-input--width-10 address-manual-input-postcode"
+                   sfa-validation-for="@(id)"
+                   sfa-validationerror-class="govuk-input--error"
+                   type="text"
+                   id="@(id)"
+                   name="@(id)"
+                   value="@Model.JsonValue?.Postcode" />
+        </div>
+    </div>
+</div>

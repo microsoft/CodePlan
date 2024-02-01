@@ -1,0 +1,295 @@
+{
+    "Title": "Forecasting starts",
+    "LinkTitle": "Forecasting starts",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "6500",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Forecasting starts",
+            "LinkTitle": "Forecasting starts",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-650",
+                    "QuestionTag": null,
+                    "Label": "How many starts does your organisation forecast in the first 12 months of joining the RoATP?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "One to 49",
+                                "Label": "One to 49",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "50 to 99",
+                                "Label": "50 to 99",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "100 to 149",
+                                "Label": "100 to 149",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "150 to 249",
+                                "Label": "150 to 249",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "250 or more",
+                                "Label": "250 or more",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how many starts your organisation forecasts in the first 12 months of joining RoATP"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "6510",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": null,
+            "BodyText": "",
+            "Details": {
+                "Title": "What is a 'start'?",
+                "Body": "A 'start' is an apprentice who will start their apprenticeship after your organisation joins the RoATP."
+            }
+        },
+        {
+            "PageId": "6510",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Forecasting starts",
+            "LinkTitle": "Ready to deliver against starts",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-651",
+                    "QuestionTag": null,
+                    "Label": "When will your organisation be ready to deliver training against this forecast?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Within the first 3 months of joining the RoATP",
+                                "Label": "Within the first 3 months of joining the RoATP",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "Between the first 3 to 6 months of joining the RoATP",
+                                "Label": "Between the first 3 to 6 months of joining the RoATP",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us when your organisation will be ready to deliver training against this forecast"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "6520",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "6500"
+        },
+        {
+            "PageId": "6520",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Forecasting starts",
+            "LinkTitle": "Recruit staff to deliver",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-652",
+                    "QuestionTag": null,
+                    "Label": "Will your organisation recruit new staff to deliver training against these forecasts?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your organisation will recruit new staff to deliver training against these forecasts"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "6530",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "6510"
+        },
+        {
+            "PageId": "6530",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Forecasting starts",
+            "LinkTitle": "Staff Apprentice Ratio",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "PAT-653",
+                    "QuestionTag": null,
+                    "Label": "What is the typical ratio of the staff who deliver training to the apprentices?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "One trainer between 10 or less apprentices",
+                                "Label": "One trainer between 10 or less apprentices",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "One trainer between 11 to 29 apprentices",
+                                "Label": "One trainer between 11 to 29 apprentices",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "One trainer between 30 to 49 apprentices",
+                                "Label": "One trainer between 30 to 49 apprentices",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "One trainer between 50 or more apprentices",
+                                "Label": "One trainer between 50 or more apprentices",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what the typical ratio is of the staff who deliver training to the learners"
+                            }
+                        ]
+                    }
+                }],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "6540",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "6520"
+        },
+        {
+            "PageId": "6540",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Forecasting starts",
+            "LinkTitle": "Proposed staff to learner support",
+            "InfoText": "",
+            "Questions": [{
+                    "QuestionId": "PAT-654",
+                    "QuestionTag": null,
+                    "Label": "How does your proposed staff to learner ratio offer quality support to your apprentices?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body' id='pat-level-of-support'>Your answer must include how:</p><ul class='govuk-list govuk-list--bullet'><li>you are making sure each apprentice is challenged</li><li>your delivery method is appropriate for your ratio</li><li>you deliver individual support based on your ratio</li><li>you would continue to deliver the same level of quality apprentice experience, if your ratio changes</li><li>you agree on time spent on remote support vs face to face</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [{
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how your proposed staff to learner ratio offer quality support to your apprentices"
+                            }, {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.6",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "6530"
+        }
+    ]
+}

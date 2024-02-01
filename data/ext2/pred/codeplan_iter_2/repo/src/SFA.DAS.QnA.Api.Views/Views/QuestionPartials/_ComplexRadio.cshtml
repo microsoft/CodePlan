@@ -1,0 +1,93 @@
+@model dynamic
+@{
+    var isError = Model.ErrorMessages != null && Model.ErrorMessages.Count > 0 ? "govuk-input--error" : "";
+}
+
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+
+<div class="govuk-form-group">
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        @for (int i = 0; i < Model.Options.Count; i++)
+        {
+            var radioChecked = Model.Value == Model.Options[i].Value.ToString() ? "checked" : "";
+            var optionId = Model.QuestionId + (i == 0 ? "" : "_" + i);
+            <div class="govuk-radios__item">
+                @if (Model.Options[i].HasHintText)
+                {
+                    <input 
+                        class="govuk-radios__input"
+                        type="radio"
+                        id="@optionId"
+                        name="@Model.QuestionId"
+                        value="@Model.Options[i].Value"
+                        data-aria-controls="conditional-@optionId"
+                        aria-describedby="@optionId-hint"
+                        @radioChecked 
+                      />
+                }
+                else
+                {
+                    <input
+                        class="govuk-radios__input"
+                        type="radio"
+                        id="@optionId"
+                        name="@Model.QuestionId"
+                        value="@Model.Options[i].Value"
+                        data-aria-controls="conditional-@optionId"
+                        @radioChecked
+                    />
+                }
+                <label class="govuk-label govuk-radios__label" for="@(Model.QuestionId + (i == 0 ? "" : "_" + i))">@Model.Options[i].Label</label>
+                @if (Model.Options[i].HasHintText)
+                {
+                    <span id="@optionId-hint" class="govuk-hint govuk-radios__hint">
+                        @Html.Raw(Model.Options[i].HintText)
+                    </span>
+                }
+            </div>
+            if (Model.Options[i].FurtherQuestions != null)
+            {
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-@optionId">
+                    @for (int furtherQuestionIndex = 0; furtherQuestionIndex < Model.Options[i].FurtherQuestions.Count; furtherQuestionIndex++)
+                    {
+                        {
+                            if (Model.ErrorMessages != null)
+                            {
+                                foreach (var errorMessage in Model.ErrorMessages)
+                                {
+                                    foreach (var furtherQuestion in Model.Options[i].FurtherQuestions)
+                                    {
+                                        if (errorMessage.Field == furtherQuestion.QuestionId)
+                                        {
+                                            furtherQuestion.ErrorMessages = Model.ErrorMessages;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    <div class="govuk-form-group">
+                            <label class="govuk-label" for="@Model.Options[i].FurtherQuestions[furtherQuestionIndex].QuestionId" id="@Model.Options[i].FurtherQuestions[furtherQuestionIndex].QuestionId-label">@Model.Options[i].FurtherQuestions[furtherQuestionIndex].Label</label>
+                        @if (Model.Options[i].FurtherQuestions[furtherQuestionIndex].Hint != null)
+                        {
+                            <span id="@Model.Options[i].FurtherQuestions[furtherQuestionIndex].QuestionId-hint" class="govuk-hint govuk-radios__hint">
+                                @Html.Raw(Model.Options[i].FurtherQuestions[furtherQuestionIndex].Hint)
+                            </span>
+                        }
+                        @HtmlHelperPartialExtensions.Partial(Html, $"~/Views/QuestionPartials/_{Model.Options[i].FurtherQuestions[furtherQuestionIndex].Input.Type}.cshtml", Model.Options[i].FurtherQuestions[furtherQuestionIndex])
+                    </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

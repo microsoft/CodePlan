@@ -1,0 +1,495 @@
+{
+    "Title": "Your UK ultimate parent company's financial evidence",
+    "LinkTitle": "Your UK ultimate parent company's financial evidence",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "2500",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Does your UK ultimate parent company have consolidated financial statements?",
+            "LinkTitle": "Does your UK ultimate parent company have consolidated financial statements?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-500",
+                    "QuestionTag": "FHAParentHasConsolidatedStatements",
+                    "Label": "Does your UK ultimate parent company have consolidated financial statements?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your UK ultimate parent company has consolidated financial statements"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2510",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-500",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2520",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-500",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "HasParentCompany",
+                    "IsOneOf": [
+                        "No",
+                        ""
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "2510",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your UK ultimate parent company's consolidated financial statements",
+            "LinkTitle": "Upload your UK ultimate parent company's consolidated financial statements",
+            "InfoText": "<div class='govuk-warning-text'> <span class='govuk-warning-text__icon' aria-hidden='true'>!</span> <strong class='govuk-warning-text__text'> <span class='govuk-warning-text__assistive'>Warning</span>Consolidated financial statements must not be abbreviated, filleted or accounts for a micro entity.</strong> </div>",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-510",
+                    "QuestionTag": null,
+                    "Label": "Upload your UK ultimate parent company's consolidated financial statements",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Consolidated financial statements must include:</p><ul class='govuk-list govuk-list--bullet'><li>a balance sheet - showing the value of everything your organisation owns, owes and is owed on the last day of the financial year</li><li>a cash flow statement</li><li>an income statement</li></ul><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-511",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-512",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-513",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "3.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAParentHasConsolidatedStatements",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2500"
+        },
+        {
+            "PageId": "2520",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Does your UK ultimate parent company have other active subsidiary companies?",
+            "LinkTitle": "Does your UK ultimate parent company have other active subsidiary companies?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "FH-520",
+                    "QuestionTag": "FHAParentHasOtherSubsidiaries",
+                    "Label": "Does your UK ultimate parent company have other active subsidiary companies?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Subsidiary companies must not be dormant.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Radio",
+                        "Options": [
+                            {
+                                "Value": "Yes",
+                                "Label": "Yes",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "No",
+                                "Label": "No",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us if your UK ultimate parent company has other active subsidiary companies"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2530",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-520",
+                            "MustEqual": "Yes"
+                        }
+                    ]
+                },
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "2540",
+                    "Conditions": [
+                        {
+                            "QuestionId": "FH-520",
+                            "MustEqual": "No"
+                        }
+                    ]
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAParentHasConsolidatedStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "Details": {
+                "Title": "What is a subsidiary company?",
+                "Body": "It's a company controlled by your ultimate parent company."
+            },
+            "ActivatedByPageId": "2500"
+        },
+        {
+            "PageId": "2530",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload a financial statement for all your UK ultimate parent company's active subsidiary companies",
+            "LinkTitle": "Upload a financial statement for all your UK ultimate parent company's active subsidiary companies",
+            "InfoText": "<div class='govuk-warning-text'> <span class='govuk-warning-text__icon' aria-hidden='true'>!</span> <strong class='govuk-warning-text__text'> <span class='govuk-warning-text__assistive'>Warning</span>Financial statement uploads must not be abbreviated, filleted or accounts for a micro entity.</strong> </div>",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-530",
+                    "QuestionTag": null,
+                    "Label": "Upload a financial statement for all your UK ultimate parent company's active subsidiary companies",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Subsidiary companies must not be dormant.</p><p class='govuk-body'>Financial statements must include a:</p><ul class='govuk-list govuk-list--bullet'><li>balance sheet - showing the value of everything your active subsidiaries owns, owes and are owed on the last day of the financial year</li><li>profit and loss account - showing your organisation's sales, running costs and profit or loss it made over the financial year</li><li>detailed notes about the accounts</li><li>breakdown of creditors, other creditors and borrowings</li></ul><p class='govuk-body'>If applicable, financial statements should be signed and filed with Companies House or the Charity Commission of England and Wales, Scottish Charities Regulator or other regulatory body.</p><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-531",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-532",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-533",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "3.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAParentHasOtherSubsidiaries",
+                    "IsOneOf": [
+                        "No"
+                    ]
+                },
+                {
+                    "Field": "FHAParentHasConsolidatedStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2520"
+        },
+        {
+            "PageId": "2540",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your UK ultimate parent company's full financial statements covering the last 12 months",
+            "LinkTitle": "Upload your UK ultimate parent company's full financial statements covering the last 12 months",
+            "InfoText": "<div class='govuk-warning-text'> <span class='govuk-warning-text__icon' aria-hidden='true'>!</span> <strong class='govuk-warning-text__text'> <span class='govuk-warning-text__assistive'>Warning</span>Financial statement uploads must not be abbreviated, filleted or accounts for a micro entity.</strong> </div>",
+            "DisplayType": "MultipleFileUpload",
+            "Questions": [
+                {
+                    "QuestionId": "FH-540",
+                    "QuestionTag": null,
+                    "Label": "Upload your UK ultimate parent company's full financial statements covering the last 12 months",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Financial statements must include a:</p><ul class='govuk-list govuk-list--bullet'><li>balance sheet - showing the value of everything your organisation owns, owes and is owed on the last day of the financial year</li><li>profit and loss account - showing your organisation's sales, running costs and profit or loss it made over the financial year</li><li>detailed notes about the accounts</li><li>breakdown of creditors, other creditors and borrowings</li></ul><p class='govuk-body'>If applicable, financial statements should be signed and filed with Companies House or the Charity Commission of England and Wales, Scottish Charities Regulator or other regulatory body.</p><p class='govuk-body'>You can upload a maximum of 4 files.</p><p class='govuk-body'>Each file should be a PDF and smaller than 5MB.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-541",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-542",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "QuestionId": "FH-543",
+                    "QuestionTag": "",
+                    "Label": "",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "FileUpload",    
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "3.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "FHAParentHasOtherSubsidiaries",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "Field": "FHAParentHasConsolidatedStatements",
+                    "IsOneOf": [
+                        "Yes"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "2520"
+        }
+    ]
+}

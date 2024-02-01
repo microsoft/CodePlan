@@ -1,0 +1,259 @@
+{
+    "Title": "Supporting apprentices",
+    "LinkTitle": "Supporting apprentices",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "6400",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "How will your organisation ensure apprentices are supported during their apprenticeship training?",
+            "LinkTitle": "How will your organisation ensure apprentices are supported during their apprenticeship training?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-640",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation ensure apprentices are supported during their apprenticeship training?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>have the right people in place to support apprentices</li><li>regularly check apprentice progress</li><li>financially support apprentices - for example, arranging funding for equipment</li><li>actively seek and act on apprentice feedback to ensure the programme meets each apprentice's needs and informs continuous improvement that can be evidenced</li></ul></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how your organisation will ensure apprentices are supported during their apprenticeship training"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "6410",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        },
+		{
+            "PageId": "6405",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "How will your organisation ensure apprentices are supported during their apprenticeship training?",
+            "LinkTitle": "How will your organisation ensure apprentices are supported during their apprenticeship training?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-6405",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation ensure apprentices are supported during their apprenticeship training?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your answer must include how your organisation will:</p><ul class='govuk-list govuk-list--bullet'><li>have the right people in place to support apprentices</li><li>regularly check apprentice progress</li><li>actively seek and act on apprentice feedback to ensure the programme meets each apprentice's needs and informs continuous improvement that can be evidenced</li></ul></p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how your organisation will ensure apprentices are supported during their apprenticeship training"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.5",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": null,
+            "BodyText": ""
+        },
+        {
+            "PageId": "6410",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "How will your organisation support its apprentices?",
+            "LinkTitle": "How will your organisation support its apprentices?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-641",
+                    "QuestionTag": null,
+                    "Label": "How will your organisation support its apprentices?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Select all that apply.</p>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "CheckboxList",
+                        "Options": [
+                            {
+                                "Value": "Through a mentor",
+                                "Label": "Through a mentor",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "Through coaching",
+                                "Label": "Through coaching",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "Access to a support network",
+                                "Label": "Access to a support network",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "Access to a support group",
+                                "Label": "Access to a support group",
+                                "HintText": ""
+                            },
+                            {
+                                "Value": "Other",
+                                "Label": "Other",
+                                "HintText": ""
+                            }
+                        ],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us how your organisation will support its apprentices"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "6420",
+                    "Conditions": [
+                        {
+                            "QuestionId": "PAT-641",
+                            "Contains": "Other"
+                        }
+                    ],
+                    "ConditionMet": false
+                },
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.5",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "ActivatedByPageId": "6400",
+            "BodyText": ""
+        },
+        {
+            "PageId": "6420",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "What other ways will your organisation use to support its apprentices?",
+            "LinkTitle": "What other ways will your organisation use to support its apprentices?",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "PAT-642",
+                    "QuestionTag": null,
+                    "Label": "What other ways will your organisation use to support its apprentices?",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Options": [],
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Tell us what other ways your organisation will use to support its apprentices"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "6.5",
+                    "Conditions": []
+                }
+			],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [
+                {
+                    "Field": "ApplyProviderRoute",
+                    "IsOneOf": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "BodyText": "",
+            "ActivatedByPageId": "6410"
+        }
+    ]
+}

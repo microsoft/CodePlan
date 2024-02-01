@@ -1,0 +1,55 @@
+
+
+
+
+facebookresearch__audiocraft\coeditor_codeplan\audiocraft\models\multibanddiffusion.py
+BlockTypes.METHOD, MultiBandDiffusion.get_mbd_24khz
+def get_mbd_24khz(bw: float = 3.0, pretrained: bool = True,
+                      device: tp.Optional[tp.Union[torch.device, str]] = None,
+                      n_q: tp.Optional[int] = None):
+        """Get the pretrained Models for MultibandDiffusion.
+
+        Args:
+            bw (float): Bandwidth of the compression model.
+            pretrained (bool): Whether to use / download if necessary the models.
+            device (torch.device or str, optional): Device on which the models are loaded.
+            n_q (int, optional): Number of quantizers to use within the compression model.
+        """
+        if device is None:
+            device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        assert bw in [1.5, 3.0, 6.0], f"bandwidth {bw} not available"
+        if n_q is not None:
+            assert n_q in [2, 4, 8]
+            assert {1.5: 2, 3.0: 4, 6.0: 8}[bw] == n_q, \
+                f"bandwidth and number of codebooks missmatch to use n_q = {n_q} bw should be {n_q * (1.5 / 2)}"
+        n_q = {1.5: 2, 3.0: 4, 6.0: 8}[bw]
+        codec_model = CompressionSolver.model_from_checkpoint(
+            '//pretrained/facebook/encodec_24khz', device=device)
+        codec_model.set_num_codebooks(n_q)
+        codec_model = codec_model.to(device)
+        path = f'https://dl.fbaipublicfiles.com/encodec/Diffusion/mbd_comp_{n_q}.pt'
+        models, processors, cfgs = load_diffusion_models(path, device=device)
+        DPs = []
+        for i in range(len(models)):
+            schedule = NoiseSchedule(**cfgs[i].schedule, sample_processor=processors[i], device=device)
+            DPs.append(DiffusionProcess(model=models[i], noise_schedule=schedule))
+        return MultiBandDiffusion(DPs=DPs, codec_model=codec_model)
+
+        return MultiBandDiffusion(DPs, codec_model)
+--------------------------------------------------
+facebookresearch__audiocraft\coeditor_codeplan\audiocraft\models\multibanddiffusion.py
+BlockTypes.METHOD, MultiBandDiffusion.get_mbd_musicgen
+def get_mbd_musicgen(device=None):
+        """Load our diffusion models trained for MusicGen."""
+        if device is None:
+            device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        path = 'https://dl.fbaipublicfiles.com/encodec/Diffusion/mbd_musicgen_32khz.th'
+        name = 'facebook/musicgen-small'
+        codec_model = load_compression_model(name, device=device)
+        models, processors, cfgs = load_diffusion_models(path, device=device)
+        DPs = []
+        for i in range(len(models)):
+            schedule = NoiseSchedule(**cfgs[i].schedule, sample_processor=processors[i], device=device)
+            DPs.append(DiffusionProcess(model=models[i], noise_schedule=schedule))
+        return MultiBandDiffusion(DPs=DPs, codec_model=codec_model)
+--------------------------------------------------

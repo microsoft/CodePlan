@@ -1,0 +1,1243 @@
+src\SFA.DAS.QnA.Application.UnitTests\ServiceTests\NotRequiredProcessorNotRequiredTests.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.ServiceTests.NotRequiredProcessorNotRequiredTests.When_NotRequired_conditions_are_expected
+[TestCase("OrgType1", "OrgType1", true)]
+        [TestCase("OrgType2", "OrgType2", true)]
+        [TestCase("OrgType2", "OrgType1", false)]
+        [TestCase("OrgType1", "OrgType2", false)]
+        [TestCase("OrgType1", "orgType1", false)]
+        [TestCase("orgType1", "OrgType1", false)]
+        [TestCase("rgType1", "OrgType1", false)]
+        [TestCase("OrgType1", "rgType1", false)]
+
+        public void When_NotRequired_conditions_are_expected(string notRequiredConditionValue, string applicationDataValue, bool match)
+        {
+            var notRequiredProcessor = new NotRequiredProcessor();
+
+            var notRequiredConditions = new List<NotRequiredCondition>
+                {new NotRequiredCondition() {Field = "FieldToTest", IsOneOf = new string[] { "value1",notRequiredConditionValue, "value2", "value3"}}};
+
+            var applicationDataJson = JsonSerializer.Serialize(new
+            {
+                FieldToTest = applicationDataValue
+            });
+
+            var applicationData = JsonNode.Parse(applicationDataJson);
+
+
+            var result = not_required_processor.NotRequired(notRequiredConditions, applicationData);
+
+            Assert.AreEqual(match, result);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.ResetPageAnswersBySectionNumber
+[HttpPost("{applicationId}/sequences/{sequenceNo}/sections/{sectionNo}/pages/{pageId}/reset")]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<ResetPageAnswersResponse>> ResetPageAnswersBySectionNumber(Guid applicationId, int sequenceNo, int sectionNo, string pageId)
+        {
+            _logger.LogInformation($"Resetting all Answers on page {pageId}");
+
+            var resetPageAnswersResponse = await _mediator.Send(new ResetPageAnswersBySectionNoRequest(applicationId, sequenceNo, sectionNo, pageId), CancellationToken.None);
+            if (!resetPageAnswersResponse.Success)
+            {
+                _logger.LogError($"Unable to reset answers for sequence {sequenceNo}, section {sectionNo}, page {pageId} | Reason : {resetPageAnswersResponse.Message}");
+                return BadRequest(new BadRequestError(resetPageAnswersResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from ResetPageAnswersBySectionNumber: {JsonSerializer.Serialize(resetPageAnswersResponse.Value)}");
+
+            return resetPageAnswersResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSequenceSections\GetSequenceSectionsHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSequenceSections.GetSequenceSectionsHandler.RemovePages
+private void RemovePages(Data.Entities.Application application, Section section)
+        {
+            var applicationData = JsonNode.Parse(application.ApplicationData);
+
+            RemovePagesBasedOnNotRequiredConditions(section, applicationData);
+            RemoveInactivePages(section);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Services\TagProcessingService.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Services.TagProcessingService.ClearDeactivatedTags
+public void ClearDeactivatedTags(Guid applicationId, Guid sectionId)
+        {
+            var section = _dataContext.ApplicationSections.SingleOrDefault(sec =>
+                sec.Id == sectionId && sec.ApplicationId == applicationId);
+            if (section == null) return;
+            var pages = new QnAData(section.QnAData).Pages;
+            var pagesActive = pages.Where(p => p.Active);
+            var pagesInactive = pages.Where(p => !p.Active);
+
+            var deactivatedTags = (from page in pagesInactive from question in page.Questions.Where(p => !string.IsNullOrEmpty(p.QuestionTag)) select question.QuestionTag).Distinct().ToList();
+            var activeTags = (from page in pagesActive from question in page.Questions.Where(p => !string.IsNullOrEmpty(p.QuestionTag)) select question.QuestionTag).Distinct().ToList();
+
+            // remove any activetags within deactivatedTags as some branches use tagnames twice for distinct branches
+            foreach (var tag in activeTags.Where(tag => deactivatedTags.Contains(tag)))
+            {
+                deactivatedTags.Remove(tag);
+            }
+
+            if (deactivatedTags.Count < 1)
+                return;
+
+            var application = _dataContext.Applications.SingleOrDefault(app => app.Id == applicationId);
+            if (application == null) return;
+            var applicationData = JsonNode.Parse(application.ApplicationData ?? "{}");
+
+            foreach (var tag in deactivatedTags)
+            {
+                applicationData.AsObject().Remove(tag);
+            }
+
+            application.ApplicationData = applicationData.ToString();
+            _dataContext.SaveChanges();
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_a_NotRequiredCondition.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_next_page_has_a_NotRequiredCondition.Subsequent_nextAction_is_returned
+[Test]
+        public async Task Subsequent_nextAction_is_returned()
+        {
+            var pageTwoNextAction = new Next
+            {
+                Action = "NextPage",
+                ReturnId = "3"
+            };
+
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                {
+                    new Page
+                    {
+                        PageId = "2",
+                        NotRequiredConditions = new List<NotRequiredCondition>{new NotRequiredCondition(){Field = "OrgType", IsOneOf = new string[]{"OrgType1","OrgType2"}}},
+                        Next = new List<Next>{pageTwoNextAction}
+                    },
+                    new Page
+                    {
+                        PageId = "3",
+                        NotRequiredConditions = null
+                    }
+                }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            var nextActionAfterFindingNextAction = SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            nextActionAfterFindingNextAction.Should().BeEquivalentTo(pageTwoNextAction);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\ServiceTests\NotRequiredProcessorPagesWithoutNotRequiredContainsAllOfTests.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.ServiceTests.NotRequiredProcessorPagesWithoutNotRequiredContainsAllOfTests.When_PagesWithNotRequired_conditions_with_containsAllOf
+[TestCase(new[] { "value1", "value3" }, "value1,value3,value2", true)]
+        [TestCase(new[] { "value3", "value1" }, "value1,value3,value2", true)]
+        [TestCase(new[] { "value3", "value1" }, "value3,value2,value1", true)]
+        [TestCase(new[] { "value1" }, "value1,value3,value2", true)]
+        [TestCase(new[] { "value2" }, "value1,value3,value2", true)]
+        [TestCase(new[] { "value2", "value2" }, "value1,value3,value2", true)]
+        [TestCase(new[] { "value2", "value4" }, "value1,value3,value2", false)]
+        [TestCase(new[] { "value4", "value2" }, "value1,value3,value2", false)]
+        [TestCase(new[] { "value" }, "value1,value3,value2", false)]
+        [TestCase(new string[] { }, "value1,value3,value2", false)]
+        [TestCase(null, "value1,value3,value2", false)]
+        [TestCase(new[] { "value" }, "", false)]
+        [TestCase(new[] { "value" }, null, false)]
+        [TestCase(new string[] { }, null, false)]
+        [TestCase(null, null, false)]
+        public void When_PagesWithNotRequired_conditions_with_containsAllOf(string[] containsAllValues, string applicationDataValue, bool match)
+        {
+            var expectedPagesCount = 1;
+            if (!match)
+                expectedPagesCount = 2;
+
+            var pageIdAlwaysPresent = "3";
+            var pageIdAbsentIfNotRequired = "2";
+            var applicationDataJson = JsonSerializer.Serialize(new
+            {
+                FieldToTest = applicationDataValue
+            });
+
+            var applicationData = JsonNode.Parse(applicationDataJson).AsObject();
+
+            var pages = new List<Page>
+            {
+                new Page
+                {
+                    PageId = pageIdAbsentIfNotRequired,
+                    NotRequiredConditions = new List<NotRequiredCondition>
+                    {
+                        new NotRequiredCondition
+                        {
+                            Field = "FieldToTest",
+                            ContainsAllOf = containsAllValues
+                        }
+                    },
+                    Next = new List<Next>
+                    {
+                        new Next
+                        {
+                            Action = "NextPage",
+                            ReturnId = "12",
+                            Conditions = new List<Condition>()
+                        },
+                        new Next
+                        {
+                            Action = "NextPage",
+                            ReturnId = "14",
+                            Conditions = new List<Condition>()
+                        }
+                    }
+                },
+                new Page
+                {
+                    PageId = pageIdAlwaysPresent,
+                    NotRequiredConditions = null
+                }
+            };
+
+            var notRequiredProcessor = new NotRequiredProcessor();
+            var actualPages = notRequiredProcessor.PagesWithoutNotRequired(pages, applicationData);
+
+            Assert.AreEqual(actualPages.Count(), expectedPagesCount);
+            Assert.IsTrue(actualPages.Any(p => p.PageId == pageIdAlwaysPresent));
+            Assert.AreNotEqual(actualPages.Any(p => p.PageId == pageIdAbsentIfNotRequired), match);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\ApplicationDataController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.ApplicationDataController.Post
+[ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        [HttpPost("{applicationId}/applicationData")]
+        public async Task<ActionResult<object>> Post(Guid applicationId, [FromBody] dynamic applicationData)
+        {
+            var applicationDataResponse = await _mediator.Send(new SetApplicationDataRequest(applicationId, applicationData));
+
+            if (!applicationDataResponse.Success) return NotFound(new NotFoundError(applicationDataResponse.Message));
+
+            return JsonSerializer.Deserialize<object>(applicationDataResponse.Value);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.SkipPage
+[HttpPost("{applicationId}/sections/{sectionId}/pages/{pageId}/skip")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult<SkipPageResponse>> SkipPage(Guid applicationId, Guid sectionId, string pageId)
+        {
+            _logger.LogInformation($"Getting the next action...: applicationId = {applicationId} , pageId = {pageId}");
+
+            var getNextActionResponse = await _mediator.Send(new SkipPageRequest(applicationId, sectionId, pageId), CancellationToken.None);
+            if (!getNextActionResponse.Success)
+            {
+                _logger.LogError($"Unable to get the next action for page {pageId} | Reason : {getNextActionResponse.Message}");
+                return BadRequest(new BadRequestError(getNextActionResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from SkipPage: {JsonSerializer.Serialize(getNextActionResponse.Value)}");
+
+            return getNextActionResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\SetPageAnswers\SetAnswersBase.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.SetPageAnswers.SetAnswersBase.UpdateApplicationData
+protected void UpdateApplicationData(string pageId, List<Answer> submittedAnswers, ApplicationSection section, Data.Entities.Application application)
+        {
+            if (application != null)
+            {
+                var applicationData = JsonNode.Parse(application.ApplicationData ?? "{}");
+
+                var page = section?.QnAData?.Pages.SingleOrDefault(p => p.PageId == pageId);
+
+                if (page != null)
+                {
+                    var questionTagsWhichHaveBeenUpdated = new List<string>();
+                    var answers = GetAnswersFromRequest(submittedAnswers);
+
+                    foreach (var question in page.Questions)
+                    {
+                        SetApplicationDataField(question, answers, applicationData);
+                        if (!string.IsNullOrWhiteSpace(question.QuestionTag))
+                            questionTagsWhichHaveBeenUpdated.Add(question.QuestionTag);
+
+                        if (question.Input.Options != null)
+                        {
+                            foreach (var option in question.Input.Options.Where(o => o.FurtherQuestions != null))
+                            {
+                                foreach (var furtherQuestion in option.FurtherQuestions)
+                                {
+                                    SetApplicationDataField(furtherQuestion, answers, applicationData);
+                                    if (!string.IsNullOrWhiteSpace(furtherQuestion.QuestionTag))
+                                        questionTagsWhichHaveBeenUpdated.Add(furtherQuestion.QuestionTag);
+                                }
+                            }
+                        }
+                    }
+
+                    application.ApplicationData = applicationData.ToString();
+
+                    SetStatusOfAllPagesBasedOnUpdatedQuestionTags(application, questionTagsWhichHaveBeenUpdated);
+                    _tagProcessingService.ClearDeactivatedTags(application.Id, section.Id);
+
+                }
+            }
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSection\GetSectionHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSection.GetSectionHandler.RemovePages
+private void RemovePages(Data.Entities.Application application, ApplicationSection section)
+        {
+            var applicationData = JsonNode.Parse(application.ApplicationData);
+
+            RemoveInactivePages(section);
+            RemovePagesBasedOnNotRequiredConditions(section, applicationData);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_no_NotRequiredConditions.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_next_page_has_no_NotRequiredConditions.For_null_NotRequiredConditions_then_the_same_nextAction_is_returned
+[Test]
+        public async Task For_null_NotRequiredConditions_then_the_same_nextAction_is_returned()
+        {
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                {
+                    new Page
+                    {
+                        PageId = "2",
+                        NotRequiredConditions = null
+                    }
+                }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            var nextActionAfterFindingNextAction = SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            nextActionAfterFindingNextAction.Should().BeEquivalentTo(NextAction);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.ResetPageAnswers
+[HttpPost("{applicationId}/sections/{sectionId}/pages/{pageId}/reset")]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<ResetPageAnswersResponse>> ResetPageAnswers(Guid applicationId, Guid sectionId, string pageId)
+        {
+            _logger.LogInformation($"Resetting all Answers on page {pageId}");
+
+            var resetPageAnswersResponse = await _mediator.Send(new ResetPageAnswersRequest(applicationId, sectionId, pageId), CancellationToken.None);
+            if (!resetPageAnswersResponse.Success)
+            {
+                _logger.LogError($"Unable to reset answers for page {pageId} | Reason : {resetPageAnswersResponse.Message}");
+                return BadRequest(new BadRequestError(resetPageAnswersResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from ResetPageAnswers: {JsonSerializer.Serialize(resetPageAnswersResponse.Value)}");
+
+            return resetPageAnswersResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_no_NotRequiredConditions.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_next_page_has_no_NotRequiredConditions.For_empty_NotRequiredConditions_then_the_same_nextAction_is_returned
+[Test]
+        public async Task For_empty_NotRequiredConditions_then_the_same_nextAction_is_returned()
+        {
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                {
+                    new Page
+                    {
+                        PageId = "2",
+                        NotRequiredConditions = new List<NotRequiredCondition>()
+                    }
+                }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            var nextActionAfterFindingNextAction = SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            nextActionAfterFindingNextAction.Should().BeEquivalentTo(NextAction);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.SetPageAnswers
+[HttpPost("{applicationId}/sequences/{sequenceNo}/sections/{sectionNo}/pages/{pageId}")]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<SetPageAnswersResponse>> SetPageAnswers(Guid applicationId, int sequenceNo, int sectionNo, string pageId, [FromBody] List<Answer> answers)
+        {
+            _logger.LogInformation($"Answers sent to SetPageAnswers: {JsonSerializer.Serialize(answers)}");
+
+            var savePageAnswersResponse = await _mediator.Send(new SetPageAnswersBySectionNoRequest(applicationId, sequenceNo, sectionNo, pageId, answers), CancellationToken.None);
+            if (!savePageAnswersResponse.Success)
+            {
+                _logger.LogError($"Unable to save answers for page {pageId} | Reason : {savePageAnswersResponse.Message}");
+                return BadRequest(new BadRequestError(savePageAnswersResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from SetPageAnswers: {JsonSerializer.Serialize(savePageAnswersResponse.Value)}");
+
+            return savePageAnswersResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\SetPageAnswers\SetAnswersBase.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.SetPageAnswers.SetAnswersBase.GetCheckboxListMatchingNextActionsForPage
+protected List<Next> GetCheckboxListMatchingNextActionsForPage(ApplicationSection section, Data.Entities.Application application, string pageId)
+        {
+            var page = section?.QnAData?.Pages.SingleOrDefault(p => p.PageId == pageId);
+
+            if (page is null)
+            {
+                return new List<Next>();
+            }
+            else if (page.Next is null || !page.Next.Any())
+            {
+                throw new ApplicationException($"Page {page.PageId}, in Sequence {page.SequenceId}, Section {page.SectionId} has no 'Next' instructions.");
+            }
+            else if (page.Questions.All(q => !"CheckboxList".Equals(q.Input.Type, StringComparison.InvariantCultureIgnoreCase) && !"ComplexCheckboxList".Equals(q.Input.Type, StringComparison.InvariantCultureIgnoreCase)))
+            {
+                return new List<Next>();
+            }
+
+            var matchingNexts = new List<Next>();
+
+            foreach (var next in page.Next)
+            {
+                var allConditionsSatisfied = true;
+
+                if (next.Conditions != null && next.Conditions.Any())
+                {
+                    foreach (var condition in next.Conditions.Where(c => c.Contains != null))
+                    {
+                        var question = page.Questions.Single(q => q.QuestionId == condition.QuestionId);
+                        var answers = page.PageOfAnswers?.FirstOrDefault()?.Answers;
+                        var answer = answers?.FirstOrDefault(a => a.QuestionId == condition.QuestionId);
+
+                        if ("CheckboxList".Equals(question.Input.Type, StringComparison.InvariantCultureIgnoreCase) || ("ComplexCheckboxList".Equals(question.Input.Type, StringComparison.InvariantCultureIgnoreCase)))
+                        {
+                            if (answer == null)
+                            {
+                                allConditionsSatisfied = false;
+                                break;
+                            }
+                            else
+                            {
+                                var answerValueList = answer.Value.Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                                if (answer.QuestionId != condition.QuestionId || !answerValueList.Contains(condition.Contains))
+                                {
+                                    allConditionsSatisfied = false;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (answer == null || answer.QuestionId != condition.QuestionId || answer.Value != condition.MustEqual)
+                            {
+                                allConditionsSatisfied = false;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (allConditionsSatisfied)
+                {
+                    // NOTE: In this version we add all of the matching conditions.
+                    matchingNexts.Add(next);
+                }
+            }
+
+            var applicationData = JsonNode.Parse(application?.ApplicationData ?? "{}");
+            var matchingNextsToReturn = new List<Next>();
+
+            foreach (var matchingNext in matchingNexts)
+            {
+                var nextAction = FindNextRequiredAction(section, matchingNext, applicationData);
+
+                if (nextAction != null)
+                {
+                    matchingNextsToReturn.Add(nextAction);
+                }
+            }
+
+            return matchingNextsToReturn;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_a_NotRequiredCondition.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_next_page_has_a_NotRequiredCondition.Subsequent_nextAction_further_down_the_branch_is_returned
+[Test]
+        public async Task Subsequent_nextAction_further_down_the_branch_is_returned()
+        {
+            var pageThreeNextAction = new Next
+            {
+                Action = "NextPage",
+                ReturnId = "4"
+            };
+
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                {
+                    new Page
+                    {
+                        PageId = "2",
+                        NotRequiredConditions = new List<NotRequiredCondition>{new NotRequiredCondition(){Field = "OrgType", IsOneOf = new string[]{"OrgType1","OrgType2"}}},
+                        Next = new List<Next>{new Next{Action = "NextPage",
+                            ReturnId = "3"}}
+                    },
+                    new Page
+                    {
+                        PageId = "3",
+                        NotRequiredConditions = new List<NotRequiredCondition>{new NotRequiredCondition(){Field = "OrgType", IsOneOf = new string[]{"OrgType1"}}},
+                        Next = new List<Next>{pageThreeNextAction}
+                    },
+                    new Page
+                    {
+                        PageId = "4",
+                        NotRequiredConditions = null
+                    }
+                }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            var nextActionAfterFindingNextAction = SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            nextActionAfterFindingNextAction.Should().BeEquivalentTo(pageThreeNextAction);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\ResetPageAnswersHandlerTests\When_page_found.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.ResetPageAnswersHandlerTests.When_page_found.Then_questiontag_is_reset
+[Test]
+        public async Task Then_questiontag_is_reset()
+        {
+            await Handler.Handle(new ResetPageAnswersRequest(ApplicationId, SectionId, "1"), CancellationToken.None);
+
+            var getApplicationDataResponse = await GetApplicationDataHandler.Handle(new GetApplicationDataRequest(ApplicationId), CancellationToken.None);
+
+            var applicationData = JsonNode.Parse(getApplicationDataResponse.Value);
+            var questionTag = applicationData.AsObject()["Q1"];
+
+            questionTag.Should().NotBeNull();
+            questionTag.Value<string>().Should().BeNullOrEmpty();
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.SetPageAnswers
+[HttpPost("{applicationId}/sections/{sectionId}/pages/{pageId}")]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<SetPageAnswersResponse>> SetPageAnswers(Guid applicationId, Guid sectionId, string pageId, [FromBody] List<Answer> answers)
+        {
+            _logger.LogInformation($"Answers sent to SetPageAnswers: {JsonSerializer.Serialize(answers)}");
+
+            var savePageAnswersResponse = await _mediator.Send(new SetPageAnswersRequest(applicationId, sectionId, pageId, answers), CancellationToken.None);
+            if (!savePageAnswersResponse.Success)
+            {
+                _logger.LogError($"Unable to save answers for page {pageId} | Reason : {savePageAnswersResponse.Message}");
+                return BadRequest(new BadRequestError(savePageAnswersResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from SetPageAnswers: {JsonSerializer.Serialize(savePageAnswersResponse.Value)}");
+
+            return savePageAnswersResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\SetApplicationData\SetApplicationDataHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.SetApplicationData.SetApplicationDataHandler.Handle
+public async Task<HandlerResponse<string>> Handle(SetApplicationDataRequest request, CancellationToken cancellationToken)
+        {
+            var application = await _dataContext.Applications.SingleOrDefaultAsync(app => app.Id == request.ApplicationId, cancellationToken);
+
+            if (application is null) return new HandlerResponse<string>(success: false, message: "Application does not exist.");
+
+            var workflow = await _dataContext.Workflows.SingleOrDefaultAsync(wf => wf.Id == application.WorkflowId, cancellationToken);
+
+            var serializedApplicationData = JsonSerializer.Serialize(request.ApplicationData);
+
+            if (!_applicationDataValidator.IsValid(workflow.ApplicationDataSchema, serializedApplicationData))
+            {
+                return new HandlerResponse<string>(success: false, message: "ApplicationData does not validated against the Project's Schema.");
+            }
+
+            application.ApplicationData = serializedApplicationData;
+
+            await _dataContext.SaveChangesAsync(cancellationToken);
+
+            return new HandlerResponse<string>(serializedApplicationData);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\ApplicationDataController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.ApplicationDataController.Get
+[ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        [HttpGet("{applicationId}/applicationData")]
+        public async Task<ActionResult<object>> Get(Guid applicationId)
+        {
+            var applicationDataResponse = await _mediator.Send(new GetApplicationDataRequest(applicationId));
+
+            if (!applicationDataResponse.Success) return NotFound(new NotFoundError(applicationDataResponse.Message));
+
+            return Ok(JsonSerializer.Deserialize<object>(applicationDataResponse.Value));
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\ResetSectionAnswersHandlerTests\When_section_found.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.ResetPageAnswersHandlerTests.When_section_found.Then_questiontag_is_reset
+[Test]
+        public async Task Then_questiontag_is_reset(string questionId, bool tagShouldExist)
+        {
+            await Handler.Handle(new ResetSectionAnswersRequest(ApplicationId, SequenceNo, SectionNo), CancellationToken.None);
+
+            var getApplicationDataResponse = await GetApplicationDataHandler.Handle(new GetApplicationDataRequest(ApplicationId), CancellationToken.None);
+
+            var applicationData = JsonNode.Parse(getApplicationDataResponse.Value);
+            var questionTag = applicationData.AsObject()[questionId];
+
+            if (tagShouldExist)
+            {
+                // active tags should still exists
+                questionTag.Should().NotBeNull();
+                questionTag.Value<string>().Should().BeNullOrEmpty();
+            }
+            else
+            {
+                questionTag.Should().BeNull();
+            }
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_a_NotRequiredCondition.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_multiple_next_actions_and_page_is_not_required.And_all_of_the_nextactions_have_a_condition_The_the_last_action_is_returned
+[Test]
+        public void And_all_of_the_nextactions_have_a_condition_The_the_last_action_is_returned()
+        {
+            var expectedNextAction = new Next
+            {
+                Action = "NextPage",
+                ReturnId = "3",
+                Conditions = new List<Condition>()
+            };
+
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                {
+                    new Page
+                    {
+                        PageId = "2",
+                        NotRequiredConditions = new List<NotRequiredCondition>{new NotRequiredCondition(){Field = "OrgType", IsOneOf = new string[]{"OrgType1","OrgType2"}}},
+                        Next = new List<Next>
+                        {
+                            new Next
+                            {
+                                Action = "NextPage",
+                                ReturnId = "12",
+                                Conditions = new List<Condition>()
+                            },
+                            new Next
+                            {
+                                Action = "NextPage",
+                                ReturnId = "14",
+                                Conditions = new List<Condition>()
+                            },
+                            expectedNextAction
+                        }
+                    },
+                    new Page
+                    {
+                        PageId = "3",
+                        NotRequiredConditions = null
+                    }
+                }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            var nextActionAfterFindingNextAction = SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            nextActionAfterFindingNextAction.Should().BeEquivalentTo(expectedNextAction);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_a_NotRequiredCondition.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_multiple_next_actions_and_page_is_not_required.And_one_of_the_nextactions_has_condition_null_Then_that_action_is_returned
+[Test]
+        public void And_one_of_the_nextactions_has_condition_null_Then_that_action_is_returned()
+        {
+            var actionWithNoCondition = new Next
+            {
+                Action = "NextPage",
+                ReturnId = "3",
+                Conditions = null
+            };
+
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                {
+                    new Page
+                    {
+                        PageId = "2",
+                        NotRequiredConditions = new List<NotRequiredCondition>{new NotRequiredCondition(){Field = "OrgType", IsOneOf = new string[]{"OrgType1","OrgType2"}}},
+                        Next = new List<Next>
+                        {
+                            new Next
+                            {
+                                Action = "NextPage",
+                                ReturnId = "12",
+                                Conditions = new List<Condition>()
+                            },
+                            actionWithNoCondition,
+                            new Next
+                            {
+                                Action = "NextPage",
+                                ReturnId = "14",
+                                Conditions = new List<Condition>()
+                            }
+                        }
+                    },
+                    new Page
+                    {
+                        PageId = "3",
+                        NotRequiredConditions = null
+                    }
+                }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            var nextActionAfterFindingNextAction = SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            nextActionAfterFindingNextAction.Should().BeEquivalentTo(actionWithNoCondition);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\QueriesTests\GetSectionTests\When_section_has_pages_to_be_hidden.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.QueriesTests.GetSectionTests.When_section_has_pages_to_be_hidden.Then_pages_are_not_returned_in_section
+[Test]
+        public async Task Then_pages_are_not_returned_in_section()
+        {
+            var sectionId = Guid.NewGuid();
+            var applicationId = Guid.NewGuid();
+            var dataContext = DataContextHelpers.GetInMemoryDataContext();
+
+            var applicationData = new { OrganisationType = "HEI" };
+
+            dataContext.Applications.Add(new Data.Entities.Application()
+            {
+                Id = applicationId,
+                ApplicationData = JsonSerializer.Serialize(applicationData)
+            });
+
+            dataContext.ApplicationSections.Add(new ApplicationSection()
+            {
+                Id = sectionId,
+                ApplicationId = applicationId,
+                QnAData = new QnAData()
+                {
+                    Pages = new List<Page>()
+                {
+                    new Page() {PageId = "1", Active = true},
+                    new Page() {PageId = "2", NotRequiredConditions = new List<NotRequiredCondition>(){new NotRequiredCondition(){Field = "OrganisationType", IsOneOf = new []{"HEI"}}}, Active = true},
+                    new Page() {PageId = "3", Active = true}
+                }
+                }
+            });
+
+            dataContext.SaveChanges();
+
+            var mapperConfig = new MapperConfiguration(options => { options.CreateMap<ApplicationSection, Section>(); });
+            var notRequiredProcessor = new NotRequiredProcessor();
+
+            var handler = new GetSectionHandler(dataContext, mapperConfig.CreateMapper(), notRequiredProcessor);
+
+            var section = await handler.Handle(new GetSectionRequest(applicationId, sectionId), CancellationToken.None);
+
+            section.Value.QnAData.Pages.Count.Should().Be(2);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\SetPageAnswers\SetAnswersBase.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.SetPageAnswers.SetAnswersBase.GetNextActionForPage
+protected Next GetNextActionForPage(ApplicationSection section, Data.Entities.Application application, string pageId)
+        {
+            var page = section?.QnAData?.Pages.SingleOrDefault(p => p.PageId == pageId);
+
+            if (page is null)
+            {
+                return null;
+            }
+            else if (page.Next is null || !page.Next.Any())
+            {
+                throw new ApplicationException($"Page {page.PageId}, in Sequence {page.SequenceId}, Section {page.SectionId} has no 'Next' instructions.");
+            }
+
+            var applicationData = JsonNode.Parse(application?.ApplicationData ?? "{}");
+
+            Next nextAction = null;
+
+            if (page.Next.Count == 1)
+            {
+                nextAction = page.Next.Single();
+            }
+
+            foreach (var next in page.Next)
+            {
+                var allConditionsSatisfied = true;
+
+                if (next.Conditions != null && next.Conditions.Any())
+                {
+                    foreach (var condition in next.Conditions)
+                    {
+                        if (!String.IsNullOrWhiteSpace(condition.QuestionTag))
+                        {
+                            var questionTagValue = applicationData.AsObject()[condition.QuestionTag];
+                            var questionTag = questionTagValue?.Value<string>();
+                            allConditionsSatisfied = CheckAllConditionsSatisfied(condition, questionTag);
+
+                            if (!allConditionsSatisfied)
+                                break;
+                        }
+                        else
+                        {
+                            var question = page.Questions.Single(q => q.QuestionId == condition.QuestionId);
+                            var answers = page.PageOfAnswers?.FirstOrDefault()?.Answers;
+                            var answer = answers?.FirstOrDefault(a => a.QuestionId == condition.QuestionId);
+
+                            if ("CheckboxList".Equals(question.Input.Type, StringComparison.InvariantCultureIgnoreCase) || ("ComplexCheckboxList".Equals(question.Input.Type, StringComparison.InvariantCultureIgnoreCase)))
+                            {
+                                if (answer == null)
+                                {
+                                    allConditionsSatisfied = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    var answerValueList = answer.Value.Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                                    if (answer.QuestionId != condition.QuestionId || !answerValueList.Contains(condition.Contains))
+                                    {
+                                        allConditionsSatisfied = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (answer == null || answer.QuestionId != condition.QuestionId || answer.Value != condition.MustEqual)
+                                {
+                                    allConditionsSatisfied = false;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (allConditionsSatisfied)
+                {
+                    // NOTE: In this version we return the first Next action that is satisfied. In the Checkbox version we return all of the matching ones.
+                    // At some point we should check this intended behaviour works if multiple Next actions are satisfied BUT one of them are actually not required.
+                    nextAction = next;
+                    break;
+                }
+            }
+
+            return FindNextRequiredAction(section, nextAction, applicationData);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\ServiceTests\NotRequiredProcessorPagesWithDoesNotContainTests.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.ServiceTests.NotRequiredProcessorPagesWithDoesNotContainTests.When_PagesWithNotRequired_DoesNotContain_conditions_are_removed
+[TestCase("OrgType1", "", true, false, "detail without a toRemove in application data should render as satisfied NRC")]
+        [TestCase("", "OrgType2", false, true, "no details should not render as a satisfied NotRequiredCondition")]
+        [TestCase("OrgType2", "OrgType1", true, false, "not present so should be removed")]
+        [TestCase("OrgType1", "OrgType2", true, false, "not present so should be removed")]
+        [TestCase("OrgType1", "OrgType1", false, false, "present so should not be removed")]
+        [TestCase("rgType1", "OrgType1", true, false, "not present so should be removed")]
+        [TestCase("OrgType", "OrgType1", true, false, "not present so should be removed")]
+        [TestCase("orgType1", "OrgType1", false, false, "present so should not be removed")]
+        public void When_PagesWithNotRequired_DoesNotContain_conditions_are_removed(string notRequiredConditionValue, string applicationDataValue, bool toRemove, bool singleValue, string explanation)
+        {
+            var expectedPagesCount = 2;
+            if (toRemove)
+                expectedPagesCount = 1;
+
+            var pageIdAlwaysPresent = "3";
+            var pageIdAbsentIfNotRequired = "2";
+            var applicationDataJson = JsonSerializer.Serialize(new
+            {
+                FieldToTest = applicationDataValue
+            });
+
+            var applicationData = JsonNode.Parse(applicationDataJson).AsObject();
+            var doesNotContainList = new string[] { notRequiredConditionValue };
+            if (!singleValue)
+                doesNotContainList = new string[] { "value1", notRequiredConditionValue, "value2" };
+
+            var pages = new List<Page>
+            {
+                new Page
+                {
+                    PageId = pageIdAbsentIfNotRequired,
+                    NotRequiredConditions = new List<NotRequiredCondition>
+                    {
+                        new NotRequiredCondition()
+                        {
+                            Field = "FieldToTest",
+                            DoesNotContain = doesNotContainList
+                        }
+                    },
+                    Next = new List<Next>
+                    {
+                        new Next
+                        {
+                            Action = "NextPage",
+                            ReturnId = "12",
+                            Conditions = new List<Condition>()
+                        },
+                        new Next
+                        {
+                            Action = "NextPage",
+                            ReturnId = "14",
+                            Conditions = new List<Condition>()
+                        }
+                    }
+                },
+                new Page
+                {
+                    PageId = pageIdAlwaysPresent,
+                    NotRequiredConditions = null
+                }
+            };
+
+            var notRequiredProcessor = new NotRequiredProcessor();
+            var actualPages = notRequiredProcessor.PagesWithoutNotRequired(pages, applicationData);
+
+            Assert.AreEqual(actualPages.ToList().Count, expectedPagesCount);
+            Assert.IsTrue(actualPages.Any(p => p.PageId == pageIdAlwaysPresent));
+            Assert.AreNotEqual(actualPages.Any(p => p.PageId == pageIdAbsentIfNotRequired), toRemove);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\When_next_page_has_a_NotRequiredCondition.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.When_multiple_next_actions_and_page_is_not_required.Then_the_page_is_marked_as_not_required
+[Test]
+        public void Then_the_page_is_marked_as_not_required()
+        {
+            var section = new ApplicationSection
+            {
+                ApplicationId = ApplicationId,
+                QnAData = new QnAData
+                {
+                    Pages = new List<Page>
+                    {
+                        new Page
+                        {
+                            PageId = "2",
+                            NotRequiredConditions = new List<NotRequiredCondition>{new NotRequiredCondition(){Field = "OrgType", IsOneOf = new string[]{"OrgType1","OrgType2"}}},
+                            Next = new List<Next>
+                            {
+                                new Next
+                                {
+                                    Action = "NextPage",
+                                    ReturnId = "12",
+                                    Conditions = new List<Condition>()
+                                }
+                            }
+                        },
+                        new Page
+                        {
+                            PageId = "3",
+                            NotRequiredConditions = null
+                        }
+                    }
+                }
+            };
+
+            var applicationData = JsonNode.Parse(ApplicationDataJson);
+            SetAnswersBase.FindNextRequiredAction(section, NextAction, applicationData);
+            Assert.IsTrue(section.QnAData.Pages.First().NotRequired);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\SetPageAnswers\SetAnswersBase.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.SetPageAnswers.SetAnswersBase.SetApplicationDataField
+protected static void SetApplicationDataField(Question question, List<Answer> answers, JsonNode applicationData)
+        {
+            if (question != null && applicationData != null)
+            {
+                var questionTag = question.QuestionTag;
+                var questionTagAnswer = answers?.SingleOrDefault(a => a.QuestionId == question.QuestionId)?.Value;
+
+                if (!string.IsNullOrWhiteSpace(questionTag))
+                {
+                    if (applicationData.AsObject().ContainsKey(questionTag))
+                    {
+                        applicationData.AsObject()[questionTag] = questionTagAnswer;
+                    }
+                    else
+                    {
+                        applicationData.AsObject().Add(questionTag, questionTagAnswer);
+                    }
+                }
+            }
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\Files\UploadFile\SubmitPageOfFilesHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.Files.UploadFile.SubmitPageOfFilesHandler.UpdateApplicationData
+private void UpdateApplicationData(SubmitPageOfFilesRequest request, Data.Entities.Application application, ApplicationSection section)
+        {
+            if (application != null)
+            {
+                var applicationData = JsonNode.Parse(application.ApplicationData ?? "{}");
+
+                var page = section?.QnAData?.Pages.SingleOrDefault(p => p.PageId == request.PageId);
+
+                if (page != null)
+                {
+                    var questionTagsWhichHaveBeenUpdated = new List<string>();
+                    var answers = GetAnswersFromRequest(request);
+
+                    foreach (var question in page.Questions)
+                    {
+                        SetApplicationDataField(question, answers, applicationData.AsObject());
+                        if (!string.IsNullOrWhiteSpace(question.QuestionTag))
+                            questionTagsWhichHaveBeenUpdated.Add(question.QuestionTag);
+
+                        if (question.Input.Options != null)
+                        {
+                            foreach (var option in question.Input.Options.Where(o => o.FurtherQuestions != null))
+                            {
+                                foreach (var furtherQuestion in option.FurtherQuestions)
+                                {
+                                    SetApplicationDataField(furtherQuestion, answers, applicationData.AsObject());
+                                    if (!string.IsNullOrWhiteSpace(furtherQuestion.QuestionTag))
+                                        questionTagsWhichHaveBeenUpdated.Add(furtherQuestion.QuestionTag);
+                                }
+                            }
+                        }
+                    }
+
+                    application.ApplicationData = applicationData.ToString();
+
+                    SetStatusOfAllPagesBasedOnUpdatedQuestionTags(application, questionTagsWhichHaveBeenUpdated);
+                    _tagProcessingService.ClearDeactivatedTags(application.Id, request.SectionId);
+                }
+            }
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\FindNextRequiredActionTests\FindNextRequiredActionTestsBase.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.FindNextRequiredActionTests.FindNextRequiredActionTestsBase.SetUp
+[SetUp]
+        public async Task SetUp()
+        {
+            QnaDataContext = DataContextHelpers.GetInMemoryDataContext();
+
+            NotRequiredProcessor = new NotRequiredProcessor();
+            TagProcessingService = new TagProcessingService(QnaDataContext);
+            SetAnswersBase = new SetAnswersBase(QnaDataContext, NotRequiredProcessor, TagProcessingService, null);
+
+            ApplicationId = Guid.NewGuid();
+
+            ApplicationDataJson = JsonSerializer.Serialize(new
+            {
+                OrgType = "OrgType1"
+            });
+
+            await QnaDataContext.Applications.AddAsync(new Data.Entities.Application { Id = ApplicationId, ApplicationData = ApplicationDataJson });
+
+            await QnaDataContext.SaveChangesAsync();
+
+            NextAction = new Next { Action = "NextPage", ReturnId = "2" };
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.SetPagesToIncomplete
+[HttpPost("{applicationId}/sequences/{sequenceNo}/sections/{sectionNo}/reset-completeflag")]
+        [ProducesResponseType(200)]
+        public async Task SetPagesToIncomplete(Guid applicationId, int sequenceNo, int sectionNo, [FromBody] List<string> pageIdsToExclude)
+        {
+            _logger.LogInformation($"Pages sent to reset-completeflag to false: {JsonSerializer.Serialize(pageIdsToExclude)} in SetPagesToIncomplete");
+            await _mediator.Send(new ResetPagesToIncompleteRequest(applicationId, sequenceNo, sectionNo, pageIdsToExclude), CancellationToken.None);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.ResetSectionAnswers
+[HttpPost("{applicationId}/sequences/{sequenceNo}/sections/{sectionNo}/reset")]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<ResetSectionAnswersResponse>> ResetSectionAnswers(Guid applicationId, int sequenceNo, int sectionNo)
+        {
+            _logger.LogInformation($"Resetting all Answers on sequence {sequenceNo}, section {sectionNo} for application {applicationId}");
+
+            var resetSectionAnswersResponse = await _mediator.Send(new ResetSectionAnswersRequest(applicationId, sequenceNo, sectionNo), CancellationToken.None);
+            if (!resetSectionAnswersResponse.Success)
+            {
+                _logger.LogError($"Unable to reset answers for sequence {sequenceNo}, section {sectionNo}, for application {applicationId} | Reason : {resetSectionAnswersResponse.Message}");
+                return BadRequest(new BadRequestError(resetSectionAnswersResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from ResetPageAnswersBySectionNumber: {JsonSerializer.Serialize(resetSectionAnswersResponse.Value)}");
+
+            return resetSectionAnswersResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\ServiceTests\NotRequiredProcessorPagesWithoutNotRequiredIsOneOfTests.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.ServiceTests.NotRequiredProcessorPagesWithoutNotRequiredIsOnOfTests.When_PagesWithNotRequired_conditions_are_removed
+[TestCase("OrgType1", "OrgType1", true)]
+        [TestCase("OrgType2", "OrgType2", true)]
+        [TestCase("OrgType2", "OrgType1", false)]
+        [TestCase("OrgType1", "OrgType2", false)]
+        [TestCase("OrgType1", "orgType1", false)]
+        [TestCase("orgType1", "OrgType1", false)]
+        [TestCase("rgType1", "OrgType1", false)]
+        [TestCase("OrgType1", "rgType1", false)]
+
+        public void When_PagesWithNotRequired_conditions_are_removed(string notRequiredConditionValue, string applicationDataValue, bool match)
+        {
+            var expectedPagesCount = 1;
+            if (!match)
+                expectedPagesCount = 2;
+
+            var pageIdAlwaysPresent = "3";
+            var pageIdAbsentIfNotRequired = "2";
+            var applicationDataJson = JsonSerializer.Serialize(new
+            {
+                FieldToTest = applicationDataValue
+            });
+
+            var applicationData = JsonNode.Parse(applicationDataJson).AsObject();
+
+            var pages = new List<Page>
+            {
+                new Page
+                {
+                    PageId = pageIdAbsentIfNotRequired,
+                    NotRequiredConditions = new List<NotRequiredCondition>
+                    {
+                        new NotRequiredCondition()
+                        {
+                            Field = "FieldToTest",
+                            IsOneOf = new string[] {"value1", notRequiredConditionValue, "value2"}
+                        }
+                    },
+                    Next = new List<Next>
+                    {
+                        new Next
+                        {
+                            Action = "NextPage",
+                            ReturnId = "12",
+                            Conditions = new List<Condition>()
+                        },
+                        new Next
+                        {
+                            Action = "NextPage",
+                            ReturnId = "14",
+                            Conditions = new List<Condition>()
+                        }
+                    }
+                },
+                new Page
+                {
+                    PageId = pageIdAlwaysPresent,
+                    NotRequiredConditions = null
+                }
+            };
+
+            var notRequiredProcessor = new NotRequiredProcessor();
+            var actualPages = notRequiredProcessor.PagesWithoutNotRequired(pages, applicationData);
+
+            Assert.AreEqual(actualPages.ToList().Count, expectedPagesCount);
+            Assert.IsTrue(actualPages.Any(p => p.PageId == pageIdAlwaysPresent));
+            Assert.AreNotEqual(actualPages.Any(p => p.PageId == pageIdAbsentIfNotRequired), match);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\PagesController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.PagesController.SkipPageBySectionNo
+[HttpPost("{applicationId}/sequences/{sequenceNo}/sections/{sectionNo}/pages/{pageId}/skip")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult<SkipPageResponse>> SkipPageBySectionNo(Guid applicationId, int sequenceNo, int sectionNo, string pageId)
+        {
+            _logger.LogInformation($"Getting the next action...: applicationId = {applicationId} , sequenceNo = {sequenceNo} , sectionNo = {sectionNo} , pageId = {pageId}");
+
+            var getNextActionResponse = await _mediator.Send(new SkipPageBySectionNoRequest(applicationId, sequenceNo, sectionNo, pageId), CancellationToken.None);
+            if (!getNextActionResponse.Success)
+            {
+                _logger.LogError($"Unable to get the next action for page {pageId} | Reason : {getNextActionResponse.Message}");
+                return BadRequest(new BadRequestError(getNextActionResponse.Message));
+            }
+
+            _logger.LogInformation($"Response from SkipPageBySectionNo: {JsonSerializer.Serialize(getNextActionResponse.Value)}");
+
+            return getNextActionResponse.Value;
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application.UnitTests\CommandsTests\ResetPageAnswersBySectionNoHandlerTests\When_page_found.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.UnitTests.CommandsTests.ResetPageAnswersBySectionNoHandlerTests.When_page_found.Then_questiontag_is_reset
+[Test]
+        public async Task Then_questiontag_is_reset()
+        {
+            await Handler.Handle(new ResetPageAnswersBySectionNoRequest(ApplicationId, SequenceNo, SectionNo, "1"), CancellationToken.None);
+
+            var getApplicationDataResponse = await GetApplicationDataHandler.Handle(new GetApplicationDataRequest(ApplicationId), CancellationToken.None);
+
+            var applicationData = JsonNode.Parse(getApplicationDataResponse.Value);
+            var questionTag = applicationData.AsObject()["Q1"];
+
+            questionTag.Should().NotBeNull();
+            questionTag.Value<string>().Should().BeNullOrEmpty();
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Queries\Sections\GetSection\GetSectionBySectionNoHandler.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Queries.Sections.GetSection.GetSectionBySectionNoHandler.RemovePages
+private void RemovePages(Data.Entities.Application application, ApplicationSection section)
+        {
+            var applicationData = JsonNode.Parse(application.ApplicationData);
+
+            RemovePagesBasedOnNotRequiredConditions(section, applicationData);
+            RemoveInactivePages(section);
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Application\Commands\Files\DeleteFile\DeleteFileRequest.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Application.Commands.Files.DeleteFile.DeleteFileHandler.RemoveApplicationDataForThisQuestion
+private async Task RemoveApplicationDataForThisQuestion(Guid applicationId, string questionId, Page page)
+        {
+            var application = await _dataContext.Applications.SingleOrDefaultAsync(app => app.Id == applicationId);
+            var applicationData = JsonNode.Parse(application.ApplicationData);
+
+            var question = page.Questions.Single(q => q.QuestionId == questionId);
+
+            applicationData.AsObject().Remove(question.QuestionTag);
+
+            application.ApplicationData = applicationData.ToString();
+
+            await _dataContext.SaveChangesAsync();
+        }
+--------------------------------------------------
+src\SFA.DAS.QnA.Api\Controllers\ApplicationDataController.cs
+BlockTypes.METHOD, SFA.DAS.QnA.Api.Controllers.ApplicationDataController.GetQuestionTagData
+[ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        [HttpGet("{applicationId}/applicationData/{questionTag}")]
+        public async Task<ActionResult<string>> GetQuestionTagData(Guid applicationId, string questionTag)
+        {
+            var applicationDataResponse = await _mediator.Send(new GetQuestionTagDataRequest(applicationId, questionTag));
+
+            if (!applicationDataResponse.Success) return NotFound(new NotFoundError(applicationDataResponse.Message));
+
+            JsonNode applicationDataJson = JsonNode.Parse(applicationDataResponse?.Value);
+            return applicationDataJson.AsObject().ToString();
+        }
+--------------------------------------------------

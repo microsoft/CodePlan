@@ -1,0 +1,30 @@
+
+
+t3\pred\repair\repo\server\awesome_chat.py
+BlockTypes.METHOD, send_request
+def send_request(data):
+    api_key = data.pop("api_key")
+    api_type = data.pop("api_type")
+    api_endpoint = data.pop("api_endpoint")
+    if use_completion:
+        data = convert_chat_to_completion(data)
+    if api_type == "openai":
+        HEADER = {
+            "Authorization": f"Bearer {api_key}"
+        }
+    elif api_type == "azure":
+        HEADER = {
+            "api-key": api_key,
+            "Content-Type": "application/json"
+        }
+    else:
+        HEADER = None
+    response = requests.post(api_endpoint, json=data, headers=HEADER, proxies=PROXY)
+    if "error" in response.json():
+        return response.json()
+    logger.debug(response.text.strip())
+    if use_completion:
+        return response.json()["choices"][0]["text"].strip()
+    else:
+        return response.json()["choices"][0]["message"]["content"].strip()
+--------------------------------------------------

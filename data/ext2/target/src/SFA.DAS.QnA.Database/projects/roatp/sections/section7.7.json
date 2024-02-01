@@ -1,0 +1,145 @@
+{
+    "Title": "Policy for professional development of employees",
+    "LinkTitle": "Policy for professional development of employees",
+    "DisplayType": "Pages",
+    "Pages": [
+        {
+            "PageId": "7700",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Upload your organisation's contract for services template with employers",
+            "LinkTitle": "Upload your organisation's contract for services template with employers",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-770",
+                    "QuestionTag": null,
+                    "Label": "Upload your organisation's policy for professional development of employees",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>This must include how your organisation will continuously:</p><ul class='govuk-list govuk-list--bullet'><li>improve its employees sector expertise, skills and performance</li><li>improve its employees teaching and training knowledge, skills and performance</li><li>Improve its employees skills and performance</li><li>ensure learning objectives are tailored to meet employee, customer and organisation needs</li><li>monitor employees professional development</li><li>review this policy, this must be annually</li></ul><p class='govuk-body'>Also include:</p><ul class='govuk-list govuk-list--bullet'><li>your organisation's vision for professional development of employees</li><li>the last review date of this policy</li></ul><p class='govuk-body'>The file must be a PDF and smaller than 5MB.</p>",
+                    "Hint": "Upload a file",
+                    "Input": {
+                        "Type": "FileUpload",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Select your organisation's policy for professional development of employees"
+                            },
+                            {
+                                "Name": "FileType",
+                                "Value": "pdf",
+                                "ErrorMessage": "The selected file must be a PDF"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "7710",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": true,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": null
+        },
+        {
+            "PageId": "7710",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Give an example of how your organisation used this policy to improve employee sector expertise",
+            "LinkTitle": "Maintain sector knowledge",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-771",
+                    "QuestionTag": null,
+                    "Label": "Give an example of how your organisation used this policy to improve employee sector expertise",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your answer must include how your organisation:</p><ul class='govuk-list govuk-list--bullet'><li>ensured employee sector expertise was relevant to apprenticeship training</li><li>ensured employee expertise was up to date in relevant sectors</li><li>maintained employee expertise in relevant sectors - for example, through co-creation of apprenticeship programmes or mentoring</li><li>will continue to improve employee expertise, if your delivery sector changes</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter an example of how your organisation used this policy to improve employee sector expertise"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "NextPage",
+                    "ReturnId": "7720",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "7700"
+        },
+        {
+            "PageId": "7720",
+            "SequenceId": null,
+            "SectionId": null,
+            "Title": "Give an example of how your organisation used this policy to maintain employee teaching and training knowledge",
+            "LinkTitle": "Maintain teaching and training",
+            "InfoText": "",
+            "Questions": [
+                {
+                    "QuestionId": "DAT-772",
+                    "QuestionTag": null,
+                    "Label": "Give an example of how your organisation used this policy to maintain employee teaching and training knowledge",
+                    "ShortLabel": "",
+                    "QuestionBodyText": "<p class='govuk-body'>Your answer must include how your organisation:</p><ul class='govuk-list govuk-list--bullet'><li>ensured employee's teaching and training knowledge, skills and performance was kept relevant to apprenticeship training</li><li>used teaching and training bodies to ensure employee expertise was up to date</li><li>worked with teaching and training bodies to ensure employee expertise is maintained - for example, through co-creation of apprenticeship programmes or mentoring</li><li>will continue to improve teaching and training knowledge, if your delivery sector changes</li></ul>",
+                    "Hint": "",
+                    "Input": {
+                        "Type": "Textarea",
+                        "Validations": [
+                            {
+                                "Name": "Required",
+                                "Value": "",
+                                "ErrorMessage": "Enter an example of how your organisation used this policy to maintain employee teaching and training knowledge"
+                            },
+                            {
+                                "Name": "MaxWordCount",
+                                "Value": "275",
+                                "ErrorMessage": "Your answer must be 275 words or less"
+                            }
+                        ]
+                    }
+                }
+            ],
+			"PageOfAnswers": [],
+            "Next": [
+                {
+                    "Action": "ReturnToSection",
+                    "ReturnId": "8.1",
+                    "Conditions": []
+                }
+            ],
+            "AllowMultipleAnswers": false,
+            "Active": false,
+            "NotRequiredConditions": [],
+            "BodyText": "",
+            "ActivatedByPageId": "7710"
+        }
+    ]
+}

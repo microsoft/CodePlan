@@ -1,0 +1,16 @@
+@model dynamic
+@if (Model.ErrorMessages != null && Model.ErrorMessages.Count > 0)
+{
+    foreach (var errorMessage in Model.ErrorMessages)
+    {
+        if (errorMessage.Field == Model.QuestionId)
+        {
+            <span class="govuk-error-message">@Html.Raw(errorMessage.ErrorMessage)</span>
+        }
+    }
+}
+
+@{
+    var chkd = Model.Value == "Yes" ? "checked" : "";
+}
+<input type="checkbox" id="@Model.QuestionId" name="@Model.QuestionId" @chkd />
