@@ -2,6 +2,7 @@
 
 For the paper titled "CodePlan: Repository-level Coding using LLMs and Planning", accepted FSE 2024.
 
+Pre-print: [CodePlan paper](https://arxiv.org/abs/2309.12499)
 
 ## Contents
 
